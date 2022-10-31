@@ -1,0 +1,116 @@
+.sidebar {
+  height: calc(100vh - rem($headerHeight));
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+  overflow-y: auto;
+  // .sidebar__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    row-gap: rem(30);
+  }
+  // .sidebar__menu
+  &__menu { }
+  // .sidebar__bottom
+  &__bottom { }
+}
+.menu {
+  flex: 1 1 auto;
+  // .menu__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: rem(15);
+  }
+  // .menu__item
+  &__item {
+    width: 100%;
+  }
+  // .menu__link
+  &__link {
+    padding: rem(16) rem(20);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    column-gap: rem(12);
+    border-radius: rem(10);
+    transition: $standartTrans;
+    &:hover {
+      background-color: #F6F7F9;
+    }
+    &._active {
+      background-color: #F6F7F9;
+      .menu__icon {
+        svg {
+          path {
+            fill: $blueColor;
+          }
+        }
+      }
+      .menu__text {
+        color: $blueColor;
+      }
+    }
+  }
+  // .menu__icon
+  &__icon { 
+    width: rem(20);
+    height: rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .menu__text
+  &__text {
+    font-weight: 600;
+    line-height: prc(19, 16);
+    color: $darkBlueColor;
+  }
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: rem(22);
+  // .info__link
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    &:hover {
+      .info__text {
+        color: darken(#a0a7b5, 20%);
+      }
+      .info__icon {
+        svg {
+          path {
+            fill: darken(#a0a7b5, 20%);
+          }
+        }
+      }
+    }
+  }
+  // .info__icon
+  &__icon {
+    width: rem(20);
+    height: rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      path {
+        transition: $standartTrans;
+      }
+    }
+  }
+  // .info__text
+  &__text {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: prc(17, 14);
+    color: #a0a7b5;
+    transition: $standartTrans;
+  }
+}
