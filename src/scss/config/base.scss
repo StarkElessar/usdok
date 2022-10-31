@@ -9,9 +9,14 @@ body {
   min-height: 100%;
   overflow: hidden;
 }
+.wrapper-content {
+  display: grid;
+  grid-template-columns: rem(343) 1fr;
+}
 .page {
   position: relative;
   flex: 1 1 auto;
+  height: 100%;
 
   [data-observ] {
     position: absolute;
@@ -28,7 +33,7 @@ body {
   }
 }
 [class*="__container"] {
-  max-width: rem($containerWidth + $mainOffset * 2);
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 rem($mainOffset);
 }
