@@ -255,8 +255,9 @@ body .lock {
   -ms-grid-columns: minmax(20rem, 1fr) 22.3125rem;
   grid-template-columns: minmax(20rem, 1fr) 22.3125rem;
   background-color: #f9fafc;
-  border-radius: 1.875rem;
+  border-radius: 1.875rem 1.875rem 0 0;
   padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
