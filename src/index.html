@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html', {
-    'title': 'Главная'
-  })
-  <body>
-    <div class="wrapper">
-      @@include('html/header.html', {})
-      <main class="page">
-        <div data-observ></div>
-        
-      </main>
-      @@include('html/footer.html', {})
+@@include('html/head.html', {
+'title': 'Главная'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <div class="wrapper-content">
+      @@include('html/sideBar.html', {})
+      <div class="inner-page">
+        <main class="page">
+          <div class="page__container">
+            <div class="page__content">
+              <div class="page__baner">
+                <img src="@img/banner.png" alt="Banner Page">
+                <h1 class="page__title">Территория
+                  врачей</h1>
+              </div>
+            </div>
+            <aside class="page__sidebar sidebar-right">
+              <div class="sidebar-right__stat stat-bar">
+                <div class="stat-bar__header">Статистика</div>
+                <ul class="stat-bar__list">
+                  <li class="stat-bar__item">
+                    <span class="stat-bar__icon">
+                      <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 10H6C7.63573 10 9.08801 10.7855 10.0002 11.9998C10.864 10.8494 12.2129 10.0839 13.7433 10.0065L14 10H15C17.7614 10 20 12.2386 20 15C20 15.5523 19.5523 16 19 16C18.4872 16 18.0645 15.614 18.0067 15.1166L17.9949 14.8237C17.907 13.3072 16.6928 12.093 15.1763 12.0051L15 12H14C12.3431 12 11 13.3431 11 15C11 15.5128 10.614 15.9355 10.1166 15.9933L10 16C9.48716 16 9.06449 15.614 9.00673 15.1166L8.99491 14.8237C8.90704 13.3072 7.69275 12.093 6.17627 12.0051L6 12H5C3.34315 12 2 13.3431 2 15C2 15.5523 1.55228 16 1 16C0.447715 16 0 15.5523 0 15C0 12.3112 2.12231 10.1182 4.78311 10.0046L5 10ZM5 0C7.20914 0 9 1.79086 9 4C9 6.20914 7.20914 8 5 8C2.79086 8 1 6.20914 1 4C1 1.79086 2.79086 0 5 0ZM15 0C17.2091 0 19 1.79086 19 4C19 6.20914 17.2091 8 15 8C12.7909 8 11 6.20914 11 4C11 1.79086 12.7909 0 15 0ZM5 2C3.89543 2 3 2.89543 3 4C3 5.10457 3.89543 6 5 6C6.10457 6 7 5.10457 7 4C7 2.89543 6.10457 2 5 2ZM15 2C13.8954 2 13 2.89543 13 4C13 5.10457 13.8954 6 15 6C16.1046 6 17 5.10457 17 4C17 2.89543 16.1046 2 15 2Z" fill="#387DFF"/>
+                      </svg>
+                    </span>
+                    <span class="stat-bar__text">
+                      <span class="stat-bar__text_bold">35 904</span>  пользователя
+                    </span>
+                  </li>
+                  <li class="stat-bar__item">
+                    <span class="stat-bar__icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 14H15C17.7614 14 20 16.2386 20 19C20 19.5523 19.5523 20 19 20C18.4872 20 18.0645 19.614 18.0067 19.1166L17.9949 18.8237C17.907 17.3072 16.6928 16.093 15.1763 16.0051L15 16H5C3.34315 16 2 17.3431 2 19C2 19.5523 1.55228 20 1 20C0.447715 20 0 19.5523 0 19C0 16.3112 2.12231 14.1182 4.78311 14.0046L5 14ZM10 0C10.4062 0 10.8078 0.0405124 11.2004 0.120294C11.7416 0.230293 12.0912 0.75821 11.9812 1.29943C11.8712 1.84065 11.3432 2.19022 10.802 2.08022C10.5404 2.02705 10.2722 2 10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10C11.2748 10 12.4482 9.40081 13.2001 8.40038C13.5319 7.95889 14.1588 7.86999 14.6003 8.20181C15.0418 8.53363 15.1307 9.16053 14.7989 9.60202C13.6731 11.0999 11.9104 12 10 12C6.68629 12 4 9.31371 4 6C4 2.68629 6.68629 0 10 0ZM17 0C17.5523 0 18 0.447715 18 1V2H19C19.5523 2 20 2.44772 20 3C20 3.55228 19.5523 4 19 4H18V5C18 5.55228 17.5523 6 17 6C16.4477 6 16 5.55228 16 5V4H15C14.4477 4 14 3.55228 14 3C14 2.44772 14.4477 2 15 2H16V1C16 0.447715 16.4477 0 17 0Z" fill="#27AE60"/>
+                      </svg>
+                    </span>
+                    <span class="stat-bar__text">
+                      <span class="stat-bar__text_bold">41</span> новых пользователся
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </main>
+      </div>
     </div>
-    @@include('html/script.html', {})
-  </body>
-</html> 
+  </div>
+  @@include('html/script.html', {})
+</body>
+
+</html>
