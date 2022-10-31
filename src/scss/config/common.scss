@@ -1,0 +1,115 @@
+.logo {
+  display: block;
+  width: rem(114);
+  height: rem(35);
+}
+.button {
+  color: #fff;
+  font-size: rem(14);
+  line-height: prc(17, 14);
+  border-radius: rem(10);
+  background-color: $blueColor;
+  padding: rem(16) rem(24);
+  font-weight: 600;
+  transition: $standartTrans;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: darken($blueColor, 10%);
+      box-shadow: 0 rem(4) rem(8) rgba($blackColor, 20%);
+    }
+  }
+}
+
+.page {
+  padding-right: rem(30);
+  // .page__container
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(rem(320), 1fr) rem(357);
+    background-color: #f9fafc;
+    border-radius: rem(30);
+    padding-top: rem(30);
+    column-gap: rem(20);
+    height: 100%;
+  }
+  // .page__content
+  &__content {
+  }
+  // .page__baner
+  &__baner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: rem(20);
+    height: rem(300);
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding-left: rem(109);
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .page__title
+  &__title {
+    position: relative;
+    z-index: 2;
+    font-weight: 800;
+    font-size: rem(48);
+    line-height: prc(58, 48);
+    max-width: rem(300);
+  }
+  // .page__sidebar
+  &__sidebar {
+  }
+}
+.sidebar-right {
+  // .sidebar-right__stat
+  &__stat {
+  }
+}
+.stat-bar {
+  background-color: #fff;
+  border-radius: rem(20);
+  // .stat-bar__header
+  &__header {
+    padding: rem(15) rem(20);
+    border-bottom: rem(2) solid #f9fafc;
+    font-weight: 700;
+    line-height: prc(24, 16);
+  }
+  // .stat-bar__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+    padding: rem(30) rem(16);
+  }
+  // .stat-bar__item
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+  }
+  // .stat-bar__icon
+  &__icon {
+  }
+  // .stat-bar__text
+  &__text {
+    font-weight: 500;
+    line-height: prc(24, 16);
+    color: #4e5e78;
+
+    // .stat-bar__text_bold
+    &_bold {
+      font-weight: 700;
+      color: $darkBlueColor;
+    }
+  }
+}
