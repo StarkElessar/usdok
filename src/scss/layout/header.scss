@@ -7,8 +7,64 @@
     display: flex;
     align-items: center;
   }
+  // .header__logo
+  &__logo {
+    margin-right: rem(200);
+  }
+  // .header__search
+  &__search {
+    margin-right: auto;
+  }
+  // .header__login
+  &__login {
+    margin-left: rem(18);
+  }
 }
 // =====================================================================================================================
+.search-header {
+  position: relative;
+  height: rem(50);
+  width: 100%;
+  // .search-header__icon
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: rem(18);
+    transform: translateY(-50%);
+    svg {
+      path {
+        transition: $standartTrans;
+      }
+    }
+  }
+  // .search-header__input
+  &__input {
+    width: 100%;
+    max-width: rem(607);
+    border-radius: rem(10);
+    border: rem(1) solid #cbccd1;
+    height: 100%;
+    padding-left: rem(50);
+    padding-right: rem(18);
+    background-color: transparent;
+    font-size: rem(14);
+    font-weight: 500;
+    color: $blackColor;
+    transition: $standartTrans;
+    @include hidePlaceholder();
+    @include styledPlaceholder(#a0a7b5);
+    &:focus {
+      box-shadow: 0 0 0 rem(2) rgba($blueColor, 65%);
+      & + .search-header__icon {
+        svg {
+          path {
+            fill: $blueColor;
+          }
+        }
+      }
+    }
+  }
+}
 
 // Burger
 /*
