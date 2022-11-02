@@ -1,0 +1,188 @@
+// =============================================================================================
+.article-post {
+  background-color: #fff;
+  border-radius: rem(20);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  // .article-post__top
+  &__top {
+    width: 100%;
+    padding: rem(15) rem(15) 0;
+  }
+  // .article-post__image
+  &__image {
+    display: block;
+    position: relative;
+    padding-bottom: prc(217, 327);
+    border-radius: rem(10);
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      transition: transform 600ms ease-in-out;
+    }
+  }
+  // .article-post__body
+  &__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    padding: rem(10) rem(15);
+  }
+  // .article-post__date
+  &__date {
+  }
+  // .article-post__title
+  &__title {
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: prc(24, 16);
+  }
+  // .article-post__description
+  &__description {
+    font-size: rem(14);
+    line-height: prc(21, 14);
+    color: #4e5e78;
+  }
+  // .article-post__bottom
+  &__bottom {
+    padding: rem(12) rem(15);
+    display: grid;
+    grid-template-columns: 1fr rem(118) rem(24);
+    column-gap: rem(10);
+    border-top: rem(2) solid #f9fafc;
+  }
+  // .article-post__user-info
+  &__user-info {
+  }
+  // .article-post__button-like
+  &__button-like {
+    width: 100%;
+    height: rem(32);
+    border-radius: rem(10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(5);
+    border: rem(1) solid #a0a7b5;
+    transition: $standartTrans;
+    background-color: transparent;
+    padding: 0 rem(6);
+    &:hover {
+      background: #f6f7f9;
+      border-color: #f6f7f9;
+    }
+    &:active {
+      background: darken(#f6f7f9, 5%);
+    }
+  }
+  // .article-post__button-like-icon
+  &__button-like-icon {
+    width: rem(20);
+    height: rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .article-post__button-like-text
+  &__button-like-text {
+    font-weight: 700;
+    font-size: rem(10);
+    line-height: prc(12, 10);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  // .article-post__more-info
+  &__more-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    height: rem(32);
+    border-radius: rem(6);
+    transition: $standartTrans;
+    &:hover {
+      background-color: #f6f7f9;
+    }
+    &:active {
+      background-color: darken(#f6f7f9, 5%);
+    }
+  }
+}
+// =============================================================================================
+.date-post {
+  display: flex;
+  align-items: center;
+  column-gap: rem(5);
+  // .date-post__icon
+  &__icon {
+    position: relative;
+    width: rem(16);
+    height: rem(16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .date-post__text
+  &__text {
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: prc(15, 12);
+    color: #a0a7b5;
+  }
+}
+// =============================================================================================
+.info-user {
+  display: flex;
+  align-items: center;
+  column-gap: rem(4);
+  // .info-user__image
+  &__image {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: rem(2) solid #f6f7f9;
+    min-width: rem(32);
+    min-height: rem(32);
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .info-user__text
+  &__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(4);
+  }
+  // .info-user__name
+  &__name {
+    font-weight: 700;
+    font-size: rem(12);
+    line-height: prc(12, 12);
+  }
+  // .info-user__vocation
+  &__vocation {
+    font-size: rem(12);
+    line-height: prc(12, 12);
+  }
+}
+// =============================================================================================
