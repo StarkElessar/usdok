@@ -310,6 +310,21 @@ body .lock {
   transition: all 280ms ease-in-out 0ms;
 }
 
+.button:active {
+  background-color: #0051eb;
+}
+
+.sidebar-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.25rem;
+}
+
 .stat-bar {
   background-color: #fff;
   border-radius: 1.25rem;
@@ -354,6 +369,214 @@ body .lock {
 
 .stat-bar__text_bold {
   font-weight: 700;
+  color: #2b3450;
+}
+
+.school-bar {
+  width: 100%;
+  border-radius: 0.625rem;
+  background-color: #2b3450;
+  padding: 2.5rem 1.875rem 1.5rem;
+}
+
+.school-bar__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 1rem;
+}
+
+.school-bar__logo {
+  width: 10.25rem;
+  height: 5.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.school-bar__logo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.school-bar__images {
+  width: 18.75rem;
+  height: 14.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.school-bar__images img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.school-bar__text {
+  font-weight: 500;
+  color: #fff;
+  font-size: 0.8125rem;
+  line-height: 123.0769230769%;
+}
+
+.school-bar__button {
+  background-color: #387dff;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+  width: 100%;
+  height: 3.125rem;
+  border-radius: 0.625rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 118.75%;
+}
+
+.school-bar__button:hover {
+  background-color: #1f6cff;
+}
+
+.school-bar__button:active {
+  background-color: #055cff;
+}
+
+.calendar-bar {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.625rem;
+}
+
+.calendar-bar__header {
+  height: 3.75rem;
+  padding: 0 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calendar-bar__button-control {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+  border-radius: 0.375rem;
+}
+
+.calendar-bar__button-control:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.calendar-bar__button-control:active {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.calendar-bar__button-control_right svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.calendar-bar__date {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 118.75%;
+}
+
+.calendar-bar__body {
+  margin: 0 auto;
+  padding: 0 2.25rem 1.25rem;
+}
+
+.calendar-bar__day-names {
+  font-weight: 700;
+  font-size: 0.625rem;
+  text-align: center;
+  line-height: 120%;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+  -ms-grid-rows: 2.5rem;
+  grid-template-rows: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar-bar__day-number {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+  -ms-grid-rows: (2.5rem)[5];
+  grid-template-rows: repeat(5, 2.5rem);
+  cursor: pointer;
+}
+
+.calendar-bar__day {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 121.4285714286%;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+  border-radius: 0.375rem;
+}
+
+.calendar-bar__day:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.calendar-bar__day._active {
+  color: #fff;
+  background-color: #387dff;
+  border-radius: 50%;
+}
+
+.calendar-bar__day_prev {
+  color: #a0a7b5;
+}
+
+.calendar-bar__day_now {
   color: #2b3450;
 }
 
@@ -612,6 +835,10 @@ body .lock {
   background-color: #F6F7F9;
 }
 
+.menu__link:active {
+  background-color: #edeff3;
+}
+
 .menu__link._active {
   background-color: #F6F7F9;
 }
@@ -769,12 +996,20 @@ body .lock {
   font-weight: 700;
   font-size: 1rem;
   line-height: 150%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .article-post__description {
   font-size: 0.875rem;
   line-height: 150%;
   color: #4e5e78;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .article-post__bottom {
@@ -842,6 +1077,10 @@ body .lock {
   line-height: 120%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .article-post__more-info {
