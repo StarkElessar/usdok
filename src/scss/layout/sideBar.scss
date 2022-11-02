@@ -1,5 +1,6 @@
 .sidebar {
-  height: calc(100vh - rem($headerHeight));
+  // height: calc(100vh - rem($headerHeight));
+  height: 100%;
   padding-top: rem(30);
   padding-bottom: rem(30);
   overflow-y: auto;
