@@ -1,5 +1,5 @@
 body {
-  .lock {
+  &._lock {
     overflow: hidden;
   }
 }
@@ -34,7 +34,8 @@ body {
     column-gap: rem(20);
   }
   // .page__content
-  &__content { }
+  &__content {
+  }
   // .page__baner
   &__baner {
     position: relative;
@@ -46,7 +47,7 @@ body {
     justify-self: center;
     align-items: center;
     padding-left: rem(109);
-    @include adaptiveClamp('padding-left', 109, 20, 1920, 980, 2);
+    @include adaptiveClamp("padding-left", 109, 20, 1920, 980, 2);
     img {
       position: absolute;
       top: 50%;
@@ -67,19 +68,21 @@ body {
     max-width: rem(300);
   }
   // .page__sidebar
-  &__sidebar { }
+  &__sidebar {
+  }
   // .page__posts-wrapper
   &__posts-wrapper {
     margin-top: rem(20);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
     column-gap: rem(20);
-    @include adaptiveClamp('column-gap', 20, 10);
-    @include adaptiveClamp('row-gap', 46, 8);
+    @include adaptiveClamp("column-gap", 20, 10);
+    @include adaptiveClamp("row-gap", 46, 8);
     row-gap: rem(46);
   }
   // .page__post
-  &__post {}
+  &__post {
+  }
 
   [data-observ] {
     position: absolute;
