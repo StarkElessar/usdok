@@ -1,8 +1,14 @@
+// ========================================================================
 .logo {
-  display: block;
+  flex: 0 0 auto;
   width: rem(114);
   height: rem(35);
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
+// ========================================================================
 .button {
   color: #fff;
   font-size: rem(14);
@@ -18,12 +24,26 @@
       box-shadow: 0 rem(4) rem(8) rgba($blackColor, 20%);
     }
   }
+  &:active {
+    background-color: darken($blueColor, 15%);
+  }
 }
+// ========================================================================
 .sidebar-right {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(20);
   // .sidebar-right__stat
   &__stat {
   }
+  // .sidebar-right__calendar
+  &__calendar {
+  }
+  // .sidebar-right__baner
+  &__baner {
+  }
 }
+// ========================================================================
 .stat-bar {
   background-color: #fff;
   border-radius: rem(20);
@@ -64,4 +84,160 @@
   }
 }
 // ========================================================================
-
+.school-bar {
+  width: 100%;
+  border-radius: rem(10);
+  background-color: $darkBlueColor;
+  padding: rem(40) rem(30) rem(24);
+  // .school-bar__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(16);
+  }
+  // .school-bar__logo
+  &__logo {
+    width: rem(164);
+    height: rem(82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  // .school-bar__images
+  &__images {
+    width: rem(300);
+    height: rem(232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  // .school-bar__text
+  &__text {
+    font-weight: 500;
+    color: #fff;
+    font-size: rem(13);
+    line-height: prc(16, 13);
+  }
+  // .school-bar__button
+  &__button {
+    background-color: $blueColor;
+    transition: $standartTrans;
+    width: 100%;
+    height: rem(50);
+    border-radius: rem(10);
+    color: #fff;
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: prc(19, 16);
+    &:hover {
+      background-color: darken($blueColor, 5%);
+    }
+    &:active {
+      background-color: darken($blueColor, 10%);
+    }
+  }
+}
+// ========================================================================
+.calendar-bar {
+  width: 100%;
+  background-color: #fff;
+  border-radius: rem(10);
+  // .calendar-bar__header
+  &__header {
+    height: rem(60);
+    padding: 0 rem(20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .calendar-bar__button-control
+  &__button-control {
+    width: rem(24);
+    height: rem(24);
+    background-color: transparent;
+    transition: $standartTrans;
+    border-radius: rem(6);
+    &:hover {
+      background-color: rgba(#000, 3%);
+    }
+    &:active {
+      background-color: rgba(#000, 6%);
+    }
+    // .calendar-bar__button-control_left
+    &_left {
+    }
+    // .calendar-bar__button-control_right
+    &_right {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  // .calendar-bar__date
+  &__date {
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: prc(19, 16);
+  }
+  // .calendar-bar__body
+  &__body {
+    margin: 0 auto;
+    padding: 0 rem(36) rem(20);
+  }
+  // .calendar-bar__day-names
+  &__day-names {
+    font-weight: 700;
+    font-size: rem(10);
+    text-align: center;
+    line-height: prc(12, 10);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(40), 1fr));
+    grid-template-rows: rem(40);
+    align-items: center;
+  }
+  // .calendar-bar__day-number
+  &__day-number {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(40), 1fr));
+    grid-template-rows: repeat(5, rem(40));
+    cursor: pointer;
+  }
+  // .calendar-bar__day
+  &__day {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: prc(17, 14);
+    transition: $standartTrans;
+    border-radius: rem(6);
+    &:hover {
+      background-color: rgba(#000, 3%);
+    }
+    &._active {
+      color: #fff;
+      background-color: $blueColor;
+      border-radius: 50%;
+    }
+    // .calendar-bar__day_prev
+    &_prev {
+      color: #a0a7b5;
+    }
+    // .calendar-bar__day_now
+    &_now {
+      color: $darkBlueColor;
+    }
+  }
+}
