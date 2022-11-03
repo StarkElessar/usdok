@@ -48,15 +48,18 @@
     font-weight: 700;
     font-size: rem(16);
     line-height: prc(24, 16);
+    @include lineClamp(3);
   }
   // .article-post__description
   &__description {
     font-size: rem(14);
     line-height: prc(21, 14);
     color: #4e5e78;
+    @include lineClamp(3);
   }
   // .article-post__bottom
   &__bottom {
+    // flex: 1 1 auto;
     padding: rem(12) rem(15);
     display: grid;
     grid-template-columns: 1fr rem(118) rem(24);
@@ -102,6 +105,7 @@
     line-height: prc(12, 10);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    @include lineClamp(1);
   }
   // .article-post__more-info
   &__more-info {
@@ -183,6 +187,7 @@
   &__vocation {
     font-size: rem(12);
     line-height: prc(12, 12);
+    @include lineClamp(1);
   }
 }
 // =============================================================================================

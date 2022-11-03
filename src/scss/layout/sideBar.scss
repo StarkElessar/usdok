@@ -42,6 +42,9 @@
     &:hover {
       background-color: #F6F7F9;
     }
+    &:active {
+      background-color: darken(#F6F7F9, 3%);
+    }
     &._active {
       background-color: #F6F7F9;
       .menu__icon {
