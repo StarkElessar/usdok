@@ -1,0 +1,293 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#fff, 40%);
+  backdrop-filter: blur(rem(6));
+  z-index: 1000;
+  padding: rem(24);
+  @include adaptiveClamp('padding-top', 24, 64, 768, 320, 1);
+  @include adaptiveClamp('padding-right', 24, 8, 768, 320, 1);
+  @include adaptiveClamp('padding-bottom', 24, 12, 768, 320, 1);
+  @include adaptiveClamp('padding-left', 24, 8, 768, 320, 1);
+  overflow-y: auto;
+  transition: $standartTrans;
+  opacity: 0;
+  visibility: hidden;
+  &._show {
+    opacity: 1;
+    visibility: visible;
+    .modal__body {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  // .modal__body
+  &__body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: rem(1120);
+    display: flex;
+    background-color: #fff;
+    border-radius: rem(30);
+    @include adaptiveClamp('border-radius', 30, 16);
+    overflow: hidden;
+    box-shadow: 0px 492px 197px rgba(#000, 1%), 0px 277px 166px rgba(#000, 5%), 0px 123px 123px rgba(#000, 9%),
+      0px 31px 68px rgba(#000, 10%), 0px 0px 0px rgba(#000, 10%);
+    transition: $standartTrans;
+    opacity: 0;
+    transform: translateY(-200px);
+    @include media(768) {
+      max-width: 100%;
+    }
+  }
+  // .modal__image
+  &__image {
+    position: relative;
+    flex: 0 1 rem(668);
+    overflow: hidden;
+    @include media(768) {
+      display: none;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+  // .modal__content-form
+  &__content-form {
+    flex: 0 1 rem(450);
+    position: relative;
+    padding-left: rem(80);
+    padding-right: rem(80);
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+    @include media(768) {
+      padding: rem(24) rem(16) rem(32);
+      flex: 0 1 100%;
+      width: 100%;
+      max-width: rem(328);
+      max-width: 100%;
+    }
+  }
+  // .modal__button-close
+  &__button-close {
+    position: absolute;
+    top: rem(10);
+    right: rem(10);
+    width: rem(24);
+    height: rem(24);
+    background-color: transparent;
+    transition: $standartTrans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(6);
+    @include media(768) {
+      top: rem(8);
+      right: rem(8);
+    }
+    &:hover {
+      background-color: rgba(#000, 3%);
+    }
+    &:active {
+      background-color: rgba(#000, 5%);
+    }
+  }
+  // .modal__title
+  &__title {
+    font-weight: 700;
+    font-size: rem(24);
+    @include adaptiveClamp('font-size', 24, 20, 768, 320, 1);
+    line-height: prc(29, 24);
+    span {
+      font-weight: 400;
+    }
+  }
+  // .modal__action-form
+  &__action-form {
+    margin-top: rem(30);
+  }
+  // .modal__footer
+  &__footer {
+    margin-top: rem(30);
+    @include media(768) {
+      margin-top: rem(40);
+    }
+  }
+  // .modal__footer-text
+  &__footer-text {
+    font-weight: 700;
+    @include adaptiveClamp('font-size', 14, 13);
+    line-height: prc(24, 14);
+    color: #2b3450;
+    @include adaptiveClamp('margin-bottom', 20, 16);
+  }
+  // .modal__footer-action
+  &__footer-action {
+    display: flex;
+    align-items: center;
+    @include adaptiveClamp('gap', 30, 16);
+  }
+  // .modal__button-footer
+  &__button-footer {
+    border-radius: 50%;
+    background-color: #f6f7f9;
+    width: rem(48);
+    height: rem(48);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: $standartTrans;
+    &:hover {
+      background-color: darken(#f6f7f9, 5%);
+    }
+    &:active {
+      background-color: darken(#f6f7f9, 10%);
+    }
+  }
+}
+// ===========================================================================
+.form-action {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(20);
+  @include adaptiveClamp('row-gap', 20, 16);
+  @include media(768) {
+    width: 100%;
+  }
+  // .form-action__field-control
+  &__field-control {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    @include media(768) {
+      width: 100%;
+    }
+    // .form-action__field-control_row
+    &_row {
+      column-gap: rem(10);
+      display: grid;
+      grid-template-columns: rem(87) 1fr;
+    }
+  }
+  // .form-action__label
+  &__label {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: prc(17, 14);
+    color: #2b3450;
+    @include media(768) {
+      font-size: rem(11);
+      line-height: rem(13);
+    }
+  }
+  // .form-action__input
+  &__input {
+    width: 100%;
+    max-width: rem(290);
+    padding: rem(16) rem(10);
+    background-color: #fff;
+
+    border: rem(1) solid #a0a7b5;
+    border-radius: rem(10);
+    @include media(768) {
+      max-width: 100%;
+    }
+  }
+  // .form-action__field-checkbox
+  &__field-checkbox {
+    margin-top: rem(-10);
+    @include media(768) {
+      margin-top: 0;
+    }
+  }
+  // .form-action__label-checkbox
+  &__label-checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: rem(5);
+    cursor: pointer;
+    input {
+      display: none;
+      &:checked + .form-action__checkbox {
+        border-color: $blueColor;
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  // .form-action__checkbox
+  &__checkbox {
+    width: rem(16);
+    height: rem(16);
+    background-color: #fff;
+    border: rem(1) solid #a0a7b5;
+    border-radius: rem(4);
+    transition: $standartTrans;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: rgba($blueColor, 10%);
+    }
+    svg {
+      transition: $standartTrans;
+      opacity: 0;
+      path {
+        fill: $blueColor;
+      }
+    }
+  }
+  // .form-action__label-text
+  &__label-text {
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: prc(15, 12);
+    color: #4e5e78;
+  }
+  // .form-action__label-link
+  &__label-link {
+    text-decoration: underline;
+  }
+  // .form-action__button-outline
+  &__button-outline {
+    background-color: transparent;
+    border-radius: rem(10);
+    transition: $standartTrans;
+    padding: rem(16) rem(24);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: prc(17, 14);
+    color: #4e5e78;
+    @include media(768) {
+      font-size: rem(13);
+      padding-left: rem(20);
+      padding-right: rem(20);
+    }
+    &:hover {
+      background-color: rgba(#000, 3%);
+    }
+    &:active {
+      background-color: rgba(#000, 10%);
+    }
+  }
+  // .form-action__button-action
+  &__button-action {
+    @include media(768) {
+      font-size: rem(13);
+      padding-left: rem(20);
+      padding-right: rem(20);
+    }
+  }
+}
