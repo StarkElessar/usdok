@@ -18,6 +18,11 @@
 }
 .menu {
   flex: 1 1 auto;
+  &._hide {
+    .menu__count-notification {
+      display: none;
+    }
+  }
   // .menu__list
   &__list {
     display: flex;
