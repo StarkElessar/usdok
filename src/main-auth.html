@@ -9,585 +9,592 @@
     @@include('html/header.html', {})
     <div class="wrapper__content">
       @@include('html/sideBar.html', {})
-      <div class="inner-page">
-        <main class="page">
-          <div class="page__container">
-            <div class="page__content">
-              <div class="page__new-post new-post">
-                <div class="new-post__body">
-                  <a title="Открыть профиль" href="#" class="new-post__user-avatar">
-                    <img src="@img/users/04.png" alt="User Avatar">
-                  </a>
-                  <form class="new-post__form-action">
-                    <textarea 
-                        class="new-post__text-control" 
-                        placeholder="Текст Вашей публикации"
-                        name="new-post-text" 
-                        id="new-post"
-                        rows="1"></textarea>
-                    <label class="new-post__add-file-field">
-                      <input type="file" name="new-post-video">
-                      <span class="new-post__label-icon">
-                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4C0 1.79086 1.79086 0 4 0H11C13.2091 0 15 1.79086 15 4V4.07171L18.202 2.23108C19.0019 1.77121 20 2.34868 20 3.27144V10.7488C20 11.6203 19.1003 12.2012 18.306 11.8424L14.9855 10.3425C14.8118 12.3913 13.0938 14 11 14H4C1.79086 14 0 12.2091 0 10V4ZM15 8.15443L18 9.50958V4.65407L15 6.37861V8.15443ZM13 4C13 2.89543 12.1046 2 11 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H11C12.1046 12 13 11.1046 13 10V4Z" fill="#387DFF"/>
-                        </svg>
-                      </span>
-                      <span class="new-post__label-text">Видео</span>
-                    </label>
-                    <label class="new-post__add-file-field">
-                      <input type="file" name="new-post-image">
-                      <span class="new-post__label-icon">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0H16C19.3137 0 22 2.68629 22 6V16C22 19.3137 19.3137 22 16 22H6C2.68629 22 0 19.3137 0 16V6C0 2.68629 2.68629 0 6 0ZM6 2C3.79086 2 2 3.79086 2 6V16C2 18.2091 3.79086 20 6 20H16C18.2091 20 20 18.2091 20 16V6C20 3.79086 18.2091 2 16 2H6Z" fill="#39CB8A"/>
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79289 19.6949C2.40237 19.3044 2.40237 18.6712 2.79289 18.2807L7.7835 13.2901L7.79753 13.2771C8.2212 12.8846 8.87622 12.8866 9.29748 13.2817L9.29923 13.2833L10.3259 14.2507L13.6277 10.4274C14.0442 9.94522 14.7819 9.91658 15.2345 10.3651L15.2492 10.3796L21.2326 16.8193C21.6085 17.2239 21.5853 17.8567 21.1807 18.2326C20.7761 18.6085 20.1434 18.5853 19.7674 18.1807L14.4847 12.4951L11.7828 15.6235L16.1858 19.7722C16.5877 20.1509 16.6066 20.7838 16.2278 21.1858C15.8491 21.5877 15.2162 21.6066 14.8142 21.2278L8.56374 15.3383L4.20711 19.6949C3.81658 20.0854 3.18342 20.0854 2.79289 19.6949ZM8.00001 7C7.44772 7 7.00001 7.44772 7.00001 8C7.00001 8.55228 7.44772 9 8.00001 9C8.55229 9 9.00001 8.55228 9.00001 8C9.00001 7.44772 8.55229 7 8.00001 7ZM11 8C11 9.65685 9.65686 11 8.00001 11C6.34315 11 5.00001 9.65685 5.00001 8C5.00001 6.34315 6.34315 5 8.00001 5C9.65686 5 11 6.34315 11 8Z" fill="#39CB8A"/>
-                        </svg>
-                      </span>
-                      <span class="new-post__label-text">Фото</span>
-                    </label>
-                    <label class="new-post__add-file-field">
-                      <input type="file" name="new-post-doc">
-                      <span class="new-post__label-icon">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6H11C11.5523 6 12 5.55228 12 5C12 4.44772 11.5523 4 11 4H5Z" fill="#FF5531"/>
-                          <path d="M4 9C4 8.44771 4.44772 8 5 8H11C11.5523 8 12 8.44771 12 9C12 9.55229 11.5523 10 11 10H5C4.44772 10 4 9.55229 4 9Z" fill="#FF5531"/>
-                          <path d="M5 12C4.44772 12 4 12.4477 4 13C4 13.5523 4.44772 14 5 14H11C11.5523 14 12 13.5523 12 13C12 12.4477 11.5523 12 11 12H5Z" fill="#FF5531"/>
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.625 18H16.375C18.3918 18 20 16.3435 20 14.3333V3.66667C20 1.65653 18.3918 0 16.375 0H3.625C1.60818 0 0 1.65653 0 3.66667V14.3333C0 16.3435 1.60818 18 3.625 18ZM3.625 2C2.74233 2 2 2.73129 2 3.66667V14.3333C2 15.2687 2.74233 16 3.625 16H12.375C13.2577 16 14 15.2687 14 14.3333V3.66667C14 2.73129 13.2577 2 12.375 2H3.625ZM16.375 16H15.6042C15.8575 15.4987 16 14.9317 16 14.3333V3.66667C16 3.06833 15.8575 2.50132 15.6042 2H16.375C17.2577 2 18 2.73129 18 3.66667V14.3333C18 15.2687 17.2577 16 16.375 16Z" fill="#FF5531"/>
-                        </svg>
-                      </span>
-                      <span class="new-post__label-text">Документ</span>
-                    </label>
-                  </form>
-                </div>
-              </div>
-              <div class="page__baner">
-                <img src="@img/banner.png" alt="Banner Page">
-                <h1 class="page__title">Территория врачей</h1>
-              </div>
-              <div class="page__posts-wrapper">
-                <article class="page__post article-post">
-                  <div class="article-post__top">
-                    <a href="#" class="article-post__image">
-                      <img src="@img/posts/01.jpg" alt="Post Image">
-                    </a>
-                  </div>
-                  <div class="article-post__body">
-                    <div class="article-post__date date-post">
-                      <span class="date-post__icon">
-                        <img src="@img/icons/clock.svg" alt="Clock Icon">
-                      </span>
-                      <span class="date-post__text">10 мин. назад</span>
-                    </div>
-                    <a href="#" class="article-post__link-title">
-                      <h3 class="article-post__title">
-                        Ещё один случай из практики реаниматолога СП.
-                      </h3>
-                    </a>
-                    <div class="article-post__description">
-                      Во время дежурства поступает вызов от фельдшерской бригады с поводом...
-                    </div>
-                  </div>
-                  <div class="article-post__bottom">
-                    <div class="article-post__user-info info-user">
-                      <a class="info-user__image" href="#">
-                        <img src="@img/users/01.png" alt="User Avatar">
-                      </a>
-                      <div class="info-user__text">
-                        <a href="" class="info-user__link-name">
-                          <h4 class="info-user__name">Терёхин К.</h4>
-                        </a>
-                        <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
-                      </div>
-                    </div>
-                    <button class="article-post__button-like" type="button">
-                      <span class="article-post__button-like-icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
-                          <path
-                            d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
-                            fill="#E6C047" />
-                          <path
-                            d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
-                            stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
-                        </svg>
-                      </span>
-                      <span class="article-post__button-like-text">
-                        <span id="like-count">124</span> cпасибо
-                      </span>
-                    </button>
-                    <button class="article-post__more-info" type="button">
-                      <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <main class="page">
+        <div class="page__container page__container_2-column">
+          <div class="page__content">
+            <div class="page__new-post new-post">
+              <div class="new-post__body">
+                <a title="Открыть профиль" href="#" class="new-post__user-avatar">
+                  <img src="@img/users/04.png" alt="User Avatar">
+                </a>
+                <form class="new-post__form-action">
+                  <textarea class="new-post__text-control" placeholder="Текст Вашей публикации" name="new-post-text"
+                    id="new-post" rows="1"></textarea>
+                  <label class="new-post__add-file-field">
+                    <input type="file" name="new-post-video">
+                    <span class="new-post__label-icon">
+                      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
-                          fill="#A0A7B5" />
-                      </svg>
-                    </button>
-                  </div>
-                </article>
-                <article class="page__post article-post">
-                  <div class="article-post__top">
-                    <a href="#" class="article-post__image">
-                      <img src="@img/posts/02.jpg" alt="Post Image">
-                    </a>
-                  </div>
-                  <div class="article-post__body">
-                    <div class="article-post__date date-post">
-                      <span class="date-post__icon">
-                        <img src="@img/icons/clock.svg" alt="Clock Icon">
-                      </span>
-                      <span class="date-post__text">2 н. назад</span>
-                    </div>
-                    <a href="#" class="article-post__link-title">
-                      <h3 class="article-post__title">
-                        Каннабис при cиндроме ломкой Х-хромосомы
-                      </h3>
-                    </a>
-                    <div class="article-post__description">
-                      Спасибо Татьяне Евгеньевне Егоровой за интересную публикацию “Синдром...
-                    </div>
-                  </div>
-                  <div class="article-post__bottom">
-                    <div class="article-post__user-info info-user">
-                      <a class="info-user__image" href="#">
-                        <img src="@img/users/02.png" alt="User Avatar">
-                      </a>
-                      <div class="info-user__text">
-                        <a href="" class="info-user__link-name">
-                          <h4 class="info-user__name">Doctor News. D.</h4>
-                        </a>
-                        <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
-                      </div>
-                    </div>
-                    <button class="article-post__button-like" type="button">
-                      <span class="article-post__button-like-icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
-                          <path
-                            d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
-                            fill="#E6C047" />
-                          <path
-                            d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
-                            stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
-                        </svg>
-                      </span>
-                      <span class="article-post__button-like-text">
-                        <span id="like-count">99</span> cпасибо
-                      </span>
-                    </button>
-                    <button class="article-post__more-info" type="button">
-                      <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
-                          fill="#A0A7B5" />
-                      </svg>
-                    </button>
-                  </div>
-                </article>
-                <article class="page__post article-post">
-                  <div class="article-post__top">
-                    <a href="#" class="article-post__image">
-                      <img src="@img/posts/03.jpg" alt="Post Image">
-                    </a>
-                  </div>
-                  <div class="article-post__body">
-                    <div class="article-post__date date-post">
-                      <span class="date-post__icon">
-                        <img src="@img/icons/clock.svg" alt="Clock Icon">
-                      </span>
-                      <span class="date-post__text">2 н. назад</span>
-                    </div>
-                    <a href="#" class="article-post__link-title">
-                      <h3 class="article-post__title">
-                        А слона-то и не заметила.
-                      </h3>
-                    </a>
-                    <div class="article-post__description">
-                      Поделюсь одним случаем из моей практики. Около 2х лет назад я, тогда еще оч...
-                    </div>
-                  </div>
-                  <div class="article-post__bottom">
-                    <div class="article-post__user-info info-user">
-                      <a class="info-user__image" href="#">
-                        <img src="@img/users/03.png" alt="User Avatar">
-                      </a>
-                      <div class="info-user__text">
-                        <a href="" class="info-user__link-name">
-                          <h4 class="info-user__name">Девятых Т.</h4>
-                        </a>
-                        <div title="Врач ультразвуковой диагностики" class="info-user__vocation">
-                          Врач ультразвуковой диагностики
-                        </div>
-                      </div>
-                    </div>
-                    <button class="article-post__button-like" type="button">
-                      <span class="article-post__button-like-icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
-                          <path
-                            d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
-                            fill="#E6C047" />
-                          <path
-                            d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
-                            stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
-                        </svg>
-                      </span>
-                      <span class="article-post__button-like-text">
-                        <span id="like-count">2</span> cпасибо
-                      </span>
-                    </button>
-                    <button class="article-post__more-info" type="button">
-                      <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
-                          fill="#A0A7B5" />
-                      </svg>
-                    </button>
-                  </div>
-                </article>
-                <article class="page__post article-post">
-                  <div class="article-post__top">
-                    <a href="#" class="article-post__image">
-                      <img src="@img/posts/04.jpg" alt="Post Image">
-                    </a>
-                  </div>
-                  <div class="article-post__body">
-                    <div class="article-post__date date-post">
-                      <span class="date-post__icon">
-                        <img src="@img/icons/clock.svg" alt="Clock Icon">
-                      </span>
-                      <span class="date-post__text">10 мин. назад</span>
-                    </div>
-                    <a href="#" class="article-post__link-title">
-                      <h3 class="article-post__title">
-                        Баттл. ТЭЛА на фоне транексамовой кислоты
-                      </h3>
-                    </a>
-                    <div class="article-post__description">
-                      Клинический случай. Самое интересное как всегда под вечер... За медицинской...
-                    </div>
-                  </div>
-                  <div class="article-post__bottom">
-                    <div class="article-post__user-info info-user">
-                      <a class="info-user__image" href="#">
-                        <img src="@img/users/06.png" alt="User Avatar">
-                      </a>
-                      <div class="info-user__text">
-                        <a href="" class="info-user__link-name">
-                          <h4 class="info-user__name">Бурцев А.</h4>
-                        </a>
-                        <div title="Врач Терапевт" class="info-user__vocation">Терапевт</div>
-                      </div>
-                    </div>
-                    <button class="article-post__button-like" type="button">
-                      <span class="article-post__button-like-icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
-                          <path
-                            d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
-                            fill="#E6C047" />
-                          <path
-                            d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
-                            stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
-                        </svg>
-                      </span>
-                      <span class="article-post__button-like-text">
-                        <span id="like-count">399</span> cпасибо
-                      </span>
-                    </button>
-                    <button class="article-post__more-info" type="button">
-                      <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
-                          fill="#A0A7B5" />
-                      </svg>
-                    </button>
-                  </div>
-                </article>
-                <article class="page__post article-post">
-                  <div class="article-post__top">
-                    <a href="#" class="article-post__image">
-                      <img src="@img/posts/05.jpg" alt="Post Image">
-                    </a>
-                  </div>
-                  <div class="article-post__body">
-                    <div class="article-post__date date-post">
-                      <span class="date-post__icon">
-                        <img src="@img/icons/clock.svg" alt="Clock Icon">
-                      </span>
-                      <span class="date-post__text">10 мин. назад</span>
-                    </div>
-                    <a href="#" class="article-post__link-title">
-                      <h3 class="article-post__title">
-                        Лечение метастатического колоректального рака
-                      </h3>
-                    </a>
-                    <div class="article-post__description">
-                      17 октября 2022 г. в журнале Journal of Clinical Oncology опубликовали руко...
-                    </div>
-                  </div>
-                  <div class="article-post__bottom">
-                    <div class="article-post__user-info info-user">
-                      <a class="info-user__image" href="#">
-                        <img src="@img/users/05.png" alt="User Avatar">
-                      </a>
-                      <div class="info-user__text">
-                        <a href="" class="info-user__link-name">
-                          <h4 class="info-user__name">Кадыров Т.</h4>
-                        </a>
-                        <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
-                      </div>
-                    </div>
-                    <button class="article-post__button-like" type="button">
-                      <span class="article-post__button-like-icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
-                          <path
-                            d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
-                            fill="#E6C047" />
-                          <path
-                            d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
-                            stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
-                        </svg>
-                      </span>
-                      <span class="article-post__button-like-text">
-                        <span id="like-count">1000</span> cпасибо
-                      </span>
-                    </button>
-                    <button class="article-post__more-info" type="button">
-                      <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
-                          fill="#A0A7B5" />
-                      </svg>
-                    </button>
-                  </div>
-                </article>
-                <article class="page__post article-post">
-                  <div class="article-post__top">
-                    <a href="#" class="article-post__image">
-                      <img src="@img/posts/06.jpg" alt="Post Image">
-                    </a>
-                  </div>
-                  <div class="article-post__body">
-                    <div class="article-post__date date-post">
-                      <span class="date-post__icon">
-                        <img src="@img/icons/clock.svg" alt="Clock Icon">
-                      </span>
-                      <span class="date-post__text">10 мин. назад</span>
-                    </div>
-                    <a href="#" class="article-post__link-title">
-                      <h3 class="article-post__title">
-                        Лечение метастатического колоректального рака
-                      </h3>
-                    </a>
-                    <div class="article-post__description">
-                      17 октября 2022 г. в журнале Journal of Clinical Oncology опубликовали руко...
-                    </div>
-                  </div>
-                  <div class="article-post__bottom">
-                    <div class="article-post__user-info info-user">
-                      <a class="info-user__image" href="#">
-                        <img src="@img/users/05.png" alt="User Avatar">
-                      </a>
-                      <div class="info-user__text">
-                        <a href="" class="info-user__link-name">
-                          <h4 class="info-user__name">Кадыров Т.</h4>
-                        </a>
-                        <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
-                      </div>
-                    </div>
-                    <button class="article-post__button-like" type="button">
-                      <span class="article-post__button-like-icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
-                          <path
-                            d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
-                            fill="#E6C047" />
-                          <path
-                            d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
-                            stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
-                            stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
-                        </svg>
-                      </span>
-                      <span class="article-post__button-like-text">
-                        <span id="like-count">100</span> cпасибо
-                      </span>
-                    </button>
-                    <button class="article-post__more-info" type="button">
-                      <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
-                          fill="#A0A7B5" />
-                      </svg>
-                    </button>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <aside class="page__sidebar sidebar-right">
-              <div class="sidebar-right__stat stat-bar">
-                <div class="stat-bar__header">Статистика</div>
-                <ul class="stat-bar__list">
-                  <li class="stat-bar__item">
-                    <span class="stat-bar__icon">
-                      <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5 10H6C7.63573 10 9.08801 10.7855 10.0002 11.9998C10.864 10.8494 12.2129 10.0839 13.7433 10.0065L14 10H15C17.7614 10 20 12.2386 20 15C20 15.5523 19.5523 16 19 16C18.4872 16 18.0645 15.614 18.0067 15.1166L17.9949 14.8237C17.907 13.3072 16.6928 12.093 15.1763 12.0051L15 12H14C12.3431 12 11 13.3431 11 15C11 15.5128 10.614 15.9355 10.1166 15.9933L10 16C9.48716 16 9.06449 15.614 9.00673 15.1166L8.99491 14.8237C8.90704 13.3072 7.69275 12.093 6.17627 12.0051L6 12H5C3.34315 12 2 13.3431 2 15C2 15.5523 1.55228 16 1 16C0.447715 16 0 15.5523 0 15C0 12.3112 2.12231 10.1182 4.78311 10.0046L5 10ZM5 0C7.20914 0 9 1.79086 9 4C9 6.20914 7.20914 8 5 8C2.79086 8 1 6.20914 1 4C1 1.79086 2.79086 0 5 0ZM15 0C17.2091 0 19 1.79086 19 4C19 6.20914 17.2091 8 15 8C12.7909 8 11 6.20914 11 4C11 1.79086 12.7909 0 15 0ZM5 2C3.89543 2 3 2.89543 3 4C3 5.10457 3.89543 6 5 6C6.10457 6 7 5.10457 7 4C7 2.89543 6.10457 2 5 2ZM15 2C13.8954 2 13 2.89543 13 4C13 5.10457 13.8954 6 15 6C16.1046 6 17 5.10457 17 4C17 2.89543 16.1046 2 15 2Z"
+                          d="M0 4C0 1.79086 1.79086 0 4 0H11C13.2091 0 15 1.79086 15 4V4.07171L18.202 2.23108C19.0019 1.77121 20 2.34868 20 3.27144V10.7488C20 11.6203 19.1003 12.2012 18.306 11.8424L14.9855 10.3425C14.8118 12.3913 13.0938 14 11 14H4C1.79086 14 0 12.2091 0 10V4ZM15 8.15443L18 9.50958V4.65407L15 6.37861V8.15443ZM13 4C13 2.89543 12.1046 2 11 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H11C12.1046 12 13 11.1046 13 10V4Z"
                           fill="#387DFF" />
                       </svg>
                     </span>
-                    <span class="stat-bar__text">
-                      <span class="stat-bar__text_bold">35 904</span> пользователя
-                    </span>
-                  </li>
-                  <li class="stat-bar__item">
-                    <span class="stat-bar__icon">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <span class="new-post__label-text">Видео</span>
+                  </label>
+                  <label class="new-post__add-file-field">
+                    <input type="file" name="new-post-image">
+                    <span class="new-post__label-icon">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M5 14H15C17.7614 14 20 16.2386 20 19C20 19.5523 19.5523 20 19 20C18.4872 20 18.0645 19.614 18.0067 19.1166L17.9949 18.8237C17.907 17.3072 16.6928 16.093 15.1763 16.0051L15 16H5C3.34315 16 2 17.3431 2 19C2 19.5523 1.55228 20 1 20C0.447715 20 0 19.5523 0 19C0 16.3112 2.12231 14.1182 4.78311 14.0046L5 14ZM10 0C10.4062 0 10.8078 0.0405124 11.2004 0.120294C11.7416 0.230293 12.0912 0.75821 11.9812 1.29943C11.8712 1.84065 11.3432 2.19022 10.802 2.08022C10.5404 2.02705 10.2722 2 10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10C11.2748 10 12.4482 9.40081 13.2001 8.40038C13.5319 7.95889 14.1588 7.86999 14.6003 8.20181C15.0418 8.53363 15.1307 9.16053 14.7989 9.60202C13.6731 11.0999 11.9104 12 10 12C6.68629 12 4 9.31371 4 6C4 2.68629 6.68629 0 10 0ZM17 0C17.5523 0 18 0.447715 18 1V2H19C19.5523 2 20 2.44772 20 3C20 3.55228 19.5523 4 19 4H18V5C18 5.55228 17.5523 6 17 6C16.4477 6 16 5.55228 16 5V4H15C14.4477 4 14 3.55228 14 3C14 2.44772 14.4477 2 15 2H16V1C16 0.447715 16.4477 0 17 0Z"
-                          fill="#27AE60" />
+                          d="M6 0H16C19.3137 0 22 2.68629 22 6V16C22 19.3137 19.3137 22 16 22H6C2.68629 22 0 19.3137 0 16V6C0 2.68629 2.68629 0 6 0ZM6 2C3.79086 2 2 3.79086 2 6V16C2 18.2091 3.79086 20 6 20H16C18.2091 20 20 18.2091 20 16V6C20 3.79086 18.2091 2 16 2H6Z"
+                          fill="#39CB8A" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M2.79289 19.6949C2.40237 19.3044 2.40237 18.6712 2.79289 18.2807L7.7835 13.2901L7.79753 13.2771C8.2212 12.8846 8.87622 12.8866 9.29748 13.2817L9.29923 13.2833L10.3259 14.2507L13.6277 10.4274C14.0442 9.94522 14.7819 9.91658 15.2345 10.3651L15.2492 10.3796L21.2326 16.8193C21.6085 17.2239 21.5853 17.8567 21.1807 18.2326C20.7761 18.6085 20.1434 18.5853 19.7674 18.1807L14.4847 12.4951L11.7828 15.6235L16.1858 19.7722C16.5877 20.1509 16.6066 20.7838 16.2278 21.1858C15.8491 21.5877 15.2162 21.6066 14.8142 21.2278L8.56374 15.3383L4.20711 19.6949C3.81658 20.0854 3.18342 20.0854 2.79289 19.6949ZM8.00001 7C7.44772 7 7.00001 7.44772 7.00001 8C7.00001 8.55228 7.44772 9 8.00001 9C8.55229 9 9.00001 8.55228 9.00001 8C9.00001 7.44772 8.55229 7 8.00001 7ZM11 8C11 9.65685 9.65686 11 8.00001 11C6.34315 11 5.00001 9.65685 5.00001 8C5.00001 6.34315 6.34315 5 8.00001 5C9.65686 5 11 6.34315 11 8Z"
+                          fill="#39CB8A" />
                       </svg>
                     </span>
-                    <span class="stat-bar__text">
-                      <span class="stat-bar__text_bold">41</span> новых пользователся
+                    <span class="new-post__label-text">Фото</span>
+                  </label>
+                  <label class="new-post__add-file-field">
+                    <input type="file" name="new-post-doc">
+                    <span class="new-post__label-icon">
+                      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6H11C11.5523 6 12 5.55228 12 5C12 4.44772 11.5523 4 11 4H5Z"
+                          fill="#FF5531" />
+                        <path
+                          d="M4 9C4 8.44771 4.44772 8 5 8H11C11.5523 8 12 8.44771 12 9C12 9.55229 11.5523 10 11 10H5C4.44772 10 4 9.55229 4 9Z"
+                          fill="#FF5531" />
+                        <path
+                          d="M5 12C4.44772 12 4 12.4477 4 13C4 13.5523 4.44772 14 5 14H11C11.5523 14 12 13.5523 12 13C12 12.4477 11.5523 12 11 12H5Z"
+                          fill="#FF5531" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.625 18H16.375C18.3918 18 20 16.3435 20 14.3333V3.66667C20 1.65653 18.3918 0 16.375 0H3.625C1.60818 0 0 1.65653 0 3.66667V14.3333C0 16.3435 1.60818 18 3.625 18ZM3.625 2C2.74233 2 2 2.73129 2 3.66667V14.3333C2 15.2687 2.74233 16 3.625 16H12.375C13.2577 16 14 15.2687 14 14.3333V3.66667C14 2.73129 13.2577 2 12.375 2H3.625ZM16.375 16H15.6042C15.8575 15.4987 16 14.9317 16 14.3333V3.66667C16 3.06833 15.8575 2.50132 15.6042 2H16.375C17.2577 2 18 2.73129 18 3.66667V14.3333C18 15.2687 17.2577 16 16.375 16Z"
+                          fill="#FF5531" />
+                      </svg>
                     </span>
-                  </li>
-                </ul>
+                    <span class="new-post__label-text">Документ</span>
+                  </label>
+                </form>
               </div>
-              <div class="sidebar-right__calendar calendar-bar">
-                <div class="calendar-bar__header">
-                  <button class="calendar-bar__button-control calendar-bar__button-control_left" type="button">
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M6.66667 0.999987C6.49601 0.999987 6.32534 1.06532 6.19534 1.19532L0.862005 6.52865C0.601338 6.78932 0.601338 7.21065 0.862005 7.47132L6.19534 12.8047C6.456 13.0653 6.87734 13.0653 7.138 12.8047C7.39867 12.544 7.39867 12.1227 7.138 11.862L2.276 6.99999L7.13801 2.13799C7.39867 1.87732 7.39867 1.45599 7.13801 1.19532C7.00801 1.06532 6.83734 0.999987 6.66667 0.999987Z"
-                        fill="#A0A7B5" stroke="#A0A7B5" />
-                    </svg>
-                  </button>
-                  <div class="calendar-bar__date">
-                    <span id="calendar-month">Октябрь</span>
-                    <span id="calendar-year">2022</span>
-                  </div>
-                  <button class="calendar-bar__button-control calendar-bar__button-control_right" type="button">
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M6.66667 0.999987C6.49601 0.999987 6.32534 1.06532 6.19534 1.19532L0.862005 6.52865C0.601338 6.78932 0.601338 7.21065 0.862005 7.47132L6.19534 12.8047C6.456 13.0653 6.87734 13.0653 7.138 12.8047C7.39867 12.544 7.39867 12.1227 7.138 11.862L2.276 6.99999L7.13801 2.13799C7.39867 1.87732 7.39867 1.45599 7.13801 1.19532C7.00801 1.06532 6.83734 0.999987 6.66667 0.999987Z"
-                        fill="#A0A7B5" stroke="#A0A7B5" />
-                    </svg>
-                  </button>
-                </div>
-                <div class="calendar-bar__body">
-                  <div class="calendar-bar__day-names">
-                    <span>Пн</span>
-                    <span>Вт</span>
-                    <span>Ср</span>
-                    <span>Чт</span>
-                    <span>Пт</span>
-                    <span>Сб</span>
-                    <span>Вс</span>
-                  </div>
-                  <div class="calendar-bar__day-number">
-                    <span class="calendar-bar__day calendar-bar__day_prev">27</span>
-                    <span class="calendar-bar__day calendar-bar__day_prev">28</span>
-                    <span class="calendar-bar__day calendar-bar__day_prev">29</span>
-                    <span class="calendar-bar__day calendar-bar__day_prev">30</span>
-                    <span class="calendar-bar__day calendar-bar__day_prev">31</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">1</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">2</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">3</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">4</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">5</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">6</span>
-                    <span class="calendar-bar__day calendar-bar__day_now _active">7</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">8</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">9</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">10</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">11</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">12</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">13</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">14</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">15</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">16</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">17</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">18</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">19</span>
-                    <span class="calendar-bar__day calendar-bar__day_now _active">20</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">21</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">22</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">23</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">24</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">25</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">26</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">27</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">28</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">29</span>
-                    <span class="calendar-bar__day calendar-bar__day_now">30</span>
-                  </div>
-                </div>
-              </div>
-              <div class="sidebar-right__baner school-bar">
-                <div class="school-bar__body">
-                  <a class="school-bar__logo" href="#">
-                    <img src="@img/icons/school-logo.svg" alt="USDOK School">
+            </div>
+            <div class="page__baner">
+              <img src="@img/banner.png" alt="Banner Page">
+              <h1 class="page__title">Территория врачей</h1>
+            </div>
+            <div class="page__posts-wrapper">
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/01.jpg" alt="Post Image">
                   </a>
-                  <div class="school-bar__images">
-                    <img src="@img/school-bg.png" alt="Doctor">
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__date date-post">
+                    <span class="date-post__icon">
+                      <img src="@img/icons/clock.svg" alt="Clock Icon">
+                    </span>
+                    <span class="date-post__text">10 мин. назад</span>
                   </div>
-                  <div class="school-bar__text">Первый урок бесплатно!</div>
-                  <button class="school-bar__button" type="button">Записаться</button>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Ещё один случай из практики реаниматолога СП.
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Во время дежурства поступает вызов от фельдшерской бригады с поводом...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/01.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Терёхин К.</h4>
+                      </a>
+                      <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like" type="button">
+                    <span class="article-post__button-like-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="article-post__button-like-text">
+                      <span id="like-count">124</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/02.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__date date-post">
+                    <span class="date-post__icon">
+                      <img src="@img/icons/clock.svg" alt="Clock Icon">
+                    </span>
+                    <span class="date-post__text">2 н. назад</span>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Каннабис при cиндроме ломкой Х-хромосомы
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Спасибо Татьяне Евгеньевне Егоровой за интересную публикацию “Синдром...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/02.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Doctor News. D.</h4>
+                      </a>
+                      <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like" type="button">
+                    <span class="article-post__button-like-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="article-post__button-like-text">
+                      <span id="like-count">99</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/03.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__date date-post">
+                    <span class="date-post__icon">
+                      <img src="@img/icons/clock.svg" alt="Clock Icon">
+                    </span>
+                    <span class="date-post__text">2 н. назад</span>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      А слона-то и не заметила.
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Поделюсь одним случаем из моей практики. Около 2х лет назад я, тогда еще оч...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/03.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Девятых Т.</h4>
+                      </a>
+                      <div title="Врач ультразвуковой диагностики" class="info-user__vocation">
+                        Врач ультразвуковой диагностики
+                      </div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like" type="button">
+                    <span class="article-post__button-like-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="article-post__button-like-text">
+                      <span id="like-count">2</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/04.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__date date-post">
+                    <span class="date-post__icon">
+                      <img src="@img/icons/clock.svg" alt="Clock Icon">
+                    </span>
+                    <span class="date-post__text">10 мин. назад</span>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Баттл. ТЭЛА на фоне транексамовой кислоты
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Клинический случай. Самое интересное как всегда под вечер... За медицинской...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/06.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Бурцев А.</h4>
+                      </a>
+                      <div title="Врач Терапевт" class="info-user__vocation">Терапевт</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like" type="button">
+                    <span class="article-post__button-like-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="article-post__button-like-text">
+                      <span id="like-count">399</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/05.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__date date-post">
+                    <span class="date-post__icon">
+                      <img src="@img/icons/clock.svg" alt="Clock Icon">
+                    </span>
+                    <span class="date-post__text">10 мин. назад</span>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Лечение метастатического колоректального рака
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    17 октября 2022 г. в журнале Journal of Clinical Oncology опубликовали руко...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/05.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Кадыров Т.</h4>
+                      </a>
+                      <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like" type="button">
+                    <span class="article-post__button-like-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="article-post__button-like-text">
+                      <span id="like-count">1000</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/06.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__date date-post">
+                    <span class="date-post__icon">
+                      <img src="@img/icons/clock.svg" alt="Clock Icon">
+                    </span>
+                    <span class="date-post__text">10 мин. назад</span>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Лечение метастатического колоректального рака
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    17 октября 2022 г. в журнале Journal of Clinical Oncology опубликовали руко...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/05.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Кадыров Т.</h4>
+                      </a>
+                      <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like" type="button">
+                    <span class="article-post__button-like-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="article-post__button-like-text">
+                      <span id="like-count">100</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <aside class="page__sidebar sidebar-right">
+            <div class="sidebar-right__stat stat-bar">
+              <div class="stat-bar__header">Статистика</div>
+              <ul class="stat-bar__list">
+                <li class="stat-bar__item">
+                  <span class="stat-bar__icon">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5 10H6C7.63573 10 9.08801 10.7855 10.0002 11.9998C10.864 10.8494 12.2129 10.0839 13.7433 10.0065L14 10H15C17.7614 10 20 12.2386 20 15C20 15.5523 19.5523 16 19 16C18.4872 16 18.0645 15.614 18.0067 15.1166L17.9949 14.8237C17.907 13.3072 16.6928 12.093 15.1763 12.0051L15 12H14C12.3431 12 11 13.3431 11 15C11 15.5128 10.614 15.9355 10.1166 15.9933L10 16C9.48716 16 9.06449 15.614 9.00673 15.1166L8.99491 14.8237C8.90704 13.3072 7.69275 12.093 6.17627 12.0051L6 12H5C3.34315 12 2 13.3431 2 15C2 15.5523 1.55228 16 1 16C0.447715 16 0 15.5523 0 15C0 12.3112 2.12231 10.1182 4.78311 10.0046L5 10ZM5 0C7.20914 0 9 1.79086 9 4C9 6.20914 7.20914 8 5 8C2.79086 8 1 6.20914 1 4C1 1.79086 2.79086 0 5 0ZM15 0C17.2091 0 19 1.79086 19 4C19 6.20914 17.2091 8 15 8C12.7909 8 11 6.20914 11 4C11 1.79086 12.7909 0 15 0ZM5 2C3.89543 2 3 2.89543 3 4C3 5.10457 3.89543 6 5 6C6.10457 6 7 5.10457 7 4C7 2.89543 6.10457 2 5 2ZM15 2C13.8954 2 13 2.89543 13 4C13 5.10457 13.8954 6 15 6C16.1046 6 17 5.10457 17 4C17 2.89543 16.1046 2 15 2Z"
+                        fill="#387DFF" />
+                    </svg>
+                  </span>
+                  <span class="stat-bar__text">
+                    <span class="stat-bar__text_bold">35 904</span> пользователя
+                  </span>
+                </li>
+                <li class="stat-bar__item">
+                  <span class="stat-bar__icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5 14H15C17.7614 14 20 16.2386 20 19C20 19.5523 19.5523 20 19 20C18.4872 20 18.0645 19.614 18.0067 19.1166L17.9949 18.8237C17.907 17.3072 16.6928 16.093 15.1763 16.0051L15 16H5C3.34315 16 2 17.3431 2 19C2 19.5523 1.55228 20 1 20C0.447715 20 0 19.5523 0 19C0 16.3112 2.12231 14.1182 4.78311 14.0046L5 14ZM10 0C10.4062 0 10.8078 0.0405124 11.2004 0.120294C11.7416 0.230293 12.0912 0.75821 11.9812 1.29943C11.8712 1.84065 11.3432 2.19022 10.802 2.08022C10.5404 2.02705 10.2722 2 10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10C11.2748 10 12.4482 9.40081 13.2001 8.40038C13.5319 7.95889 14.1588 7.86999 14.6003 8.20181C15.0418 8.53363 15.1307 9.16053 14.7989 9.60202C13.6731 11.0999 11.9104 12 10 12C6.68629 12 4 9.31371 4 6C4 2.68629 6.68629 0 10 0ZM17 0C17.5523 0 18 0.447715 18 1V2H19C19.5523 2 20 2.44772 20 3C20 3.55228 19.5523 4 19 4H18V5C18 5.55228 17.5523 6 17 6C16.4477 6 16 5.55228 16 5V4H15C14.4477 4 14 3.55228 14 3C14 2.44772 14.4477 2 15 2H16V1C16 0.447715 16.4477 0 17 0Z"
+                        fill="#27AE60" />
+                    </svg>
+                  </span>
+                  <span class="stat-bar__text">
+                    <span class="stat-bar__text_bold">41</span> новых пользователся
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="sidebar-right__calendar calendar-bar">
+              <div class="calendar-bar__header">
+                <button class="calendar-bar__button-control calendar-bar__button-control_left" type="button">
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.66667 0.999987C6.49601 0.999987 6.32534 1.06532 6.19534 1.19532L0.862005 6.52865C0.601338 6.78932 0.601338 7.21065 0.862005 7.47132L6.19534 12.8047C6.456 13.0653 6.87734 13.0653 7.138 12.8047C7.39867 12.544 7.39867 12.1227 7.138 11.862L2.276 6.99999L7.13801 2.13799C7.39867 1.87732 7.39867 1.45599 7.13801 1.19532C7.00801 1.06532 6.83734 0.999987 6.66667 0.999987Z"
+                      fill="#A0A7B5" stroke="#A0A7B5" />
+                  </svg>
+                </button>
+                <div class="calendar-bar__date">
+                  <span id="calendar-month">Октябрь</span>
+                  <span id="calendar-year">2022</span>
+                </div>
+                <button class="calendar-bar__button-control calendar-bar__button-control_right" type="button">
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.66667 0.999987C6.49601 0.999987 6.32534 1.06532 6.19534 1.19532L0.862005 6.52865C0.601338 6.78932 0.601338 7.21065 0.862005 7.47132L6.19534 12.8047C6.456 13.0653 6.87734 13.0653 7.138 12.8047C7.39867 12.544 7.39867 12.1227 7.138 11.862L2.276 6.99999L7.13801 2.13799C7.39867 1.87732 7.39867 1.45599 7.13801 1.19532C7.00801 1.06532 6.83734 0.999987 6.66667 0.999987Z"
+                      fill="#A0A7B5" stroke="#A0A7B5" />
+                  </svg>
+                </button>
+              </div>
+              <div class="calendar-bar__body">
+                <div class="calendar-bar__day-names">
+                  <span>Пн</span>
+                  <span>Вт</span>
+                  <span>Ср</span>
+                  <span>Чт</span>
+                  <span>Пт</span>
+                  <span>Сб</span>
+                  <span>Вс</span>
+                </div>
+                <div class="calendar-bar__day-number">
+                  <span class="calendar-bar__day calendar-bar__day_prev">27</span>
+                  <span class="calendar-bar__day calendar-bar__day_prev">28</span>
+                  <span class="calendar-bar__day calendar-bar__day_prev">29</span>
+                  <span class="calendar-bar__day calendar-bar__day_prev">30</span>
+                  <span class="calendar-bar__day calendar-bar__day_prev">31</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">1</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">2</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">3</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">4</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">5</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">6</span>
+                  <span class="calendar-bar__day calendar-bar__day_now _active">7</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">8</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">9</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">10</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">11</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">12</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">13</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">14</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">15</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">16</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">17</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">18</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">19</span>
+                  <span class="calendar-bar__day calendar-bar__day_now _active">20</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">21</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">22</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">23</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">24</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">25</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">26</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">27</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">28</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">29</span>
+                  <span class="calendar-bar__day calendar-bar__day_now">30</span>
                 </div>
               </div>
-            </aside>
-          </div>
-        </main>
-      </div>
+            </div>
+            <div class="sidebar-right__baner school-bar">
+              <div class="school-bar__body">
+                <a class="school-bar__logo" href="#">
+                  <img src="@img/icons/school-logo.svg" alt="USDOK School">
+                </a>
+                <div class="school-bar__images">
+                  <img src="@img/school-bg.png" alt="Doctor">
+                </div>
+                <div class="school-bar__text">Первый урок бесплатно!</div>
+                <button class="school-bar__button" type="button">Записаться</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main> 
     </div>
-    @@include('html/modals/registrationPopup.html', {})
   </div>
   @@include('html/script.html', {})
 </body>
