@@ -1,0 +1,107 @@
+.new-post {
+  padding: rem(20);
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: rem(20);
+  // .new-post__body
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    column-gap: rem(10);
+  }
+  // .new-post__user-avatar
+  &__user-avatar {
+    flex: 0 0 rem(44);
+    border-radius: 50%;
+    overflow: hidden;
+    height: rem(44);
+    border: rem(2) solid #f6f7f9;
+    background: #f9fafc;
+    position: relative;
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms ease-in-out;
+    }
+  }
+  // .new-post__form-action
+  &__form-action {
+    display: flex;
+    align-items: flex-start;
+    column-gap: rem(30);
+    width: 100%;
+  }
+  // .new-post__text-control
+  &__text-control {
+    flex: 1 1 rem(624);
+    height: rem(44);
+    max-height: rem(400);
+    resize: none;
+    background-color: #f6f7f9;
+    border-radius: rem(6);
+    border-radius: rem(10);
+    padding: rem(14) rem(10);
+    margin-right: rem(-10);
+    transition: $standartTrans;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    
+    font-weight: 500;
+    font-size: rem(12);
+    color: #a0a7b5;
+    @include styledPlaceholder(#a0a7b5);
+    @include hidePlaceholder();
+    &:focus {
+      background-color: darken(#f6f7f9, 3%);
+      box-shadow: 0 0 0 rem(2) rgba($blueColor, 60%);
+      color: #000;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  // .new-post__add-file-field
+  &__add-file-field {
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+    padding: rem(10);
+    height: rem(44);
+    transition: $standartTrans;
+    border-radius: rem(10);
+    cursor: pointer;
+    &:hover {
+      background-color: #f6f7f9;
+    }
+    &:active {
+      background-color: darken(#f6f7f9, 10%);
+    }
+    input {
+      display: none;
+    }
+  }
+  // .new-post__label-icon
+  &__label-icon {
+    width: rem(24);
+    height: rem(24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .new-post__label-text
+  &__label-text {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: prc(12, 14);
+    color: #4e5e78;
+  }
+}
