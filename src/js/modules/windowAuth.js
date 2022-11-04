@@ -16,25 +16,28 @@ export const windowAuth = () => {
     toggleElementsWindowsAuth(isLogin)
   })
 
-  windowAuth.addEventListener('click', (event) => {
-    const target = event.target
-
-    if (
-      target &&
-      (target === windowAuth || target.closest('.modal__button-close'))
-    ) {
-      windowAuth.classList.remove('_show')
-      bodyUnLock()
-    }
-
-    if (target && target === authLink) {
-      isLogin = false
-      toggleElementsWindowsAuth(isLogin)
-    }
-
-    if (target && target === loginLink) {
-      isLogin = true
-      toggleElementsWindowsAuth(isLogin)
-    }
-  })
+  if (windowAuth) {
+    windowAuth.addEventListener('click', (event) => {
+      const target = event.target
+  
+      if (
+        target &&
+        (target === windowAuth || target.closest('.modal__button-close'))
+      ) {
+        windowAuth.classList.remove('_show')
+        bodyUnLock()
+      }
+  
+      if (target && target === authLink) {
+        isLogin = false
+        toggleElementsWindowsAuth(isLogin)
+      }
+  
+      if (target && target === loginLink) {
+        isLogin = true
+        toggleElementsWindowsAuth(isLogin)
+      }
+    })
+  }
+  
 }
