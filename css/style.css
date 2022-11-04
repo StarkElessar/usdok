@@ -837,6 +837,10 @@ body._lock {
           flex: 1 1 auto;
 }
 
+.menu._hide .menu__count-notification {
+  display: none;
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
