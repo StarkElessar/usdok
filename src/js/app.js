@@ -1,5 +1,7 @@
-import { isWebp, headerFixed } from './modules'
+import { isWebp } from './modules'
 import { windowAuth } from './modules/windowAuth'
+import { textareaHeightAuto } from './helpers/textareaHeightAuto'
+import { authenticate } from './modules/authenticate'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -18,3 +20,8 @@ isWebp()
 // headerFixed()
 // ====================================================================================================================================================
 windowAuth()
+textareaHeightAuto('#new-post', 44)
+
+let isAuth = true
+
+authenticate(isAuth)
