@@ -22,6 +22,6 @@ isWebp()
 windowAuth()
 textareaHeightAuto('#new-post', 44)
 
-let isAuth = true
+let isAuth = location.pathname !== '/'
 
 authenticate(isAuth)
