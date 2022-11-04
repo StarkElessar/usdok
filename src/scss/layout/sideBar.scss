@@ -73,6 +73,20 @@
     line-height: prc(19, 16);
     color: $darkBlueColor;
   }
+  // .menu__count-notification
+  &__count-notification {
+    flex: 0 0 rem(24);
+    background-color: $redColor;
+    border-radius: 50%;
+    color: #fff;
+    height: rem(24);
+    line-height: rem(24);
+    text-align: center;
+
+    font-weight: 600;
+    font-size: rem(14);
+    margin-left: rem(-4);
+  }
 }
 .info {
   display: flex;
