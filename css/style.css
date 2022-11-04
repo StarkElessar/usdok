@@ -216,15 +216,23 @@ body._lock {
 .page__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(20rem, 1fr) minmax(20rem, 22.3125rem);
-  grid-template-columns: minmax(20rem, 1fr) minmax(20rem, 22.3125rem);
   background-color: #f9fafc;
   border-radius: 1.875rem 1.875rem 0 0;
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
+}
+
+.page__container_2-column {
+  -ms-grid-columns: minmax(20rem, 1fr) minmax(20rem, 22.3125rem);
+  grid-template-columns: minmax(20rem, 1fr) minmax(20rem, 22.3125rem);
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem;
+}
+
+.page__container_1-column {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 .page__new-post {
@@ -1899,7 +1907,7 @@ body._lock {
 }
 
 @media (max-width: 1024.98px) {
-  .page__container {
+  .page__container_2-column {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto auto;
