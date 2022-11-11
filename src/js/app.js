@@ -1,6 +1,7 @@
 import { isWebp } from './modules'
-import { windowAuth } from './modules/windowAuth'
+import { toggleWindowAuth } from './modules/toggleWindowAuth'
 import { textareaHeightAuto } from './helpers/textareaHeightAuto'
+import { toggleBurgerMenu } from './modules/toggleBurgerMenu'
 import { authenticate } from './modules/authenticate'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
@@ -26,6 +27,7 @@ const isAuth = isDev ? pathname === '/' : pathname === '/usdok/'
 
 console.log(isDev, isAuth);
 
-isAuth && windowAuth()
+isAuth && toggleWindowAuth()
 // authenticate(isAuth)
 textareaHeightAuto('#new-post', 44)
+toggleBurgerMenu()
