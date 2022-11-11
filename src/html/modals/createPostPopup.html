@@ -15,15 +15,31 @@
     <form class="create-popup__form-action" id="createPostForm">
       <div class="create-popup__field">
         <label class="create-popup__label" for="postTheme">Выбрать тему</label>
-        <input class="create-popup__input" type="text" id="postTheme">
+        <div class="create-popup__dropdown custom-dropdown">
+          <button class="custom-dropdown__btn" type="button" id="button-dropdown">
+            <span class="custom-dropdown__label">Выберите группу</span>
+            <span class="custom-dropdown__icon">
+              <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8849 0.294983L6.29492 4.87498L1.70492 0.294983L0.294922 1.70498L6.29492 7.70498L12.2949 1.70498L10.8849 0.294983Z" fill="black"/>
+              </svg>
+            </span>
+          </button>
+          <ul class="custom-dropdown__list  select-list" id="dropdown-list">
+            <li data-value="Кинокомедии" class="select-list__item">Кинокомедии</li>
+            <li data-value="Боевики" class="select-list__item">Боевики</li>
+            <li data-value="Драма - мелодрама" class="select-list__item">Драма - мелодрама</li>
+            <li data-value="Фантастика" class="select-list__item">Фантастика</li>
+          </ul>
+          <input type="hidden" value="" id="dropdown-input" name="postTheme">
+        </div>
       </div>
       <div class="create-popup__field">
         <label class="create-popup__label" for="postTitle">Название публикации</label>
-        <input class="create-popup__input" type="text" id="postTitle">
+        <input class="create-popup__input" type="text" id="postTitle" name="postTitle">
       </div>
       <div class="create-popup__field create-popup__field_grid">
         <label class="new-post__add-file-field new-post__add-file-field_video">
-          <input type="file" name="new-post-video">
+          <input type="file" name="postVideo">
           <span class="new-post__label-icon">
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -34,7 +50,7 @@
           <span class="new-post__label-text">Видео</span>
         </label>
         <label class="new-post__add-file-field new-post__add-file-field_image">
-          <input type="file" name="new-post-image">
+          <input type="file" name="postImage">
           <span class="new-post__label-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -48,7 +64,7 @@
           <span class="new-post__label-text">Фото</span>
         </label>
         <label class="new-post__add-file-field new-post__add-file-field_doc">
-          <input type="file" name="new-post-doc">
+          <input type="file" name="postDoc">
           <span class="new-post__label-icon">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
