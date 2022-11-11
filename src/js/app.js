@@ -20,8 +20,12 @@ isWebp()
 // headerFixed()
 // ====================================================================================================================================================
 windowAuth()
-textareaHeightAuto('#new-post', 44)
 
-let isAuth = location.pathname !== '/'
+const { pathname } = location
+const isDev = location.href === 'http://localhost:3000/'
+const isAuth = isDev ? pathname !== '/' : pathname !== '/usdok/'
+
+console.log(isDev);
 
 authenticate(isAuth)
+textareaHeightAuto('#new-post', 44)
