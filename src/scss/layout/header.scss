@@ -39,6 +39,11 @@
     &._hide {
       display: none;
     }
+    .button__text {
+      @include media(425) {
+        display: none;
+      }
+    }
   }
   // .header__profile
   &__profile {
