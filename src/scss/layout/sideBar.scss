@@ -7,17 +7,75 @@
   @include media(1150) {
     padding-top: 0;
   }
+  @include media(768) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#fff, 10%);
+    opacity: 0;
+    visibility: hidden;
+    transition: $standartTrans;
+  }
+  &._show {
+    opacity: 1;
+    visibility: visible;
+    @include media(768) {
+      .sidebar__container {
+        background-color: #fff;
+        min-height: auto;
+        padding: 0;
+        box-shadow: 0 rem(4) rem(10) rgba(#000, 10%);
+        transform: translateY(0);
+        opacity: 1;
+      }
+      .menu {
+        flex: 0 0 auto;
+        &__list {
+          row-gap: 0;
+        }
+        &__item {
+          @include notFirst {
+            border-top: rem(2) solid rgba(#000, 2%);
+          }
+        }
+        &__link {
+          border-radius: 0;
+        }
+        &__icon {
+          flex: 0 0 rem(30);
+          height: rem(30);
+        }
+        &__text {
+          display: block;
+        }
+        &__count-notification {
+          position: relative;
+          margin-left: auto;
+        }
+      }
+    }
+  }
   // .sidebar__container
   &__container {
     display: flex;
     flex-direction: column;
     min-height: 100%;
     row-gap: rem(30);
+    @include media(768) {
+      transform: translateY(rem(-200));
+      transition: $standartTrans;
+      opacity: 0;
+    }
   }
   // .sidebar__menu
-  &__menu { }
+  &__menu {
+  }
   // .sidebar__bottom
-  &__bottom { }
+  &__bottom {
+  }
 }
 .menu {
   flex: 1 1 auto;
@@ -52,13 +110,34 @@
       padding: rem(16);
     }
     &:hover {
-      background-color: #F6F7F9;
+      background-color: #f6f7f9;
     }
     &:active {
-      background-color: darken(#F6F7F9, 3%);
+      background-color: darken(#f6f7f9, 3%);
+    }
+    &_user {
+      display: none;
+      @include media(768) {
+        display: flex;
+        
+        .menu__icon {
+          border-radius: 50%;
+          overflow: hidden;
+          flex: 0 0 rem(30);
+          height: rem(30);
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .menu__text {
+          font-weight: 700;
+        }
+      }
     }
     &._active {
-      background-color: #F6F7F9;
+      background-color: #f6f7f9;
       .menu__icon {
         svg {
           path {
@@ -72,7 +151,7 @@
     }
   }
   // .menu__icon
-  &__icon { 
+  &__icon {
     width: rem(20);
     height: rem(20);
     display: flex;
@@ -98,7 +177,7 @@
     height: rem(24);
     background-color: $redColor;
     border-radius: 50%;
-    
+
     line-height: rem(24);
     text-align: center;
     color: #fff;
