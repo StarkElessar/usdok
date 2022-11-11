@@ -3,6 +3,7 @@ import { toggleWindowAuth } from './modules/toggleWindowAuth'
 import { textareaHeightAuto } from './helpers/textareaHeightAuto'
 import { toggleBurgerMenu } from './modules/toggleBurgerMenu'
 import { authenticate } from './modules/authenticate'
+import { toggleCreatePostPopup } from './modules/toggleCreatePostPopup'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -31,3 +32,4 @@ isAuth && toggleWindowAuth()
 // authenticate(isAuth)
 textareaHeightAuto('#new-post', 44)
 toggleBurgerMenu()
+toggleCreatePostPopup()
