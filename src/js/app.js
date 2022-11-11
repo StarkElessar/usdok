@@ -19,13 +19,13 @@ isWebp()
 // Фиксированный header ====================================================================================================================================================
 // headerFixed()
 // ====================================================================================================================================================
-windowAuth()
 
 const { pathname } = location
 const isDev = location.href === 'http://localhost:3000/'
-const isAuth = isDev ? pathname !== '/' : pathname !== '/usdok/'
+const isAuth = isDev ? pathname === '/' : pathname === '/usdok/'
 
-console.log(isDev);
+console.log(isDev, isAuth);
 
-authenticate(isAuth)
+isAuth && windowAuth()
+// authenticate(isAuth)
 textareaHeightAuto('#new-post', 44)
