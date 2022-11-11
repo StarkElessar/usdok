@@ -4,16 +4,47 @@
 'title': 'Главная'
 })
 
-<body>
+<body class="_no-auth">
   <div class="wrapper">
     @@include('html/header.html', {})
     <div class="wrapper__content">
-      @@include('html/sideBar.html', {})
+      <aside class="sidebar " id="sidebar">
+        <div class="sidebar__container">
+          <nav class="sidebar__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link _active" href="#" title="Открыть ленту новостей">
+                  <span class="menu__icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 0C1.34315 0 0 1.34315 0 3V6C0 7.65685 1.34315 9 3 9H6C7.65685 9 9 7.65685 9 6V3C9 1.34315 7.65685 0 6 0H3ZM2 3C2 2.44772 2.44772 2 3 2H6C6.55228 2 7 2.44772 7 3V6C7 6.55228 6.55228 7 6 7H3C2.44772 7 2 6.55228 2 6V3Z"
+                        fill="#2B3450" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14 0C12.3431 0 11 1.34315 11 3V6C11 7.65685 12.3431 9 14 9H17C18.6569 9 20 7.65685 20 6V3C20 1.34315 18.6569 0 17 0H14ZM13 3C13 2.44772 13.4477 2 14 2H17C17.5523 2 18 2.44772 18 3V6C18 6.55228 17.5523 7 17 7H14C13.4477 7 13 6.55228 13 6V3Z"
+                        fill="#2B3450" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 14C0 12.3431 1.34315 11 3 11H6C7.65685 11 9 12.3431 9 14V17C9 18.6569 7.65685 20 6 20H3C1.34315 20 0 18.6569 0 17V14ZM3 13C2.44772 13 2 13.4477 2 14V17C2 17.5523 2.44772 18 3 18H6C6.55228 18 7 17.5523 7 17V14C7 13.4477 6.55228 13 6 13H3Z"
+                        fill="#2B3450" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14 11C12.3431 11 11 12.3431 11 14V17C11 18.6569 12.3431 20 14 20H17C18.6569 20 20 18.6569 20 17V14C20 12.3431 18.6569 11 17 11H14ZM13 14C13 13.4477 13.4477 13 14 13H17C17.5523 13 18 13.4477 18 14V17C18 17.5523 17.5523 18 17 18H14C13.4477 18 13 17.5523 13 17V14Z"
+                        fill="#2B3450" />
+                    </svg>
+                  </span>
+                  <span class="menu__text">Лента</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
       <main class="page">
         <div class="page__container page__container_2-column">
           <div class="page__content">
             <div class="page__baner">
-              <img src="@img/banner.png" alt="Banner Page">
+              <picture>
+                <source srcset="@img/banner-mobile.jpg" media="(max-width: 425.98px)">
+                <img src="@img/banner.png" alt="Banner Page">
+              </picture>
               <h1 class="page__title">Территория врачей</h1>
             </div>
             <div class="page__posts-wrapper">
@@ -24,11 +55,17 @@
                   </a>
                 </div>
                 <div class="article-post__body">
-                  <div class="article-post__date date-post">
-                    <span class="date-post__icon">
-                      <img src="@img/icons/clock.svg" alt="Clock Icon">
-                    </span>
-                    <span class="date-post__text">10 мин. назад</span>
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Коллеги, помогите
+                    </button>
                   </div>
                   <a href="#" class="article-post__link-title">
                     <h3 class="article-post__title">
@@ -91,11 +128,17 @@
                   </a>
                 </div>
                 <div class="article-post__body">
-                  <div class="article-post__date date-post">
-                    <span class="date-post__icon">
-                      <img src="@img/icons/clock.svg" alt="Clock Icon">
-                    </span>
-                    <span class="date-post__text">2 н. назад</span>
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Частный случай
+                    </button>
                   </div>
                   <a href="#" class="article-post__link-title">
                     <h3 class="article-post__title">
@@ -158,11 +201,17 @@
                   </a>
                 </div>
                 <div class="article-post__body">
-                  <div class="article-post__date date-post">
-                    <span class="date-post__icon">
-                      <img src="@img/icons/clock.svg" alt="Clock Icon">
-                    </span>
-                    <span class="date-post__text">2 н. назад</span>
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Частный случай
+                    </button>
                   </div>
                   <a href="#" class="article-post__link-title">
                     <h3 class="article-post__title">
@@ -227,11 +276,17 @@
                   </a>
                 </div>
                 <div class="article-post__body">
-                  <div class="article-post__date date-post">
-                    <span class="date-post__icon">
-                      <img src="@img/icons/clock.svg" alt="Clock Icon">
-                    </span>
-                    <span class="date-post__text">10 мин. назад</span>
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Случай в больнице
+                    </button>
                   </div>
                   <a href="#" class="article-post__link-title">
                     <h3 class="article-post__title">
@@ -294,11 +349,17 @@
                   </a>
                 </div>
                 <div class="article-post__body">
-                  <div class="article-post__date date-post">
-                    <span class="date-post__icon">
-                      <img src="@img/icons/clock.svg" alt="Clock Icon">
-                    </span>
-                    <span class="date-post__text">10 мин. назад</span>
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Коллеги, помогите
+                    </button>
                   </div>
                   <a href="#" class="article-post__link-title">
                     <h3 class="article-post__title">
@@ -361,11 +422,17 @@
                   </a>
                 </div>
                 <div class="article-post__body">
-                  <div class="article-post__date date-post">
-                    <span class="date-post__icon">
-                      <img src="@img/icons/clock.svg" alt="Clock Icon">
-                    </span>
-                    <span class="date-post__text">10 мин. назад</span>
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Коллеги, помогите
+                    </button>
                   </div>
                   <a href="#" class="article-post__link-title">
                     <h3 class="article-post__title">
@@ -453,74 +520,74 @@
                 </li>
               </ul>
             </div>
-            <div class="sidebar-right__calendar calendar-bar">
-              <div class="calendar-bar__header">
-                <button class="calendar-bar__button-control calendar-bar__button-control_left" type="button">
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M6.66667 0.999987C6.49601 0.999987 6.32534 1.06532 6.19534 1.19532L0.862005 6.52865C0.601338 6.78932 0.601338 7.21065 0.862005 7.47132L6.19534 12.8047C6.456 13.0653 6.87734 13.0653 7.138 12.8047C7.39867 12.544 7.39867 12.1227 7.138 11.862L2.276 6.99999L7.13801 2.13799C7.39867 1.87732 7.39867 1.45599 7.13801 1.19532C7.00801 1.06532 6.83734 0.999987 6.66667 0.999987Z"
-                      fill="#A0A7B5" stroke="#A0A7B5" />
-                  </svg>
-                </button>
-                <div class="calendar-bar__date">
-                  <span id="calendar-month">Октябрь</span>
-                  <span id="calendar-year">2022</span>
-                </div>
-                <button class="calendar-bar__button-control calendar-bar__button-control_right" type="button">
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M6.66667 0.999987C6.49601 0.999987 6.32534 1.06532 6.19534 1.19532L0.862005 6.52865C0.601338 6.78932 0.601338 7.21065 0.862005 7.47132L6.19534 12.8047C6.456 13.0653 6.87734 13.0653 7.138 12.8047C7.39867 12.544 7.39867 12.1227 7.138 11.862L2.276 6.99999L7.13801 2.13799C7.39867 1.87732 7.39867 1.45599 7.13801 1.19532C7.00801 1.06532 6.83734 0.999987 6.66667 0.999987Z"
-                      fill="#A0A7B5" stroke="#A0A7B5" />
-                  </svg>
-                </button>
+            <div class="sidebar-right__event event-bar">
+              <div class="event-bar__header">
+                <span class="event-bar__header-text">События</span>
+                <a class="event-bar__header-link" href="#">Все события</a>
               </div>
-              <div class="calendar-bar__body">
-                <div class="calendar-bar__day-names">
-                  <span>Пн</span>
-                  <span>Вт</span>
-                  <span>Ср</span>
-                  <span>Чт</span>
-                  <span>Пт</span>
-                  <span>Сб</span>
-                  <span>Вс</span>
-                </div>
-                <div class="calendar-bar__day-number">
-                  <span class="calendar-bar__day calendar-bar__day_prev">27</span>
-                  <span class="calendar-bar__day calendar-bar__day_prev">28</span>
-                  <span class="calendar-bar__day calendar-bar__day_prev">29</span>
-                  <span class="calendar-bar__day calendar-bar__day_prev">30</span>
-                  <span class="calendar-bar__day calendar-bar__day_prev">31</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">1</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">2</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">3</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">4</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">5</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">6</span>
-                  <span class="calendar-bar__day calendar-bar__day_now _active">7</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">8</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">9</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">10</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">11</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">12</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">13</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">14</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">15</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">16</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">17</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">18</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">19</span>
-                  <span class="calendar-bar__day calendar-bar__day_now _active">20</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">21</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">22</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">23</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">24</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">25</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">26</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">27</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">28</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">29</span>
-                  <span class="calendar-bar__day calendar-bar__day_now">30</span>
-                </div>
+              <div class="event-bar__body">
+                <ul class="event-bar__list">
+                  <li class="event-bar__item">
+                    <div class="event-bar__block block-event">
+                      <div class="block-event__user-img">
+                        <img src="@img/users/03.png" alt="Девятых Т.">
+                      </div>
+                      <div class="block-event__user-name">Девятых Т.</div>
+                      <div class="block-event__user-vocation">Реаниматолог</div>
+                      <div class="block-event__date date-post">
+                        <span class="date-post__icon">
+                          <img src="@img/icons/clock.svg" alt="Clock Icon">
+                        </span>
+                        <span class="date-post__text">1 д. назад</span>
+                      </div>
+                      <div class="block-event__body">
+                        <p>
+                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="event-bar__item">
+                    <div class="event-bar__block block-event">
+                      <div class="block-event__user-img">
+                        <img src="@img/users/02.png" alt="Девятых Т.">
+                      </div>
+                      <div class="block-event__user-name">Doctor News. D.</div>
+                      <div class="block-event__user-vocation">Реаниматолог</div>
+                      <div class="block-event__date date-post">
+                        <span class="date-post__icon">
+                          <img src="@img/icons/clock.svg" alt="Clock Icon">
+                        </span>
+                        <span class="date-post__text">19 д. назад</span>
+                      </div>
+                      <div class="block-event__body">
+                        <p>
+                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="event-bar__item">
+                    <div class="event-bar__block block-event">
+                      <div class="block-event__user-img">
+                        <img src="@img/users/01.png" alt="Терёхин К.">
+                      </div>
+                      <div class="block-event__user-name">Терёхин К.</div>
+                      <div class="block-event__user-vocation">Реаниматолог</div>
+                      <div class="block-event__date date-post">
+                        <span class="date-post__icon">
+                          <img src="@img/icons/clock.svg" alt="Clock Icon">
+                        </span>
+                        <span class="date-post__text">19 д. назад</span>
+                      </div>
+                      <div class="block-event__body">
+                        <p>
+                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="sidebar-right__baner school-bar">
@@ -539,6 +606,7 @@
         </div>
       </main>
     </div>
+    @@include('html/footer.html', {})
     @@include('html/modals/registrationPopup.html', {})
   </div>
   @@include('html/script.html', {})
