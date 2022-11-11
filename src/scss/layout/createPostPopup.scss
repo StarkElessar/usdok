@@ -67,6 +67,10 @@
     line-height: prc(17, 14);
     color: #2b3450;
   }
+  // .create-popup__dropdown
+  &__dropdown {
+
+  }
   // .create-popup__input
   &__input {
     padding: rem(16) rem(10);
@@ -80,7 +84,8 @@
       height: rem(44);
     }
     &:focus {
-      box-shadow: 0 0 0 rem(2) rgba($blueColor, 30%);
+      box-shadow: 0 0 0 rem(2) rgba($blueColor, 60%);
+      border-color: transparent;
     }
   }
   // .create-popup__textarea
