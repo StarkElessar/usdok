@@ -83,9 +83,17 @@
 }
 
 // !styled placeholder for TextArea
-@mixin styledPlaceholderTextarea($color) {
-  &:-moz-placeholder { color: $color; }
-  &::-webkit-input-placeholder { color: $color; }
+@mixin styledPlaceholderTextarea($color, $fontSize: inherit, $lineHeight: normal) {
+  &:-moz-placeholder { 
+    color: $color; 
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
+  &::-webkit-input-placeholder { 
+    color: $color; 
+    font-size: $fontSize;
+    line-height: $lineHeight;
+  }
 }
 
 // !media
