@@ -46,9 +46,6 @@
     line-height: prc(17, 14);
     font-weight: 600;
     text-align: center;
-    @include media(425) {
-      display: none;
-    }
   }
   // .button__icon
   &__icon {
