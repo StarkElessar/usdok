@@ -195,6 +195,7 @@ body._lock {
           flex-direction: column;
   min-height: 100%;
   overflow: hidden;
+  background: #f9fafc;
 }
 
 .wrapper__content {
@@ -217,7 +218,7 @@ body._lock {
   display: -ms-grid;
   display: grid;
   background-color: #f9fafc;
-  border-radius: 1.875rem 1.875rem 0 0;
+  border-radius: 1.875rem;
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
 }
@@ -477,15 +478,22 @@ body._lock {
   background-color: #055cff;
 }
 
-.calendar-bar {
-  width: 100%;
+.event-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #fff;
-  border-radius: 0.625rem;
+  border-radius: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
-.calendar-bar__header {
-  height: 3.75rem;
-  padding: 0 1.25rem;
+.event-bar__header {
+  padding: 0.9375rem 1.25rem;
+  border-bottom: 0.125rem solid #f9fafc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,37 +505,29 @@ body._lock {
           justify-content: space-between;
 }
 
-.calendar-bar__button-control {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: transparent;
-  -webkit-transition: all 280ms ease-in-out 0ms;
-  -o-transition: all 280ms ease-in-out 0ms;
-  transition: all 280ms ease-in-out 0ms;
-  border-radius: 0.375rem;
+.event-bar__header-text {
+  font-weight: 800;
+  line-height: 150%;
 }
 
-.calendar-bar__button-control:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+.event-bar__header-link {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 150%;
+  color: #ff5531;
 }
 
-.calendar-bar__button-control:active {
-  background-color: rgba(0, 0, 0, 0.06);
+.event-bar__body {
+  padding: 1.25rem 1.25rem 0;
+  overflow-y: auto;
+  height: 22.5rem;
 }
 
-.calendar-bar__button-control_right svg {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+.event-bar__body::-webkit-scrollbar {
+  display: none;
 }
 
-.calendar-bar__date {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 118.75%;
-}
-
-.calendar-bar__body {
+.event-bar__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,79 +535,76 @@ body._lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 2.25rem 1.25rem;
+  row-gap: 0.625rem;
 }
 
-.calendar-bar__day-names {
-  font-weight: 700;
-  font-size: 0.625rem;
-  text-align: center;
-  line-height: 120%;
+.block-event {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (2.5rem)[7];
-  grid-template-columns: repeat(7, 2.5rem);
-  -ms-grid-rows: 2.5rem;
-  grid-template-rows: 2.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-grid-columns: 1.75rem 1fr auto;
+  grid-template-columns: 1.75rem 1fr auto;
+  -ms-grid-rows: auto auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 0.25rem;
+  padding: 0.625rem;
+  background-color: #f6f7f9;
+  border-radius: 0.625rem;
+  overflow: hidden;
 }
 
-.calendar-bar__day-number {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (2.5rem)[7];
-  grid-template-columns: repeat(7, 2.5rem);
-  -ms-grid-rows: (2.5rem)[5];
-  grid-template-rows: repeat(5, 2.5rem);
-  cursor: pointer;
-}
-
-.calendar-bar__day {
+.block-event__user-img {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+  border-radius: 50%;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 121.4285714286%;
-  -webkit-transition: all 280ms ease-in-out 0ms;
-  -o-transition: all 280ms ease-in-out 0ms;
-  transition: all 280ms ease-in-out 0ms;
-  border-radius: 0.375rem;
 }
 
-.calendar-bar__day:hover {
-  background-color: rgba(0, 0, 0, 0.03);
-}
-
-.calendar-bar__day._active {
-  color: #fff;
-  background-color: #387dff;
-  border-radius: 50%;
-}
-
-.calendar-bar__day_prev {
-  color: #a0a7b5;
-}
-
-.calendar-bar__day_now {
+.block-event__user-name {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 100%;
   color: #2b3450;
+}
+
+.block-event__user-vocation {
+  font-size: 0.75rem;
+  line-height: 100%;
+  color: #2b3450;
+}
+
+.block-event__date {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 1;
+  grid-column-end: 4;
+}
+
+.block-event__body {
+  margin-top: 0.5rem;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 3;
+  grid-column-end: 4;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 150%;
+  color: #4e5e78;
 }
 
 .header {
   width: 100%;
+  background-color: #fff;
 }
 
 .header__container {
@@ -943,65 +940,6 @@ body._lock {
   margin-left: -0.25rem;
 }
 
-.info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1.375rem;
-}
-
-.info__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-}
-
-.info__link:hover .info__text {
-  color: #697386;
-}
-
-.info__link:hover .info__icon svg path {
-  fill: #697386;
-}
-
-.info__icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.info__icon svg path {
-  -webkit-transition: all 280ms ease-in-out 0ms;
-  -o-transition: all 280ms ease-in-out 0ms;
-  transition: all 280ms ease-in-out 0ms;
-}
-
-.info__text {
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 121.4285714286%;
-  color: #a0a7b5;
-  -webkit-transition: all 280ms ease-in-out 0ms;
-  -o-transition: all 280ms ease-in-out 0ms;
-  transition: all 280ms ease-in-out 0ms;
-}
-
 .article-post {
   background-color: #fff;
   border-radius: 1.25rem;
@@ -1049,6 +987,19 @@ body._lock {
   transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
 }
 
+.article-post__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.75rem;
+}
+
 .article-post__body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -1062,6 +1013,28 @@ body._lock {
           flex-direction: column;
   row-gap: 0.625rem;
   padding: 0.625rem 0.9375rem;
+}
+
+.article-post__button-tag {
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+  border: 0.0625rem solid #4e5e78;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 125%;
+  color: #4e5e78;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+}
+
+.article-post__button-tag:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.article-post__button-tag:active {
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 .article-post__title {
@@ -1808,7 +1781,7 @@ body._lock {
 
 .footer {
   padding: 1.25rem 0;
-  background: #131313;
+  background-color: #fff;
 }
 
 .footer__container {
@@ -1818,6 +1791,65 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.375rem;
+}
+
+.info__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.info__link:hover .info__text {
+  color: #697386;
+}
+
+.info__link:hover .info__icon svg path {
+  fill: #697386;
+}
+
+.info__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info__icon svg path {
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+}
+
+.info__text {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 121.4285714286%;
+  color: #a0a7b5;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
 }
 
 @media (min-width: 72.5em) {
@@ -1921,6 +1953,10 @@ body._lock {
     grid-column-end: 4;
   }
 
+  .page__sidebar {
+    margin-top: 1.25rem;
+  }
+
   .sidebar-right {
     -ms-grid-column: 1;
         grid-column-start: 1;
@@ -1930,8 +1966,26 @@ body._lock {
 }
 
 @media (max-width: 768.98px) {
+  body._no-auth .sidebar {
+    display: none;
+  }
+
+  .wrapper__content {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding-right: 0;
+  }
+
   .logo {
     width: 2.25rem;
+  }
+
+  .header__container {
+    -ms-grid-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto;
   }
 
   .modal__body {
@@ -2004,6 +2058,40 @@ body._lock {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+}
+
+@media (max-width: 425.98px) {
+  .page__container {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+  }
+
+  .header {
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+
+  .footer {
+    padding: 0.75rem 0;
+    background-color: #f9fafc;
+  }
+
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .info__icon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .info__text {
+    font-size: 0.6875rem;
+    line-height: 118.1818181818%;
   }
 }
 
