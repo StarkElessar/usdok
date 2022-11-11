@@ -1,15 +1,14 @@
 import { bodyLock, bodyUnLock } from '../helpers/bodyToggleLock'
 import { toggleElementsWindowsAuth } from '../helpers/toggleElementsWindowsAuth'
 
-export const windowAuth = () => {
-  const openWindowAuthButton = document.querySelector('.header__login')
+export const toggleWindowAuth = () => {
+  const openWindowAuthButton = document.querySelector('.button_auth')
   const windowAuth = document.querySelector('[modal-open]')
-  const loginLink = document.getElementById('login-link')
-  const authLink = document.getElementById('auth-link')
 
   let isLogin = true
 
   openWindowAuthButton.addEventListener('click', () => {
+    console.log('click');
     windowAuth.classList.add('_show')
     bodyLock()
 
@@ -28,12 +27,12 @@ export const windowAuth = () => {
         bodyUnLock()
       }
   
-      if (target && target === authLink) {
+      if (target && target.closest('#auth-link')) {
         isLogin = false
         toggleElementsWindowsAuth(isLogin)
       }
   
-      if (target && target === loginLink) {
+      if (target && target.closest('#login-link')) {
         isLogin = true
         toggleElementsWindowsAuth(isLogin)
       }
