@@ -1,5 +1,5 @@
 .sidebar {
-  // height: calc(100vh - rem($headerHeight));
+  background-color: #fff;
   height: 100%;
   padding-top: rem(30);
   padding-bottom: rem(30);
@@ -91,49 +91,5 @@
     font-weight: 600;
     font-size: rem(14);
     margin-left: rem(-4);
-  }
-}
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: rem(22);
-  // .info__link
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: rem(8);
-    &:hover {
-      .info__text {
-        color: darken(#a0a7b5, 20%);
-      }
-      .info__icon {
-        svg {
-          path {
-            fill: darken(#a0a7b5, 20%);
-          }
-        }
-      }
-    }
-  }
-  // .info__icon
-  &__icon {
-    width: rem(20);
-    height: rem(20);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg {
-      path {
-        transition: $standartTrans;
-      }
-    }
-  }
-  // .info__text
-  &__text {
-    font-weight: 500;
-    font-size: rem(14);
-    line-height: prc(17, 14);
-    color: #a0a7b5;
-    transition: $standartTrans;
   }
 }
