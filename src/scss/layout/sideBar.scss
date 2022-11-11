@@ -4,6 +4,9 @@
   padding-top: rem(30);
   padding-bottom: rem(30);
   overflow-y: auto;
+  @include media(1150) {
+    padding-top: 0;
+  }
   // .sidebar__container
   &__container {
     display: flex;
@@ -37,6 +40,7 @@
   }
   // .menu__link
   &__link {
+    position: relative;
     padding: rem(16) rem(20);
     display: flex;
     align-items: center;
@@ -44,6 +48,9 @@
     column-gap: rem(12);
     border-radius: rem(10);
     transition: $standartTrans;
+    @include media(1150) {
+      padding: rem(16);
+    }
     &:hover {
       background-color: #F6F7F9;
     }
@@ -77,19 +84,25 @@
     font-weight: 600;
     line-height: prc(19, 16);
     color: $darkBlueColor;
+    @include media(1150) {
+      display: none;
+    }
   }
   // .menu__count-notification
   &__count-notification {
-    flex: 0 0 rem(24);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: rem(-4);
+    width: rem(24);
+    height: rem(24);
     background-color: $redColor;
     border-radius: 50%;
-    color: #fff;
-    height: rem(24);
+    
     line-height: rem(24);
     text-align: center;
-
+    color: #fff;
     font-weight: 600;
     font-size: rem(14);
-    margin-left: rem(-4);
   }
 }
