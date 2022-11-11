@@ -29,10 +29,7 @@ body {
     display: grid;
     grid-template-columns: rem(343) 1fr;
     @include media(1150) {
-      grid-template-columns: rem(210) 1fr;
-    }
-    @include media(768) {
-      grid-template-columns: 1fr;
+      grid-template-columns: auto 1fr;
     }
   }
 }
