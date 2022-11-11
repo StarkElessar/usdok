@@ -1,6 +1,7 @@
 import { isWebp } from './modules'
 import { toggleWindowAuth } from './modules/toggleWindowAuth'
 import { textareaHeightAuto } from './helpers/textareaHeightAuto'
+import { dropdownGroup } from './helpers/dropdownGroup'
 import { toggleBurgerMenu } from './modules/toggleBurgerMenu'
 import { authenticate } from './modules/authenticate'
 import { toggleCreatePostPopup } from './modules/toggleCreatePostPopup'
@@ -32,4 +33,5 @@ isAuth && toggleWindowAuth()
 // authenticate(isAuth)
 textareaHeightAuto('#new-post', 44)
 toggleBurgerMenu()
+dropdownGroup()
 toggleCreatePostPopup()
