@@ -32,6 +32,13 @@
       transition: transform 600ms ease-in-out;
     }
   }
+  // .article-post__row
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(12);
+  }
   // .article-post__body
   &__body {
     flex: 1 1 auto;
@@ -42,6 +49,25 @@
   }
   // .article-post__date
   &__date {
+  }
+  // .article-post__button-tag
+  &__button-tag {
+    padding: rem(4) rem(8);
+    background-color: transparent;
+    border: rem(1) solid #4e5e78;
+    border-radius: rem(4);
+
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: prc(15, 12);
+    color: #4e5e78;
+    transition: $standartTrans;
+    &:hover {
+      background-color: rgba(#000, 3%);
+    }
+    &:active {
+      background-color: rgba(#000, 6%);
+    }
   }
   // .article-post__title
   &__title {
