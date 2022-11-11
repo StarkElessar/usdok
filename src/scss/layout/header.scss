@@ -1,16 +1,25 @@
 // =====================================================================================================================
 .header {
   width: 100%;
+  background-color: #fff;
+  @include media(425) {
+    border-radius: 0 0 rem(10) rem(10);
+  }
   // .header__container
   &__container {
     height: rem($headerHeight);
-    // display: flex;
     align-items: center;
     display: grid;
-    grid-template-columns: rem(343 - 30 - 18) 1fr /*rem(90)*/ auto;
+    grid-template-columns: rem(343 - 30 - 18) 1fr auto;
     gap: rem(18);
     @include media(1150) {
-      grid-template-columns: rem(210 - 16 - 18) 1fr /*rem(90)*/ auto;
+      grid-template-columns: rem(210 - 16 - 18) 1fr auto;
+    }
+    @include media(768) {
+      grid-template-columns: auto 1fr auto;
+    }
+    @include media(425) {
+      height: rem($headerHeight - 33);
     }
   }
   // .header__logo
@@ -59,12 +68,23 @@
   position: relative;
   height: rem(50);
   width: 100%;
+  @include media(425) {
+    height: rem(36);
+  }
   // .search-header__icon
   &__icon {
     position: absolute;
     top: 50%;
     left: rem(18);
     transform: translateY(-50%);
+    @include media(425) {
+      width: rem(14);
+      height: rem(14);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: rem(8);
+    }
     svg {
       path {
         transition: $standartTrans;
@@ -87,6 +107,12 @@
     transition: $standartTrans;
     @include hidePlaceholder();
     @include styledPlaceholder(#a0a7b5);
+    @include media(425) {
+      font-size: rem(11);
+      border-radius: rem(8);
+      padding-left: rem(30);
+      padding-right: rem(15);
+    }
     &:focus {
       box-shadow: 0 0 0 rem(2) rgba($blueColor, 65%);
       & + .search-header__icon {
