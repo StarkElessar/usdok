@@ -208,6 +208,10 @@
     font-size: rem(12);
     line-height: prc(24, 16);
     color: #ff5531;
+    transition: $standartTrans;
+    &:hover {
+      color: darken(#ff5531, 10%);
+    }
   }
   // .event-bar__body
   &__body {
