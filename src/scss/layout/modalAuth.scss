@@ -262,18 +262,24 @@
   }
   // .form-action__button-outline
   &__button-outline {
-    background-color: transparent;
+    padding: rem(16) rem(24);
     border-radius: rem(10);
     transition: $standartTrans;
-    padding: rem(16) rem(24);
-    font-weight: 600;
-    font-size: rem(14);
-    line-height: prc(17, 14);
-    color: #4e5e78;
+    background-color: transparent;
+    .button__text {
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: prc(17, 14);
+      color: #4e5e78;
+    }
     @include media(768) {
       font-size: rem(13);
       padding-left: rem(20);
       padding-right: rem(20);
+    }
+    @include media(425) {
+      padding-left: rem(10);
+      padding-right: rem(10);
     }
     &:hover {
       background-color: rgba(#000, 3%);
