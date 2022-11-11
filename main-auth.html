@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
   <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221111231106">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221111235228">
   <title>Главная</title>
 </head>
 
@@ -716,15 +716,31 @@
     <form class="create-popup__form-action" id="createPostForm">
       <div class="create-popup__field">
         <label class="create-popup__label" for="postTheme">Выбрать тему</label>
-        <input class="create-popup__input" type="text" id="postTheme">
+        <div class="create-popup__dropdown custom-dropdown">
+          <button class="custom-dropdown__btn" type="button" id="button-dropdown">
+            <span class="custom-dropdown__label">Выберите группу</span>
+            <span class="custom-dropdown__icon">
+              <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8849 0.294983L6.29492 4.87498L1.70492 0.294983L0.294922 1.70498L6.29492 7.70498L12.2949 1.70498L10.8849 0.294983Z" fill="black"/>
+              </svg>
+            </span>
+          </button>
+          <ul class="custom-dropdown__list select-list" id="dropdown-list">
+            <li data-value="Кинокомедии" class="select-list__item">Кинокомедии</li>
+            <li data-value="Боевики" class="select-list__item">Боевики</li>
+            <li data-value="Драма - мелодрама" class="select-list__item">Драма - мелодрама</li>
+            <li data-value="Фантастика" class="select-list__item">Фантастика</li>
+          </ul>
+          <input type="hidden" value="" id="dropdown-input" name="postTheme">
+        </div>
       </div>
       <div class="create-popup__field">
         <label class="create-popup__label" for="postTitle">Название публикации</label>
-        <input class="create-popup__input" type="text" id="postTitle">
+        <input class="create-popup__input" type="text" id="postTitle" name="postTitle">
       </div>
       <div class="create-popup__field create-popup__field_grid">
         <label class="new-post__add-file-field new-post__add-file-field_video">
-          <input type="file" name="new-post-video">
+          <input type="file" name="postVideo">
           <span class="new-post__label-icon">
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4C0 1.79086 1.79086 0 4 0H11C13.2091 0 15 1.79086 15 4V4.07171L18.202 2.23108C19.0019 1.77121 20 2.34868 20 3.27144V10.7488C20 11.6203 19.1003 12.2012 18.306 11.8424L14.9855 10.3425C14.8118 12.3913 13.0938 14 11 14H4C1.79086 14 0 12.2091 0 10V4ZM15 8.15443L18 9.50958V4.65407L15 6.37861V8.15443ZM13 4C13 2.89543 12.1046 2 11 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H11C12.1046 12 13 11.1046 13 10V4Z" fill="#387DFF"/>
@@ -733,7 +749,7 @@
           <span class="new-post__label-text">Видео</span>
         </label>
         <label class="new-post__add-file-field new-post__add-file-field_image">
-          <input type="file" name="new-post-image">
+          <input type="file" name="postImage">
           <span class="new-post__label-icon">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0H16C19.3137 0 22 2.68629 22 6V16C22 19.3137 19.3137 22 16 22H6C2.68629 22 0 19.3137 0 16V6C0 2.68629 2.68629 0 6 0ZM6 2C3.79086 2 2 3.79086 2 6V16C2 18.2091 3.79086 20 6 20H16C18.2091 20 20 18.2091 20 16V6C20 3.79086 18.2091 2 16 2H6Z" fill="#39CB8A"/>
@@ -743,7 +759,7 @@
           <span class="new-post__label-text">Фото</span>
         </label>
         <label class="new-post__add-file-field new-post__add-file-field_doc">
-          <input type="file" name="new-post-doc">
+          <input type="file" name="postDoc">
           <span class="new-post__label-icon">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6H11C11.5523 6 12 5.55228 12 5C12 4.44772 11.5523 4 11 4H5Z" fill="#FF5531"/>
@@ -770,7 +786,7 @@
   </div>
 </div>
   </div>
-  <script src="js/app.min.js?_v=20221111231106"></script>
+  <script src="js/app.min.js?_v=20221111235228"></script>
 </body>
 
 </html>
