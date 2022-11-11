@@ -1556,12 +1556,15 @@ body._lock {
 }
 
 .form-action__button-outline {
-  background-color: transparent;
+  padding: 1rem 1.5rem;
   border-radius: 0.625rem;
   -webkit-transition: all 280ms ease-in-out 0ms;
   -o-transition: all 280ms ease-in-out 0ms;
   transition: all 280ms ease-in-out 0ms;
-  padding: 1rem 1.5rem;
+  background-color: transparent;
+}
+
+.form-action__button-outline .button__text {
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 121.4285714286%;
