@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
   <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221112231316">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221113125503">
   <title>Главная</title>
 </head>
 
@@ -181,7 +181,10 @@
               </div>
             </div>
             <div class="page__baner">
-              <picture><source srcset="images/banner.webp" type="image/webp"><img src="images/banner.png" alt="Banner Page"></picture>
+              <picture>
+                <source srcset="images/banner-mobile.jpg" media="(max-width: 425.98px)">
+                <img src="images/banner.png" alt="Banner Page">
+              </picture>
               <h1 class="page__title">Территория врачей</h1>
             </div>
             <div class="page__posts-wrapper">
@@ -726,10 +729,22 @@
             </span>
           </button>
           <ul class="custom-dropdown__list select-list" id="dropdown-list">
-            <li data-value="Кинокомедии" class="select-list__item">Кинокомедии</li>
-            <li data-value="Боевики" class="select-list__item">Боевики</li>
-            <li data-value="Драма - мелодрама" class="select-list__item">Драма - мелодрама</li>
-            <li data-value="Фантастика" class="select-list__item">Фантастика</li>
+            <li data-value="Клинический случай" class="select-list__item">Клинический случай</li>
+            <li data-value="Коллеги, помогите" class="select-list__item">Коллеги, помогите</li>
+            <li data-value="Статья" class="select-list__item">Статья</li>
+            <li data-value="Разомнем мозги" class="select-list__item">Разомнем мозги</li>
+            <li data-value="Врач без халата" class="select-list__item">Врач без халата</li>
+            <li data-value="Анонс" class="select-list__item">Анонс</li>
+            <li data-value="Для начинающих" class="select-list__item">Для начинающих</li>
+            <li data-value="Пишем заключение" class="select-list__item">Пишем заключение</li>
+            <li data-value="Новости медицины" class="select-list__item">Новости медицины</li>
+            <li data-value="Обзор литературы" class="select-list__item">Обзор литературы</li>
+            <li data-value="Мини лекция" class="select-list__item">Мини леkция</li>
+            <li data-value="Обучающий материал" class="select-list__item">Обучающий материал</li>
+            <li data-value="История медицины" class="select-list__item">История медицины</li>
+            <li data-value="Юмор" class="select-list__item">Юмор</li>
+            <li data-value="ЗОЖ всем гож" class="select-list__item">ЗОЖ всем гож</li>
+            <li data-value="На правах рекламы" class="select-list__item">На правах рекламы</li>
           </ul>
           <input type="hidden" value="" id="dropdown-input" name="postTheme">
         </div>
@@ -776,7 +791,8 @@
       </div>
       <div class="create-popup__field">
         <p class="create-popup__text-description">
-          Опубликовать мнение о современных методах лечения, положениях в здравоохранении, поделиться полезными материалами.
+          Опубликовать мнение о современных методах лечения, положениях в здравоохранении, поделиться полезными
+          материалами.
         </p>
       </div>
       <div class="create-popup__field">
@@ -786,7 +802,7 @@
   </div>
 </div>
   </div>
-  <script src="js/app.min.js?_v=20221112231316"></script>
+  <script src="js/app.min.js?_v=20221113125503"></script>
 </body>
 
 </html>
