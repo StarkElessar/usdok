@@ -28,6 +28,7 @@ body {
   &__content {
     display: grid;
     grid-template-columns: rem(343) 1fr;
+    flex: 1 1 auto;
     @include media(1150) {
       grid-template-columns: auto 1fr;
     }
