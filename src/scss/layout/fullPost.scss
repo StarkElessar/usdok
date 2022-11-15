@@ -1,0 +1,28 @@
+.full-post {
+  display: grid;
+  grid-template-columns: 1fr rem(370);
+  grid-template-rows: 1fr auto;
+  gap: rem(40);
+  padding: rem(30);
+  // .full-post__body
+  &__body {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  // .full-post__sidebar
+  &__sidebar {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  // .full-post__footer
+  &__footer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
