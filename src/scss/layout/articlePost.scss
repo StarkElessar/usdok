@@ -1,10 +1,11 @@
 // =============================================================================================
 .article-post {
+  position: relative;
   background-color: #fff;
   border-radius: rem(20);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
   // .article-post__top
   &__top {
     width: 100%;
@@ -135,6 +136,8 @@
   }
   // .article-post__more-info
   &__more-info {
+    position: relative;
+    z-index: 12;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,6 +151,62 @@
     }
     &:active {
       background-color: darken(#f6f7f9, 5%);
+    }
+  }
+  // .article-post__menu
+  &__menu {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: rem(-40);
+    overflow: hidden;
+    border-radius: rem(20);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: rem(12) rem(36) rem(12) rem(12);
+    row-gap: rem(10);
+    visibility: hidden;
+    opacity: 0;
+    transition: $standartTrans;
+    box-shadow: 0px 104px 42px rgba(43, 52, 80, 0.01), 
+      0px 59px 35px rgba(43, 52, 80, 0.05),
+      0px 26px 26px rgba(43, 52, 80, 0.09), 
+      0px 7px 14px rgba(43, 52, 80, 0.1), 
+      0px 0px 0px rgba(43, 52, 80, 0.1);
+    &._show {
+      opacity: 1;
+      visibility: visible;
+      bottom: rem(-72);
+    }
+  }
+  // .article-post__action-button
+  &__action-button {
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: prc(21, 12);
+    background-color: transparent;
+    padding: rem(4) rem(8);
+    transition: $standartTrans;
+    border-radius: rem(6);
+    &:hover {
+      background-color: rgba(#000, 1%);
+    }
+    &:active {
+      background-color: rgba(#000, 3%);
+    }
+    // .article-post__action-button_save
+    &_save {
+      color: #4e5e78;
+    }
+    // .article-post__action-button_complain
+    &_complain {
+      color: #ff5531;
+    }
+    // .article-post__action-button_hide
+    &_hide {
+      color: #387dff;
     }
   }
 }
