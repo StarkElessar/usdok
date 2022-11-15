@@ -145,8 +145,9 @@ body {
     @include adaptiveClamp("row-gap", 46, 8);
   }
   // .page__post
-  &__post {
-  }
+  &__post {}
+  // .page__post-article
+  &__post-article {}
 
   [data-observ] {
     position: absolute;
