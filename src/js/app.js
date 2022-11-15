@@ -5,6 +5,7 @@ import { dropdownGroup } from './helpers/dropdownGroup'
 import { toggleBurgerMenu } from './modules/toggleBurgerMenu'
 import { authenticate } from './modules/authenticate'
 import { toggleCreatePostPopup } from './modules/toggleCreatePostPopup'
+import { toggleArticlePostMenu } from './modules/toggleArticlePostMenu'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -35,3 +36,4 @@ textareaHeightAuto('#new-post', 44)
 toggleBurgerMenu()
 dropdownGroup()
 toggleCreatePostPopup()
+toggleArticlePostMenu()
