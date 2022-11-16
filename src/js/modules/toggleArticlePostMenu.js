@@ -1,11 +1,11 @@
 const toggleArticlePostMenu = () => {
-  const showMoreSettingsPost = document.querySelectorAll('.article-post__more-info')
+  const showMoreSettingsPost = document.querySelectorAll('.button-more-info')
 
   showMoreSettingsPost.forEach((button) => {
     button.onclick = (event) => {
-      console.log(event.target.closest('.article-post'));
       const parentNodeContainer = event.target.closest('.article-post')
-      const postMenu = parentNodeContainer.querySelector('.article-post__menu') || null
+        || event.target.closest('.sidebar-post__header')
+      const postMenu = parentNodeContainer.querySelector('.menu-post') || null
       
       if (postMenu) {
         postMenu.classList.toggle('_show')
