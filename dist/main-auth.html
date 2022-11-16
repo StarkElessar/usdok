@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
   <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221115181413">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221116164432">
   <title>Главная</title>
 </head>
 
@@ -60,7 +60,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="menu__link _active" href="#" title="Открыть ленту новостей">
+          <a class="menu__link _active" href="./main-auth.html" title="Открыть ленту новостей">
             <span class="menu__icon">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0C1.34315 0 0 1.34315 0 3V6C0 7.65685 1.34315 9 3 9H6C7.65685 9 9 7.65685 9 6V3C9 1.34315 7.65685 0 6 0H3ZM2 3C2 2.44772 2.44772 2 3 2H6C6.55228 2 7 2.44772 7 3V6C7 6.55228 6.55228 7 6 7H3C2.44772 7 2 6.55228 2 6V3Z" fill="#2B3450"/>
@@ -218,17 +218,17 @@
                 <div class="article-post__bottom">
                   <div class="article-post__user-info info-user">
                     <a class="info-user__image" href="#">
-                      <picture><source srcset="images/users/01.webp" type="image/webp"><img src="images/users/01.png" alt="User Avatar"></picture>
+                      <picture><source srcset="images/users/02.webp" type="image/webp"><img src="images/users/02.png" alt="User Avatar"></picture>
                     </a>
                     <div class="info-user__text">
                       <a href="" class="info-user__link-name">
-                        <h4 class="info-user__name">Терёхин К.</h4>
+                        <h4 class="info-user__name">Doctor News. D.</h4>
                       </a>
                       <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
                     </div>
                   </div>
-                  <button class="article-post__button-like" type="button">
-                    <span class="article-post__button-like-icon">
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
                       <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
                         <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
@@ -240,24 +240,24 @@
                         <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
                       </svg>
                     </span>
-                    <span class="article-post__button-like-text">
-                      <span id="like-count">124</span> cпасибо
+                    <span class="button-like__text">
+                      <span data-like="600">600</span> cпасибо
                     </span>
                   </button>
-                  <button class="article-post__more-info" type="button">
-                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z" fill="#A0A7B5"/>
                     </svg>
                   </button>
                 </div>
-                <div class="article-post__menu">
-                  <button class="article-post__action-button article-post__action-button_save" type="button">
+                <div class="article-post__menu menu-post">
+                  <button class="menu-post__action-button menu-post__action-button_save" type="button">
                     Сохранить публикацию
                   </button>
-                  <button class="article-post__action-button article-post__action-button_complain" type="button">
+                  <button class="menu-post__action-button menu-post__action-button_complain" type="button">
                     Пожаловаться на публикацию
                   </button>
-                  <button class="article-post__action-button article-post__action-button_hide" type="button">
+                  <button class="menu-post__action-button menu-post__action-button_hide" type="button">
                     Скрыть публикацию автора
                   </button>
                 </div>
@@ -301,8 +301,8 @@
                       <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
                     </div>
                   </div>
-                  <button class="article-post__button-like" type="button">
-                    <span class="article-post__button-like-icon">
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
                       <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
                         <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
@@ -314,12 +314,12 @@
                         <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
                       </svg>
                     </span>
-                    <span class="article-post__button-like-text">
-                      <span id="like-count">99</span> cпасибо
+                    <span class="button-like__text">
+                      <span data-like="600">600</span> cпасибо
                     </span>
                   </button>
-                  <button class="article-post__more-info" type="button">
-                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z" fill="#A0A7B5"/>
                     </svg>
                   </button>
@@ -366,8 +366,8 @@
                       </div>
                     </div>
                   </div>
-                  <button class="article-post__button-like" type="button">
-                    <span class="article-post__button-like-icon">
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
                       <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
                         <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
@@ -379,12 +379,12 @@
                         <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
                       </svg>
                     </span>
-                    <span class="article-post__button-like-text">
-                      <span id="like-count">2</span> cпасибо
+                    <span class="button-like__text">
+                      <span data-like="2">2</span> cпасибо
                     </span>
                   </button>
-                  <button class="article-post__more-info" type="button">
-                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z" fill="#A0A7B5"/>
                     </svg>
                   </button>
@@ -429,8 +429,8 @@
                       <div title="Врач Терапевт" class="info-user__vocation">Терапевт</div>
                     </div>
                   </div>
-                  <button class="article-post__button-like" type="button">
-                    <span class="article-post__button-like-icon">
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
                       <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
                         <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
@@ -442,12 +442,12 @@
                         <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
                       </svg>
                     </span>
-                    <span class="article-post__button-like-text">
-                      <span id="like-count">399</span> cпасибо
+                    <span class="button-like__text">
+                      <span data-like="399">399</span> cпасибо
                     </span>
                   </button>
-                  <button class="article-post__more-info" type="button">
-                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z" fill="#A0A7B5"/>
                     </svg>
                   </button>
@@ -492,8 +492,8 @@
                       <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
                     </div>
                   </div>
-                  <button class="article-post__button-like" type="button">
-                    <span class="article-post__button-like-icon">
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
                       <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
                         <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
@@ -505,12 +505,12 @@
                         <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
                       </svg>
                     </span>
-                    <span class="article-post__button-like-text">
-                      <span id="like-count">1000</span> cпасибо
+                    <span class="button-like__text">
+                      <span data-like="1000">1000</span> cпасибо
                     </span>
                   </button>
-                  <button class="article-post__more-info" type="button">
-                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z" fill="#A0A7B5"/>
                     </svg>
                   </button>
@@ -555,8 +555,8 @@
                       <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
                     </div>
                   </div>
-                  <button class="article-post__button-like" type="button">
-                    <span class="article-post__button-like-icon">
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
                       <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
                         <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
@@ -568,12 +568,12 @@
                         <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
                       </svg>
                     </span>
-                    <span class="article-post__button-like-text">
-                      <span id="like-count">100</span> cпасибо
+                    <span class="button-like__text">
+                      <span data-like="100">100</span> cпасибо
                     </span>
                   </button>
-                  <button class="article-post__more-info" type="button">
-                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z" fill="#A0A7B5"/>
                     </svg>
                   </button>
@@ -813,7 +813,7 @@
   </div>
 </div>
   </div>
-  <script src="js/app.min.js?_v=20221115181413"></script>
+  <script src="js/app.min.js?_v=20221116164432"></script>
 </body>
 
 </html>
