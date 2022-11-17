@@ -3,7 +3,6 @@ import { toggleWindowAuth } from './modules/toggleWindowAuth'
 import { textareaHeightAuto } from './helpers/textareaHeightAuto'
 import { dropdownGroup } from './helpers/dropdownGroup'
 import { toggleBurgerMenu } from './modules/toggleBurgerMenu'
-import { authenticate } from './modules/authenticate'
 import { toggleCreatePostPopup } from './modules/toggleCreatePostPopup'
 import { toggleArticlePostMenu } from './modules/toggleArticlePostMenu'
 /* Раскомментировать для использования */
@@ -24,14 +23,7 @@ isWebp()
 // headerFixed()
 // ====================================================================================================================================================
 
-const { pathname } = location
-const isDev = location.href === 'http://localhost:3000/'
-const isAuth = isDev ? pathname === '/' : pathname === '/usdok/'
-
-console.log(isDev, isAuth);
-
-isAuth && toggleWindowAuth()
-// authenticate(isAuth)
+toggleWindowAuth()
 textareaHeightAuto('#new-post', 44)
 toggleBurgerMenu()
 dropdownGroup()

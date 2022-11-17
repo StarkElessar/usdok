@@ -7,18 +7,18 @@ export const toggleWindowAuth = () => {
 
   let isLogin = true
 
-  openWindowAuthButton.addEventListener('click', () => {
-    console.log('click');
-    windowAuth.classList.add('_show')
-    bodyLock()
-
-    toggleElementsWindowsAuth(isLogin)
-  })
-
   if (windowAuth) {
+    openWindowAuthButton.addEventListener('click', () => {
+      console.log('click')
+      windowAuth.classList.add('_show')
+      bodyLock()
+  
+      toggleElementsWindowsAuth(isLogin)
+    })
+    
     windowAuth.addEventListener('click', (event) => {
       const target = event.target
-  
+
       if (
         target &&
         (target === windowAuth || target.closest('.modal__button-close'))
@@ -26,17 +26,16 @@ export const toggleWindowAuth = () => {
         windowAuth.classList.remove('_show')
         bodyUnLock()
       }
-  
+
       if (target && target.closest('#auth-link')) {
         isLogin = false
         toggleElementsWindowsAuth(isLogin)
       }
-  
+
       if (target && target.closest('#login-link')) {
         isLogin = true
         toggleElementsWindowsAuth(isLogin)
       }
     })
   }
-  
 }
