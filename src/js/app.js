@@ -29,3 +29,5 @@ toggleBurgerMenu()
 dropdownGroup()
 toggleCreatePostPopup()
 toggleArticlePostMenu()
+
+console.log('Я работаю, я JS я подключился!');
