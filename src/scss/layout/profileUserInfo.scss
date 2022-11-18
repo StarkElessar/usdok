@@ -1,0 +1,56 @@
+.profile-user-info {
+  background-color: #fff;
+  padding: rem(20);
+  border-radius: rem(20);
+  @include media(1024) {
+    border-radius: rem(10);
+  }
+  @include media(425) {
+    padding: rem(20) rem(15);
+  }
+  // .profile-user-info__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+  }
+  // .profile-user-info__item
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(10);
+  }
+  // .profile-user-info__icon
+  &__icon {
+    flex: 0 0 rem(24);
+    height: rem(24);
+  }
+  // .profile-user-info__text
+  &__text {
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: prc(19, 16);
+    color: #4e5e78;
+    // .profile-user-info__text_link
+    &_link {
+      transition: $standartTrans;
+      &:hover {
+        color: $blueColor;
+      }
+    }
+  }
+  // .profile-user-info__title
+  &__title {
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: prc(19, 16);
+    color: #4e5e78;
+    margin-bottom: rem(20);
+  }
+  // .profile-user-info__article
+  &__article {
+    font-size: rem(14);
+    line-height: prc(21, 14);
+    color: #4e5e78;
+  }
+}
