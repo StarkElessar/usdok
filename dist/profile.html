@@ -135,7 +135,78 @@
   </div>
 </aside>
       <main class="page">
-        <div class="page__container page__container_2-column">
+        <div class="page__head profile-head">
+          <div class="profile-head__inner">
+            <div class="profile-head__cover">
+              <picture><source srcset="images/profile/banner-01.webp" type="image/webp"><img src="images/profile/banner-01.png" alt=""></picture>
+              <button class="button-edit button-edit_cover profile-head__button-cover-edit" type="button">
+                <span class="button-edit__icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23223 0.767767C9.20854 -0.208544 10.7915 -0.208544 11.7678 0.767767L12.4749 1.47487C13.4512 2.45118 13.4512 4.0341 12.4749 5.01041L4.34315 13.1421L1.10051 13.1421C0.548222 13.1421 0.100505 12.6944 0.100506 12.1421L0.100505 8.89949L8.23223 0.767767ZM10.3536 2.18198L11.0607 2.88909C11.2559 3.08435 11.2559 3.40093 11.0607 3.59619L10 4.65685L8.58579 3.24264L9.64645 2.18198C9.84171 1.98672 10.1583 1.98672 10.3536 2.18198ZM8.58579 6.07107L3.51472 11.1421L2.10051 11.1421L2.10051 9.72792L7.17157 4.65685L8.58579 6.07107Z" fill="#2B3450"/>
+                  </svg>
+                </span>
+                <span class="button-edit__text">Редактировать обложку</span>
+              </button>
+            </div>
+            <div class="profile-head__header-info">
+              <div class="profile-head__ava-wrapper">
+                <div class="profile-head__ava-image">
+                  <picture><source srcset="images/profile/user-avatar.webp" type="image/webp"><img src="images/profile/user-avatar.png" alt="Анна Сазанчук"></picture>
+                </div>
+                <button class="profile-head__button-edit-ava" type="button">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23223 0.767767C9.20854 -0.208544 10.7915 -0.208544 11.7678 0.767767L12.4749 1.47487C13.4512 2.45118 13.4512 4.0341 12.4749 5.01041L4.34315 13.1421L1.10051 13.1421C0.548222 13.1421 0.100505 12.6944 0.100506 12.1421L0.100505 8.89949L8.23223 0.767767ZM10.3536 2.18198L11.0607 2.88909C11.2559 3.08435 11.2559 3.40093 11.0607 3.59619L10 4.65685L8.58579 3.24264L9.64645 2.18198C9.84171 1.98672 10.1583 1.98672 10.3536 2.18198ZM8.58579 6.07107L3.51472 11.1421L2.10051 11.1421L2.10051 9.72792L7.17157 4.65685L8.58579 6.07107Z" fill="#2B3450"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="profile-head__user-name">Анна Сазанчук</div>
+              <div class="profile-head__user-vocation">Врач общей практики</div>
+              <button class="button-edit button-edit_profile profile-head__button-profile-edit" type="button">
+                <span class="button-edit__icon">
+                  <img src="images/icons/pencil.svg" alt="Редактировать">
+                </span>
+                <span class="button-edit__text">Редактировать профиль</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="page__container page__container_profile">
+          <div class="page__profile-aside"> 
+            <div class="profile-user-info">
+              <ul class="profile-user-info__list">
+                <li class="profile-user-info__item">
+                  <span class="profile-user-info__icon">
+                    <img src="images/icons/home.svg" alt="Home">
+                  </span>
+                  <span class="profile-user-info__text">
+                    Россия, Калининградская область
+                  </span>
+                </li>
+                <li class="profile-user-info__item">
+                  <span class="profile-user-info__icon">
+                    <img src="images/icons/certificate.svg" alt="Certificate">
+                  </span>
+                  <span class="profile-user-info__text">
+                    Северный государственный медицинский университет (СГМУ, АГМА, АГМИ), Архангельск
+                  </span>
+                </li>
+                <li class="profile-user-info__item">
+                  <span class="profile-user-info__icon">
+                    <img src="images/icons/mail.svg" alt="Mail">
+                  </span>
+                  <a href="mailto:sazanchuk@gmail.com" class="profile-user-info__text profile-user-info__text_link">
+                    sazanchuk@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="profile-user-info">
+              <div class="profile-user-info__title">О себе</div>
+              <p class="profile-user-info__article">
+                Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Задача организации, в особенности же реализация намеченных плановых заданий представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Товарищи! реализация намеченных плановых заданий требуют от нас анализа модели развития.
+              </p>
+            </div>
+          </div>
           <div class="page__content">
             <div class="new-post page__new-post">
               <div class="new-post__body">
@@ -180,13 +251,6 @@
                 </form>
               </div>
             </div>
-            <div class="page__baner">
-              <picture>
-                <source srcset="images/banner-mobile.jpg" media="(max-width: 425.98px)">
-                <img src="images/banner.png" alt="Banner Page">
-              </picture>
-              <h1 class="page__title">Территория врачей</h1>
-            </div>
             <div class="page__posts-wrapper">
               <article class="article-post page__post">
                 <div class="article-post__top">
@@ -196,7 +260,7 @@
                 </div>
                 <div class="article-post__body">
                   <div class="article-post__row">
-                    <div class="date-post article-post__date">
+                    <div class="article-post__date date-post">
                       <span class="date-post__icon">
                         <img src="images/icons/clock.svg" alt="Clock Icon">
                       </span>
@@ -270,7 +334,7 @@
                 </div>
                 <div class="article-post__body">
                   <div class="article-post__row">
-                    <div class="date-post article-post__date">
+                    <div class="article-post__date date-post">
                       <span class="date-post__icon">
                         <img src="images/icons/clock.svg" alt="Clock Icon">
                       </span>
@@ -333,7 +397,7 @@
                 </div>
                 <div class="article-post__body">
                   <div class="article-post__row">
-                    <div class="date-post article-post__date">
+                    <div class="article-post__date date-post">
                       <span class="date-post__icon">
                         <img src="images/icons/clock.svg" alt="Clock Icon">
                       </span>
@@ -398,7 +462,7 @@
                 </div>
                 <div class="article-post__body">
                   <div class="article-post__row">
-                    <div class="date-post article-post__date">
+                    <div class="article-post__date date-post">
                       <span class="date-post__icon">
                         <img src="images/icons/clock.svg" alt="Clock Icon">
                       </span>
@@ -461,7 +525,7 @@
                 </div>
                 <div class="article-post__body">
                   <div class="article-post__row">
-                    <div class="date-post article-post__date">
+                    <div class="article-post__date date-post">
                       <span class="date-post__icon">
                         <img src="images/icons/clock.svg" alt="Clock Icon">
                       </span>
@@ -524,7 +588,7 @@
                 </div>
                 <div class="article-post__body">
                   <div class="article-post__row">
-                    <div class="date-post article-post__date">
+                    <div class="article-post__date date-post">
                       <span class="date-post__icon">
                         <img src="images/icons/clock.svg" alt="Clock Icon">
                       </span>
@@ -581,115 +645,6 @@
               </article>
             </div>
           </div>
-          <aside class="page__sidebar sidebar-right">
-            <div class="sidebar-right__stat stat-bar">
-              <div class="stat-bar__header">Статистика</div>
-              <ul class="stat-bar__list">
-                <li class="stat-bar__item">
-                  <span class="stat-bar__icon">
-                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5 10H6C7.63573 10 9.08801 10.7855 10.0002 11.9998C10.864 10.8494 12.2129 10.0839 13.7433 10.0065L14 10H15C17.7614 10 20 12.2386 20 15C20 15.5523 19.5523 16 19 16C18.4872 16 18.0645 15.614 18.0067 15.1166L17.9949 14.8237C17.907 13.3072 16.6928 12.093 15.1763 12.0051L15 12H14C12.3431 12 11 13.3431 11 15C11 15.5128 10.614 15.9355 10.1166 15.9933L10 16C9.48716 16 9.06449 15.614 9.00673 15.1166L8.99491 14.8237C8.90704 13.3072 7.69275 12.093 6.17627 12.0051L6 12H5C3.34315 12 2 13.3431 2 15C2 15.5523 1.55228 16 1 16C0.447715 16 0 15.5523 0 15C0 12.3112 2.12231 10.1182 4.78311 10.0046L5 10ZM5 0C7.20914 0 9 1.79086 9 4C9 6.20914 7.20914 8 5 8C2.79086 8 1 6.20914 1 4C1 1.79086 2.79086 0 5 0ZM15 0C17.2091 0 19 1.79086 19 4C19 6.20914 17.2091 8 15 8C12.7909 8 11 6.20914 11 4C11 1.79086 12.7909 0 15 0ZM5 2C3.89543 2 3 2.89543 3 4C3 5.10457 3.89543 6 5 6C6.10457 6 7 5.10457 7 4C7 2.89543 6.10457 2 5 2ZM15 2C13.8954 2 13 2.89543 13 4C13 5.10457 13.8954 6 15 6C16.1046 6 17 5.10457 17 4C17 2.89543 16.1046 2 15 2Z" fill="#387DFF"/>
-                    </svg>
-                  </span>
-                  <span class="stat-bar__text">
-                    <span class="stat-bar__text_bold">35 904</span> пользователя
-                  </span>
-                </li>
-                <li class="stat-bar__item">
-                  <span class="stat-bar__icon">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5 14H15C17.7614 14 20 16.2386 20 19C20 19.5523 19.5523 20 19 20C18.4872 20 18.0645 19.614 18.0067 19.1166L17.9949 18.8237C17.907 17.3072 16.6928 16.093 15.1763 16.0051L15 16H5C3.34315 16 2 17.3431 2 19C2 19.5523 1.55228 20 1 20C0.447715 20 0 19.5523 0 19C0 16.3112 2.12231 14.1182 4.78311 14.0046L5 14ZM10 0C10.4062 0 10.8078 0.0405124 11.2004 0.120294C11.7416 0.230293 12.0912 0.75821 11.9812 1.29943C11.8712 1.84065 11.3432 2.19022 10.802 2.08022C10.5404 2.02705 10.2722 2 10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10C11.2748 10 12.4482 9.40081 13.2001 8.40038C13.5319 7.95889 14.1588 7.86999 14.6003 8.20181C15.0418 8.53363 15.1307 9.16053 14.7989 9.60202C13.6731 11.0999 11.9104 12 10 12C6.68629 12 4 9.31371 4 6C4 2.68629 6.68629 0 10 0ZM17 0C17.5523 0 18 0.447715 18 1V2H19C19.5523 2 20 2.44772 20 3C20 3.55228 19.5523 4 19 4H18V5C18 5.55228 17.5523 6 17 6C16.4477 6 16 5.55228 16 5V4H15C14.4477 4 14 3.55228 14 3C14 2.44772 14.4477 2 15 2H16V1C16 0.447715 16.4477 0 17 0Z" fill="#27AE60"/>
-                    </svg>
-                  </span>
-                  <span class="stat-bar__text">
-                    <span class="stat-bar__text_bold">41</span> новых пользователся
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div class="event-bar sidebar-right__event">
-              <div class="event-bar__header">
-                <span class="event-bar__header-text">События</span>
-                <a class="event-bar__header-link" href="#">Все события</a>
-              </div>
-              <div class="event-bar__body">
-                <ul class="event-bar__list">
-                  <li class="event-bar__item">
-                    <div class="block-event event-bar__block">
-                      <div class="block-event__user-img">
-                        <picture><source srcset="images/users/03.webp" type="image/webp"><img src="images/users/03.png" alt="Девятых Т."></picture>
-                      </div>
-                      <div class="block-event__user-name">Девятых Т.</div>
-                      <div class="block-event__user-vocation">Реаниматолог</div>
-                      <div class="date-post block-event__date">
-                        <span class="date-post__icon">
-                          <img src="images/icons/clock.svg" alt="Clock Icon">
-                        </span>
-                        <span class="date-post__text">1 д. назад</span>
-                      </div>
-                      <div class="block-event__body">
-                        <p>
-                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="event-bar__item">
-                    <div class="block-event event-bar__block">
-                      <div class="block-event__user-img">
-                        <picture><source srcset="images/users/02.webp" type="image/webp"><img src="images/users/02.png" alt="Девятых Т."></picture>
-                      </div>
-                      <div class="block-event__user-name">Doctor News. D.</div>
-                      <div class="block-event__user-vocation">Реаниматолог</div>
-                      <div class="date-post block-event__date">
-                        <span class="date-post__icon">
-                          <img src="images/icons/clock.svg" alt="Clock Icon">
-                        </span>
-                        <span class="date-post__text">19 д. назад</span>
-                      </div>
-                      <div class="block-event__body">
-                        <p>
-                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="event-bar__item">
-                    <div class="block-event event-bar__block">
-                      <div class="block-event__user-img">
-                        <picture><source srcset="images/users/01.webp" type="image/webp"><img src="images/users/01.png" alt="Терёхин К."></picture>
-                      </div>
-                      <div class="block-event__user-name">Терёхин К.</div>
-                      <div class="block-event__user-vocation">Реаниматолог</div>
-                      <div class="date-post block-event__date">
-                        <span class="date-post__icon">
-                          <img src="images/icons/clock.svg" alt="Clock Icon">
-                        </span>
-                        <span class="date-post__text">19 д. назад</span>
-                      </div>
-                      <div class="block-event__body">
-                        <p>
-                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="school-bar sidebar-right__baner">
-              <div class="school-bar__body">
-                <a class="school-bar__logo" href="#">
-                  <img src="images/icons/school-logo.svg" alt="USDOK School">
-                </a>
-                <div class="school-bar__images">
-                  <picture><source srcset="images/school-bg.webp" type="image/webp"><img src="images/school-bg.png" alt="Doctor"></picture>
-                </div>
-                <div class="school-bar__text">Первый урок бесплатно!</div>
-                <button class="school-bar__button" type="button">Записаться</button>
-              </div>
-            </div>
-          </aside>
         </div>
       </main> 
     </div>
