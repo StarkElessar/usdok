@@ -129,11 +129,8 @@
   visibility: hidden;
   opacity: 0;
   transition: $standartTrans;
-  box-shadow: 0px 104px 42px rgba(43, 52, 80, 0.01), 
-    0px 59px 35px rgba(43, 52, 80, 0.05),
-    0px 26px 26px rgba(43, 52, 80, 0.09), 
-    0px 7px 14px rgba(43, 52, 80, 0.1), 
-    0px 0px 0px rgba(43, 52, 80, 0.1);
+  box-shadow: 0px 104px 42px rgba(43, 52, 80, 0.01), 0px 59px 35px rgba(43, 52, 80, 0.05),
+    0px 26px 26px rgba(43, 52, 80, 0.09), 0px 7px 14px rgba(43, 52, 80, 0.1), 0px 0px 0px rgba(43, 52, 80, 0.1);
   &._show {
     opacity: 1;
     visibility: visible;
@@ -511,4 +508,81 @@
   font-size: rem(20);
   line-height: prc(24, 20);
   color: #2b3450;
+}
+// ===========================================================================
+.button-edit {
+  display: flex;
+  align-items: center;
+  padding: rem(10);
+  transition: $standartTrans;
+  border-radius: rem(10);
+  background-color: transparent;
+  gap: rem(5);
+  // .button-edit_cover
+  &_cover {
+    background-color: #fff;
+    box-shadow: 0 rem(4) rem(12) rgba($darkBlueColor, 40%);
+    @include media(1024) {
+      padding: 0;
+      width: rem(24);
+      height: rem(24);
+      justify-content: center;
+      .button-edit__icon {
+        width: rem(12);
+        height: rem(12);
+      }
+      .button-edit__text {
+        display: none;
+      }
+    }
+    &:hover {
+      background-color: $blueColor;
+      .button-edit__icon {
+        svg {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+      .button-edit__text {
+        color: #fff;
+      }
+    }
+    &:active {
+      background-color: darken($blueColor, 10%);
+    }
+  }
+  // .button-edit_profile
+  &_profile {
+    @include media(1024) {
+      background-color: rgba(#000, 1%);
+    }
+    &:hover {
+      background-color: rgba(#000, 3%);
+    }
+    &:active {
+      background-color: rgba(#000, 6%);
+    }
+  }
+  // .button-edit__icon
+  &__icon {
+    width: rem(24);
+    height: rem(24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      path {
+        transition: $standartTrans;
+      }
+    }
+  }
+  // .button-edit__text
+  &__text {
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: prc(15, 12);
+    color: #2b3450;
+    transition: $standartTrans;
+  }
 }
