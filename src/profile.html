@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Главная'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <div class="wrapper__content">
+      @@include('html/sideBar.html', {})
+      <main class="page">
+        <div class="page__head profile-head">
+          <div class="profile-head__inner">
+            <div class="profile-head__cover">
+              <img src="@img/profile/banner-01.png" alt="">
+              <button 
+                  class="profile-head__button-cover-edit 
+                    button-edit 
+                    button-edit_cover" 
+                  type="button"
+              >
+                <span class="button-edit__icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23223 0.767767C9.20854 -0.208544 10.7915 -0.208544 11.7678 0.767767L12.4749 1.47487C13.4512 2.45118 13.4512 4.0341 12.4749 5.01041L4.34315 13.1421L1.10051 13.1421C0.548222 13.1421 0.100505 12.6944 0.100506 12.1421L0.100505 8.89949L8.23223 0.767767ZM10.3536 2.18198L11.0607 2.88909C11.2559 3.08435 11.2559 3.40093 11.0607 3.59619L10 4.65685L8.58579 3.24264L9.64645 2.18198C9.84171 1.98672 10.1583 1.98672 10.3536 2.18198ZM8.58579 6.07107L3.51472 11.1421L2.10051 11.1421L2.10051 9.72792L7.17157 4.65685L8.58579 6.07107Z" fill="#2B3450"/>
+                  </svg>
+                </span>
+                <span class="button-edit__text">Редактировать обложку</span>
+              </button>
+            </div>
+            <div class="profile-head__header-info">
+              <div class="profile-head__ava-wrapper">
+                <div class="profile-head__ava-image">
+                  <img src="@img/profile/user-avatar.png" alt="Анна Сазанчук">
+                </div>
+                <button class="profile-head__button-edit-ava" type="button">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23223 0.767767C9.20854 -0.208544 10.7915 -0.208544 11.7678 0.767767L12.4749 1.47487C13.4512 2.45118 13.4512 4.0341 12.4749 5.01041L4.34315 13.1421L1.10051 13.1421C0.548222 13.1421 0.100505 12.6944 0.100506 12.1421L0.100505 8.89949L8.23223 0.767767ZM10.3536 2.18198L11.0607 2.88909C11.2559 3.08435 11.2559 3.40093 11.0607 3.59619L10 4.65685L8.58579 3.24264L9.64645 2.18198C9.84171 1.98672 10.1583 1.98672 10.3536 2.18198ZM8.58579 6.07107L3.51472 11.1421L2.10051 11.1421L2.10051 9.72792L7.17157 4.65685L8.58579 6.07107Z" fill="#2B3450"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="profile-head__user-name">Анна Сазанчук</div>
+              <div class="profile-head__user-vocation">Врач общей практики</div>
+              <button 
+                  class="profile-head__button-profile-edit 
+                  button-edit 
+                  button-edit_profile" 
+                  type="button"
+              >
+                <span class="button-edit__icon">
+                  <img src="@img/icons/pencil.svg" alt="Редактировать">
+                </span>
+                <span class="button-edit__text">Редактировать профиль</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="page__container page__container_profile">
+          <div class="page__profile-aside"> 
+            <div class="profile-user-info">
+              <ul class="profile-user-info__list">
+                <li class="profile-user-info__item">
+                  <span class="profile-user-info__icon">
+                    <img src="@img/icons/home.svg" alt="Home">
+                  </span>
+                  <span class="profile-user-info__text">
+                    Россия, Калининградская область
+                  </span>
+                </li>
+                <li class="profile-user-info__item">
+                  <span class="profile-user-info__icon">
+                    <img src="@img/icons/certificate.svg" alt="Certificate">
+                  </span>
+                  <span class="profile-user-info__text">
+                    Северный государственный медицинский университет (СГМУ, АГМА, АГМИ), Архангельск
+                  </span>
+                </li>
+                <li class="profile-user-info__item">
+                  <span class="profile-user-info__icon">
+                    <img src="@img/icons/mail.svg" alt="Mail">
+                  </span>
+                  <a 
+                      href="mailto:sazanchuk@gmail.com" 
+                      class="
+                          profile-user-info__text 
+                          profile-user-info__text_link"
+                  >
+                    sazanchuk@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="profile-user-info">
+              <div class="profile-user-info__title">О себе</div>
+              <p class="profile-user-info__article">
+                Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Задача организации, в особенности же реализация намеченных плановых заданий представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Товарищи! реализация намеченных плановых заданий требуют от нас анализа модели развития.
+              </p>
+            </div>
+          </div>
+          <div class="page__content">
+            <div class="page__new-post new-post">
+              <div class="new-post__body">
+                <form class="new-post__form-action">
+                  <a title="Открыть профиль" href="#" class="new-post__user-avatar">
+                    <img src="@img/users/04.png" alt="User Avatar">
+                  </a>
+                  <textarea class="new-post__text-control" placeholder="Текст Вашей публикации" name="new-post-text"
+                    id="new-post" rows="1"></textarea>
+                  <div class="new-post__add-file-group">
+                    <label class="new-post__add-file-field new-post__add-file-field_video">
+                      <input type="file" name="new-post-video">
+                      <span class="new-post__label-icon">
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 4C0 1.79086 1.79086 0 4 0H11C13.2091 0 15 1.79086 15 4V4.07171L18.202 2.23108C19.0019 1.77121 20 2.34868 20 3.27144V10.7488C20 11.6203 19.1003 12.2012 18.306 11.8424L14.9855 10.3425C14.8118 12.3913 13.0938 14 11 14H4C1.79086 14 0 12.2091 0 10V4ZM15 8.15443L18 9.50958V4.65407L15 6.37861V8.15443ZM13 4C13 2.89543 12.1046 2 11 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H11C12.1046 12 13 11.1046 13 10V4Z"
+                            fill="#387DFF" />
+                        </svg>
+                      </span>
+                      <span class="new-post__label-text">Видео</span>
+                    </label>
+                    <label class="new-post__add-file-field new-post__add-file-field_image">
+                      <input type="file" name="new-post-image">
+                      <span class="new-post__label-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6 0H16C19.3137 0 22 2.68629 22 6V16C22 19.3137 19.3137 22 16 22H6C2.68629 22 0 19.3137 0 16V6C0 2.68629 2.68629 0 6 0ZM6 2C3.79086 2 2 3.79086 2 6V16C2 18.2091 3.79086 20 6 20H16C18.2091 20 20 18.2091 20 16V6C20 3.79086 18.2091 2 16 2H6Z"
+                            fill="#39CB8A" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M2.79289 19.6949C2.40237 19.3044 2.40237 18.6712 2.79289 18.2807L7.7835 13.2901L7.79753 13.2771C8.2212 12.8846 8.87622 12.8866 9.29748 13.2817L9.29923 13.2833L10.3259 14.2507L13.6277 10.4274C14.0442 9.94522 14.7819 9.91658 15.2345 10.3651L15.2492 10.3796L21.2326 16.8193C21.6085 17.2239 21.5853 17.8567 21.1807 18.2326C20.7761 18.6085 20.1434 18.5853 19.7674 18.1807L14.4847 12.4951L11.7828 15.6235L16.1858 19.7722C16.5877 20.1509 16.6066 20.7838 16.2278 21.1858C15.8491 21.5877 15.2162 21.6066 14.8142 21.2278L8.56374 15.3383L4.20711 19.6949C3.81658 20.0854 3.18342 20.0854 2.79289 19.6949ZM8.00001 7C7.44772 7 7.00001 7.44772 7.00001 8C7.00001 8.55228 7.44772 9 8.00001 9C8.55229 9 9.00001 8.55228 9.00001 8C9.00001 7.44772 8.55229 7 8.00001 7ZM11 8C11 9.65685 9.65686 11 8.00001 11C6.34315 11 5.00001 9.65685 5.00001 8C5.00001 6.34315 6.34315 5 8.00001 5C9.65686 5 11 6.34315 11 8Z"
+                            fill="#39CB8A" />
+                        </svg>
+                      </span>
+                      <span class="new-post__label-text">Фото</span>
+                    </label>
+                    <label class="new-post__add-file-field new-post__add-file-field_doc">
+                      <input type="file" name="new-post-doc">
+                      <span class="new-post__label-icon">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6H11C11.5523 6 12 5.55228 12 5C12 4.44772 11.5523 4 11 4H5Z"
+                            fill="#FF5531" />
+                          <path
+                            d="M4 9C4 8.44771 4.44772 8 5 8H11C11.5523 8 12 8.44771 12 9C12 9.55229 11.5523 10 11 10H5C4.44772 10 4 9.55229 4 9Z"
+                            fill="#FF5531" />
+                          <path
+                            d="M5 12C4.44772 12 4 12.4477 4 13C4 13.5523 4.44772 14 5 14H11C11.5523 14 12 13.5523 12 13C12 12.4477 11.5523 12 11 12H5Z"
+                            fill="#FF5531" />
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.625 18H16.375C18.3918 18 20 16.3435 20 14.3333V3.66667C20 1.65653 18.3918 0 16.375 0H3.625C1.60818 0 0 1.65653 0 3.66667V14.3333C0 16.3435 1.60818 18 3.625 18ZM3.625 2C2.74233 2 2 2.73129 2 3.66667V14.3333C2 15.2687 2.74233 16 3.625 16H12.375C13.2577 16 14 15.2687 14 14.3333V3.66667C14 2.73129 13.2577 2 12.375 2H3.625ZM16.375 16H15.6042C15.8575 15.4987 16 14.9317 16 14.3333V3.66667C16 3.06833 15.8575 2.50132 15.6042 2H16.375C17.2577 2 18 2.73129 18 3.66667V14.3333C18 15.2687 17.2577 16 16.375 16Z"
+                            fill="#FF5531" />
+                        </svg>
+                      </span>
+                      <span class="new-post__label-text">Документ</span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="page__posts-wrapper">
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/01.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Коллеги, помогите
+                    </button>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Ещё один случай из практики реаниматолога СП.
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Во время дежурства поступает вызов от фельдшерской бригады с поводом...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/02.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Doctor News. D.</h4>
+                      </a>
+                      <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="button-like__text">
+                      <span data-like="600">600</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="article-post__menu menu-post">
+                  <button 
+                      class="menu-post__action-button menu-post__action-button_save" 
+                      type="button"
+                  >
+                    Сохранить публикацию
+                  </button>
+                  <button 
+                      class="menu-post__action-button menu-post__action-button_complain" 
+                      type="button"
+                  >
+                    Пожаловаться на публикацию
+                  </button>
+                  <button 
+                      class="menu-post__action-button menu-post__action-button_hide" 
+                      type="button"
+                  >
+                    Скрыть публикацию автора
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/02.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Частный случай
+                    </button>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Каннабис при cиндроме ломкой Х-хромосомы
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Спасибо Татьяне Евгеньевне Егоровой за интересную публикацию “Синдром...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/02.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Doctor News. D.</h4>
+                      </a>
+                      <div title="Врач Реаниматолог" class="info-user__vocation">Реаниматолог</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="button-like__text">
+                      <span data-like="600">600</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/03.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Частный случай
+                    </button>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      А слона-то и не заметила.
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Поделюсь одним случаем из моей практики. Около 2х лет назад я, тогда еще оч...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/03.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Девятых Т.</h4>
+                      </a>
+                      <div title="Врач ультразвуковой диагностики" class="info-user__vocation">
+                        Врач ультразвуковой диагностики
+                      </div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="button-like__text">
+                      <span data-like="2">2</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/04.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Случай в больнице
+                    </button>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Баттл. ТЭЛА на фоне транексамовой кислоты
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    Клинический случай. Самое интересное как всегда под вечер... За медицинской...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/06.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Бурцев А.</h4>
+                      </a>
+                      <div title="Врач Терапевт" class="info-user__vocation">Терапевт</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="button-like__text">
+                      <span data-like="399">399</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/05.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Коллеги, помогите
+                    </button>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Лечение метастатического колоректального рака
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    17 октября 2022 г. в журнале Journal of Clinical Oncology опубликовали руко...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/05.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Кадыров Т.</h4>
+                      </a>
+                      <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="button-like__text">
+                      <span data-like="1000">1000</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article class="page__post article-post">
+                <div class="article-post__top">
+                  <a href="#" class="article-post__image">
+                    <img src="@img/posts/06.jpg" alt="Post Image">
+                  </a>
+                </div>
+                <div class="article-post__body">
+                  <div class="article-post__row">
+                    <div class="article-post__date date-post">
+                      <span class="date-post__icon">
+                        <img src="@img/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">10 мин. назад</span>
+                    </div>
+                    <button class="article-post__button-tag" 
+                            type="button">
+                      Коллеги, помогите
+                    </button>
+                  </div>
+                  <a href="#" class="article-post__link-title">
+                    <h3 class="article-post__title">
+                      Лечение метастатического колоректального рака
+                    </h3>
+                  </a>
+                  <div class="article-post__description">
+                    17 октября 2022 г. в журнале Journal of Clinical Oncology опубликовали руко...
+                  </div>
+                </div>
+                <div class="article-post__bottom">
+                  <div class="article-post__user-info info-user">
+                    <a class="info-user__image" href="#">
+                      <img src="@img/users/05.png" alt="User Avatar">
+                    </a>
+                    <div class="info-user__text">
+                      <a href="" class="info-user__link-name">
+                        <h4 class="info-user__name">Кадыров Т.</h4>
+                      </a>
+                      <div title="Врач общей практики" class="info-user__vocation">Врач общей практики</div>
+                    </div>
+                  </div>
+                  <button class="article-post__button-like button-like" type="button">
+                    <span class="button-like__icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F" />
+                        <path
+                          d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z"
+                          fill="#E6C047" />
+                        <path
+                          d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450"
+                          stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12"
+                          stroke="#2B3450" stroke-width="1.5" stroke-linecap="round" />
+                        <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450" />
+                        <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450" />
+                      </svg>
+                    </span>
+                    <span class="button-like__text">
+                      <span data-like="100">100</span> cпасибо
+                    </span>
+                  </button>
+                  <button class="article-post__more-info button-more-info" type="button">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </main> 
+    </div>
+    @@include('html/footer.html', {})
+    @@include('html/modals/createPostPopup.html', {})
+  </div>
+  @@include('html/script.html', {})
+</body>
+
+</html>
