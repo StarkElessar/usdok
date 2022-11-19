@@ -3103,8 +3103,8 @@ body._lock {
   display: grid;
   -ms-grid-columns: 3rem 1fr;
   grid-template-columns: 3rem 1fr;
-  -ms-grid-rows: auto auto;
-  grid-template-rows: auto auto;
+  -ms-grid-rows: 1.5rem 1.5rem;
+  grid-template-rows: 1.5rem 1.5rem;
   -webkit-column-gap: 0.75rem;
      -moz-column-gap: 0.75rem;
           column-gap: 0.75rem;
@@ -3132,6 +3132,8 @@ body._lock {
   overflow: hidden;
   height: 3rem;
   width: 3rem;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   border: 0.125rem solid #f9fafc;
 }
@@ -4261,14 +4263,18 @@ body._lock {
   }
 
   .updates-event__header {
-    -ms-grid-columns: 2.25rem 1fr;
-    grid-template-columns: 2.25rem 1fr;
+    -ms-grid-columns: 2.5rem 1fr;
+    grid-template-columns: 2.5rem 1fr;
+    -ms-grid-rows: 1.125rem 1.125rem;
+    grid-template-rows: 1.125rem 1.125rem;
     gap: 0.25rem;
   }
 
   .updates-event__ava-image {
     width: 1.875rem;
     height: 1.875rem;
+    width: 100%;
+    height: 100%;
   }
 
   .updates-event__icon {
