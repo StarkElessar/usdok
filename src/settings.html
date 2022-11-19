@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Обновления'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <div class="wrapper__content">
+      @@include('html/sideBar.html', {})
+      <main class="page">
+        <div class="page__container page__container_settings">
+          <div class="settings-table">
+            <div class="settings-table__menu-pc settings-menu-pc">
+              <ul class="settings-menu-pc__list">
+                <li class="settings-menu-pc__item">
+                  <button class="settings-menu-pc__button _active" type="button">Редактировать профиль</button>
+                </li>
+                <li class="settings-menu-pc__item">
+                  <button class="settings-menu-pc__button" type="button">Язык</button>
+                </li>
+                <li class="settings-menu-pc__item">
+                  <button class="settings-menu-pc__button" type="button">Черный список</button>
+                </li>
+                <li class="settings-menu-pc__item">
+                  <button class="settings-menu-pc__button" type="button">Обновления</button>
+                </li>
+                <li class="settings-menu-pc__item">
+                  <button class="settings-menu-pc__button" type="button">Смена пароля</button>
+                </li>
+              </ul>
+            </div>
+            <div class="settings-table__body-container settings-accordion">
+              <ul class="settings-accordion__list">
+                <li class="settings-accordion__item _active">
+                  <div class="settings-accordion__menu-mobile">
+                    <span class="settings-accordion__menu-mobile-text">Редактировать профиль</span>
+                    <span class="settings-accordion__menu-mobile-icon">
+                      <img src="@img/icons/arrow-down.svg" alt="Arrow">
+                    </span>
+                  </div>
+                  <div class="settings-accordion__body">
+                    <h4 class="settings-accordion__body-title">Редактировать профиль</h4>
+                    <div class="settings-accordion__content setting-profile">
+                      <div class="setting-profile__ava-wrapper">
+                        <div class="setting-profile__ava-image">
+                          <img src="@img/profile/full-avatar.png" alt="Avatar">
+                        </div>
+                        <button class="setting-profile__button-edit-ava" type="button">
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23223 0.767767C9.20854 -0.208544 10.7915 -0.208544 11.7678 0.767767L12.4749 1.47487C13.4512 2.45118 13.4512 4.0341 12.4749 5.01041L4.34315 13.1421L1.10051 13.1421C0.548222 13.1421 0.100505 12.6944 0.100506 12.1421L0.100505 8.89949L8.23223 0.767767ZM10.3536 2.18198L11.0607 2.88909C11.2559 3.08435 11.2559 3.40093 11.0607 3.59619L10 4.65685L8.58579 3.24264L9.64645 2.18198C9.84171 1.98672 10.1583 1.98672 10.3536 2.18198ZM8.58579 6.07107L3.51472 11.1421L2.10051 11.1421L2.10051 9.72792L7.17157 4.65685L8.58579 6.07107Z" fill="#2B3450"/>
+                          </svg>
+                        </button>
+                      </div>
+                      <form class="setting-profile__form-control">
+                        <div class="setting-profile__field-controls">
+                          <label class="setting-profile__field">
+                            <span class="setting-profile__field-name">Имя</span>
+                            <input class="setting-profile__input" type="text" placeholder="Ваше имя" value="Анна">
+                          </label>
+                          <label class="setting-profile__field">
+                            <span class="setting-profile__field-name">Фамилия</span>
+                            <input class="setting-profile__input" type="text" placeholder="Ваша фамилия" value="Сазанчук">
+                          </label>
+                          <label class="setting-profile__field">
+                            <span class="setting-profile__field-name">Cпециальность</span>
+                            <input class="setting-profile__input" type="text" placeholder="Ваша специальность" value="Врач общей практики">
+                          </label>
+                          <label class="setting-profile__field">
+                            <span class="setting-profile__field-name">Адрес</span>
+                            <input class="setting-profile__input" type="text" placeholder="Ваш адрес" value="Россия, Калининград">
+                          </label>
+                          <label class="setting-profile__field">
+                            <span class="setting-profile__field-name">Email</span>
+                            <input class="setting-profile__input" type="email" placeholder="Ваш Email" value="sazanovich@gmail.com">
+                          </label>
+                          <label class="setting-profile__field">
+                            <span class="setting-profile__field-name">Телефон</span>
+                            <input class="setting-profile__input" type="tel" placeholder="Ваша телефон" value="+7 495 123 45 67">
+                          </label>
+                          <label class="setting-profile__field setting-profile__field_row">
+                            <input class="setting-profile__checkbox" type="checkbox" checked>
+                            <span class="setting-profile__field-box"></span>
+                            <span class="setting-profile__field-text">Скрыть мой номер телефона</span>
+                          </label>
+                        </div>
+                        <div class="setting-profile__about-me">
+                          <h5 class="setting-profile__text-label">О себе</h5>
+                          <textarea class="setting-profile__textarea-feild">Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Задача организации, в особенности же реализация намеченных плановых заданий представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Товарищи! реализация намеченных плановых заданий требуют от нас анализа модели развития.</textarea>
+                        </div>
+                        <button 
+                            class="
+                              setting-profile__button-submit 
+                              button-submit" 
+                            type="submit"
+                        >
+                          Сохранить изменения
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    @@include('html/footer.html', {})
+    @@include('html/modals/createPostPopup.html', {})
+  </div>
+  @@include('html/script.html', {})
+</body>
+
+</html>
