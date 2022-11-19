@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
+  <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221119191700">
+  <title>Обновления</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="header__container">
+    <a href="#" class="header__logo logo">
+      <picture>
+        <source srcset="images/icons/logo-sign.svg" media="(max-width: 768.98px)">
+        <img src="images/icons/logo-text_right.svg" alt="USDOK Logo">
+      </picture>
+    </a>
+    <div class="header__search search-header">
+      <input class="search-header__input" type="text" placeholder="Искать на тему...">
+      <span class="search-header__icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2 9C2 5.13401 5.13401 2 9 2C12.866 2 16 5.13401 16 9C16 12.866 12.866 16 9 16C5.13401 16 2 12.866 2 9ZM9 0C4.02944 0 0 4.02944 0 9C0 13.9706 4.02944 18 9 18C11.125 18 13.078 17.2635 14.6177 16.0319L18.2929 19.7071C18.6834 20.0976 19.3166 20.0976 19.7071 19.7071C20.0976 19.3166 20.0976 18.6834 19.7071 18.2929L16.0319 14.6177C17.2635 13.078 18 11.125 18 9C18 4.02944 13.9706 0 9 0Z" fill="#2B3450"/>
+        </svg>
+      </span>
+    </div>
+    
+    <div class="header__profile">
+      <span class="header__profile-name">Анна Сазанчук</span>
+      <span class="header__profile-avatar">
+        <picture><source srcset="images/users/04.webp" type="image/webp"><img src="images/users/04.png" alt="User Avatar"></picture>
+      </span>
+    </div>
+    <button class="_notification header__icon-menu" type="button">
+      <span>
+        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19 16C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H1C0.447715 18 0 17.5523 0 17C0 16.4477 0.447715 16 1 16H19ZM19 12C19.5523 12 20 12.4477 20 13C20 13.5523 19.5523 14 19 14H7C6.44772 14 6 13.5523 6 13C6 12.4477 6.44772 12 7 12H19ZM19 8C19.5523 8 20 8.44772 20 9C20 9.55228 19.5523 10 19 10H1C0.447715 10 0 9.55228 0 9C0 8.44772 0.447715 8 1 8H19ZM19 4C19.5523 4 20 4.44772 20 5C20 5.55228 19.5523 6 19 6H7C6.44772 6 6 5.55228 6 5C6 4.44772 6.44772 4 7 4H19ZM19 0C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0H19Z" fill="#2B3450"/>
+        </svg>
+      </span>
+    </button>
+    
+  </div>
+</header>
+    <div class="wrapper__content">
+      <aside class="sidebar" id="sidebar">
+  <div class="sidebar__container">
+    <nav class="menu sidebar__menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link menu__link_user" href="./profile.html" title="Открыть профиль">
+            <span class="menu__icon">
+              <picture><source srcset="images/users/04.webp" type="image/webp"><img src="images/users/04.png" alt="Анна Сазанчук"></picture>
+            </span>
+            <span class="menu__text">Анна Сазанчук</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link _active" href="./main-auth.html" title="Открыть ленту новостей">
+            <span class="menu__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0C1.34315 0 0 1.34315 0 3V6C0 7.65685 1.34315 9 3 9H6C7.65685 9 9 7.65685 9 6V3C9 1.34315 7.65685 0 6 0H3ZM2 3C2 2.44772 2.44772 2 3 2H6C6.55228 2 7 2.44772 7 3V6C7 6.55228 6.55228 7 6 7H3C2.44772 7 2 6.55228 2 6V3Z" fill="#2B3450"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14 0C12.3431 0 11 1.34315 11 3V6C11 7.65685 12.3431 9 14 9H17C18.6569 9 20 7.65685 20 6V3C20 1.34315 18.6569 0 17 0H14ZM13 3C13 2.44772 13.4477 2 14 2H17C17.5523 2 18 2.44772 18 3V6C18 6.55228 17.5523 7 17 7H14C13.4477 7 13 6.55228 13 6V3Z" fill="#2B3450"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14C0 12.3431 1.34315 11 3 11H6C7.65685 11 9 12.3431 9 14V17C9 18.6569 7.65685 20 6 20H3C1.34315 20 0 18.6569 0 17V14ZM3 13C2.44772 13 2 13.4477 2 14V17C2 17.5523 2.44772 18 3 18H6C6.55228 18 7 17.5523 7 17V14C7 13.4477 6.55228 13 6 13H3Z" fill="#2B3450"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14 11C12.3431 11 11 12.3431 11 14V17C11 18.6569 12.3431 20 14 20H17C18.6569 20 20 18.6569 20 17V14C20 12.3431 18.6569 11 17 11H14ZM13 14C13 13.4477 13.4477 13 14 13H17C17.5523 13 18 13.4477 18 14V17C18 17.5523 17.5523 18 17 18H14C13.4477 18 13 17.5523 13 17V14Z" fill="#2B3450"/>
+              </svg>
+            </span>
+            <span class="menu__text">Лента</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Открыть сообщения">
+            <span class="menu__icon">
+              <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 2C3.34308 2 2 3.34308 2 4.9997V10.2642C2 11.9208 3.34308 13.2639 5 13.2639H6V15.0426L8.25282 13.2639H15C16.6569 13.2639 18 11.9208 18 10.2642V4.99971C18 3.34308 16.6569 2 15 2H5ZM0 4.9997C0 2.23837 2.23865 0 5 0H15C17.7614 0 20 2.23838 20 4.99971V10.2642C20 13.0255 17.7614 15.2639 15 15.2639H8.94718L5.78164 17.7632C5.0604 18.3326 4 17.819 4 16.8998L4 15.1639C1.7178 14.7007 0 12.6831 0 10.2642V4.9997Z" fill="#2B3450"/>
+                <path d="M7 8C7 8.55228 6.55228 9 6 9C5.44772 9 5 8.55228 5 8C5 7.44772 5.44772 7 6 7C6.55228 7 7 7.44772 7 8Z" fill="#2B3450"/>
+                <path d="M11 8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8Z" fill="#2B3450"/>
+                <path d="M15 8C15 8.55228 14.5523 9 14 9C13.4477 9 13 8.55228 13 8C13 7.44772 13.4477 7 14 7C14.5523 7 15 7.44772 15 8Z" fill="#2B3450"/>
+              </svg>
+            </span>
+            <span class="menu__text">Сообщения</span>
+            <span class="menu__count-notification">3</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="./updates.html" title="Открыть обновления">
+            <span class="menu__icon">
+              <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.33497 2.72727V3.25342C2.64516 4.35644 0.765923 7.97935 0.834116 11.1192L0.834094 12.8631C-0.542872 14.6333 -0.461854 17.2727 2.9735 17.2727H5.33497C5.33497 17.996 5.61684 18.6897 6.11858 19.2012C6.62033 19.7127 7.30083 20 8.01041 20C8.71998 20 9.40049 19.7127 9.90223 19.2012C10.404 18.6897 10.6858 17.996 10.6858 17.2727H13.0538C16.4826 17.2727 16.5323 14.6278 15.1555 12.8576L15.1938 11.1216C15.2631 7.97811 13.3803 4.35194 10.6858 3.25049V2.72727C10.6858 2.00396 10.404 1.31026 9.90223 0.7988C9.40049 0.287337 8.71998 0 8.01041 0C7.30083 0 6.62033 0.287337 6.11858 0.798799C5.61684 1.31026 5.33497 2.00395 5.33497 2.72727ZM8.90222 2.72727C8.90222 2.74573 8.90167 2.76414 8.90058 2.78246C8.61013 2.74603 8.31424 2.72727 8.01399 2.72727C7.71128 2.72727 7.41302 2.74634 7.12029 2.78335C7.11916 2.76474 7.11859 2.74603 7.11859 2.72727C7.11859 2.48617 7.21255 2.25494 7.3798 2.08445C7.54705 1.91396 7.77388 1.81818 8.01041 1.81818C8.24693 1.81818 8.47377 1.91396 8.64101 2.08445C8.80826 2.25494 8.90222 2.48617 8.90222 2.72727ZM7.11859 17.2727C7.11859 17.5138 7.21255 17.7451 7.3798 17.9156C7.54705 18.086 7.77388 18.1818 8.01041 18.1818C8.24693 18.1818 8.47377 18.086 8.64101 17.9156C8.80826 17.7451 8.90222 17.5138 8.90222 17.2727H7.11859ZM13.0538 15.4545C13.8157 15.4545 14.2267 14.5435 13.7309 13.9538V13.9538C13.49 13.6673 13.3616 13.3028 13.3699 12.9286L13.4106 11.0808C13.4787 7.99416 11.0427 4.54545 8.01399 4.54545C4.98598 4.54545 2.55028 7.99301 2.61731 11.0789L2.65748 12.9289C2.66561 13.303 2.53726 13.6674 2.29639 13.9538V13.9538C1.80054 14.5435 2.21158 15.4545 2.9735 15.4545H13.0538Z" fill="#2B3450"/>
+              </svg>                      
+            </span>
+            <span class="menu__text">Обновления</span>
+            <span class="menu__count-notification">23</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="./profile.html" title="Открыть профиль">
+            <span class="menu__icon">
+              <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 2C6.89543 2 6 2.89543 6 4C6 5.10457 6.89543 6 8 6C9.10457 6 10 5.10457 10 4C10 2.89543 9.10457 2 8 2ZM4 4C4 1.79086 5.79086 0 8 0C10.2091 0 12 1.79086 12 4C12 6.20914 10.2091 8 8 8C5.79086 8 4 6.20914 4 4ZM0 16.5C0 12.3579 3.35786 9 7.5 9H8.5C12.6421 9 16 12.3579 16 16.5V17C16 18.1046 15.1046 19 14 19H2C0.895432 19 0 18.1046 0 17V16.5ZM7.5 11C4.46243 11 2 13.4624 2 16.5V17H14V16.5C14 13.4624 11.5376 11 8.5 11H7.5Z" fill="#2B3450"/>
+              </svg>            
+            </span>
+            <span class="menu__text">Профиль</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Открыть настройки">
+            <span class="menu__icon">
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.78197 1.95036C9.97198 0.643661 12.028 0.643663 13.218 1.95036L13.9535 2.75796C14.154 2.97809 14.4421 3.09744 14.7396 3.08354L15.8307 3.03255C17.5961 2.95004 19.05 4.40389 18.9675 6.16933L18.9165 7.26045C18.9026 7.55787 19.0219 7.84601 19.2421 8.04648L20.0496 8.78197C21.3563 9.97198 21.3563 12.028 20.0496 13.218L19.2421 13.9535C19.0219 14.154 18.9026 14.4421 18.9165 14.7396L18.9675 15.8307C19.05 17.5961 17.5961 19.05 15.8307 18.9675L14.7396 18.9165C14.4421 18.9026 14.154 19.0219 13.9535 19.2421L13.218 20.0496C12.028 21.3563 9.97198 21.3563 8.78197 20.0496L8.04648 19.2421C7.84601 19.0219 7.55787 18.9026 7.26045 18.9165L6.16933 18.9675C4.40388 19.05 2.95004 17.5961 3.03255 15.8307L3.08354 14.7396C3.09744 14.4421 2.97809 14.154 2.75796 13.9535L1.95036 13.218C0.643661 12.028 0.643663 9.97198 1.95036 8.78197L2.75796 8.04648C2.97809 7.84601 3.09744 7.55787 3.08354 7.26045L3.03255 6.16933C2.95004 4.40389 4.40389 2.95004 6.16933 3.03255L7.26045 3.08354C7.55787 3.09744 7.84601 2.97809 8.04648 2.75796L8.78197 1.95036ZM11.7394 3.29701C11.3427 2.86145 10.6573 2.86145 10.2607 3.29701L9.52518 4.10461C8.92375 4.76501 8.05933 5.12306 7.16709 5.08136L6.07596 5.03037C5.48748 5.00287 5.00287 5.48748 5.03037 6.07596L5.08136 7.16709C5.12306 8.05933 4.76501 8.92375 4.10461 9.52518L3.29701 10.2607C2.86145 10.6573 2.86145 11.3427 3.29701 11.7394L4.10461 12.4748C4.76501 13.0763 5.12306 13.9407 5.08136 14.8329L5.03037 15.924C5.00287 16.5125 5.48748 16.9971 6.07596 16.9696L7.16709 16.9186C8.05933 16.8769 8.92375 17.235 9.52518 17.8954L10.2607 18.703C10.6573 19.1386 11.3427 19.1386 11.7394 18.703L12.4748 17.8954C13.0763 17.235 13.9407 16.8769 14.8329 16.9186L15.924 16.9696C16.5125 16.9971 16.9971 16.5125 16.9696 15.924L16.9186 14.8329C16.8769 13.9407 17.235 13.0763 17.8954 12.4748L18.703 11.7394C19.1386 11.3427 19.1386 10.6573 18.703 10.2607L17.8954 9.52518C17.235 8.92375 16.8769 8.05933 16.9186 7.16709L16.9696 6.07596C16.9971 5.48748 16.5125 5.00287 15.924 5.03037L14.8329 5.08136C13.9407 5.12306 13.0763 4.76501 12.4748 4.10461L11.7394 3.29701Z" fill="#2B3450"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 9C9.89543 9 9 9.89543 9 11C9 12.1046 9.89543 13 11 13C12.1046 13 13 12.1046 13 11C13 9.89543 12.1046 9 11 9ZM7 11C7 8.79086 8.79086 7 11 7C13.2091 7 15 8.79086 15 11C15 13.2091 13.2091 15 11 15C8.79086 15 7 13.2091 7 11Z" fill="#2B3450"/>
+              </svg>  
+            </span>
+            <span class="menu__text">Настройки</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#" title="Выйти из аккаунта">
+            <span class="menu__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 0C8.23857 0 6 2.23858 6 5C6 5.55228 6.44771 6 7 6C7.55228 6 8 5.55228 8 5C8 3.34315 9.34314 2 11 2H15C16.6569 2 18 3.34315 18 5V15C18 16.6569 16.6569 18 15 18H11C9.34314 18 8 16.6569 8 15C8 14.4477 7.55228 14 7 14C6.44771 14 6 14.4477 6 15C6 17.7614 8.23857 20 11 20H15C17.7614 20 20 17.7614 20 15V5C20 2.23858 17.7614 0 15 0H11Z" fill="#2B3450"/>
+                <path d="M12 9C12.5523 9 13 9.44772 13 10C13 10.5523 12.5523 11 12 11V9Z" fill="#2B3450"/>
+                <path d="M3.71792 9C3.80694 8.89023 3.89223 8.78371 3.97292 8.68195C4.2184 8.37235 4.42624 8.10041 4.573 7.90549C4.64645 7.80795 4.70477 7.72946 4.74504 7.67492L4.79161 7.61162L4.80409 7.59454L4.80851 7.58848C4.80855 7.58842 4.80902 7.58778 4 7L4.80851 7.58848C5.13313 7.14167 5.03459 6.51561 4.58778 6.19098C4.141 5.86637 3.51567 5.9654 3.19103 6.41215L3.18821 6.41602L3.17798 6.43002L3.13621 6.48679C3.09927 6.53682 3.04465 6.61033 2.97525 6.7025C2.83632 6.88702 2.63883 7.14542 2.40576 7.43937C1.93452 8.0337 1.33768 8.7481 0.792892 9.29289L0.0857849 10L0.792892 10.7071C1.33768 11.2519 1.93452 11.9663 2.40576 12.5606C2.63883 12.8546 2.83632 13.113 2.97525 13.2975C3.04465 13.3897 3.09927 13.4632 3.13621 13.5132L3.17798 13.57L3.18821 13.584L3.19055 13.5872C3.51518 14.0339 4.141 14.1336 4.58778 13.809C5.03459 13.4844 5.13364 12.859 4.80902 12.4122L4 13C4.80902 12.4122 4.80906 12.4123 4.80902 12.4122L4.80409 12.4055L4.79161 12.3884L4.74504 12.3251C4.70477 12.2705 4.64645 12.1921 4.573 12.0945C4.42624 11.8996 4.2184 11.6277 3.97292 11.318C3.89223 11.2163 3.80694 11.1098 3.71792 11H12V9H3.71792Z" fill="#2B3450"/>
+              </svg>
+            </span>
+            <span class="menu__text">Выйти</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+      <main class="page">
+        <div class="page__container page__container_updates" id="tabUpdates">
+          <div class="page__updates-control tab-control">
+            <ul class="tab-control__list">
+              <li class="tab-control__item">
+                <button class="tab-control__button _active" type="button" data-id="all">
+                  Все
+                </button>
+              </li>
+              <li class="tab-control__item">
+                <button class="tab-control__button" type="button" data-id="reactions">
+                  Реакции
+                </button>
+              </li>
+              <li class="tab-control__item">
+                <button class="tab-control__button" type="button" data-id="comments">
+                  Коментарии
+                </button>
+              </li>
+              <li class="tab-control__item">
+                <button class="tab-control__button" type="button" data-id="publishings">
+                  Публикации
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="page__tab-content tab-content">
+            <ul class="tab-content__list">
+              <li class="tab-content__item" data-item="publishings">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <picture><source srcset="images/users/08.webp" type="image/webp"><img src="images/users/08.png" alt="Avatar"></picture>
+                      </div>
+                    </div>
+                    <div class="updates-event__name">Аминов Сергей</div>
+                    <div class="updates-event__vocation">Врач общей практики</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Создал публикацию:</span>
+                    <h4 class="updates-event__post-title">
+                      Экстубация в нейрореанимации
+                    </h4>
+                    <p class="updates-event__post-text">
+                      17 октября 2022 г. в журнале Intensive Care Medicine опубликована статья “Экстубация у пациентов в
+                      нейрореанимации: урок выучен. На основании международного исследования, в которое вошли 1500
+                      пациентов из нейрореанимации, был сделан вывод, что основой в успехе экстубации является
+                      комбинация уровня пробуждения (level of arousal), функциональность верхних дыхательных путей и
+                      общие...
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <button class="updates-event__button-read-more" type="button">Читать</button>
+                    <div class="date-post updates-event__date updates-event__date_new-event">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">9 сентября в 12:29</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tab-content__item" data-item="reactions">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <picture><source srcset="images/users/07.webp" type="image/webp"><img src="images/users/07.png" alt="Avatar"></picture>
+                      </div>
+                      <img class="updates-event__icon" src="images/icons/smile.svg" alt="Smile">
+                    </div>
+                    <div class="updates-event__name">Скляренко Наталья</div>
+                    <div class="updates-event__vocation">Хирург</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Добавила реакцию к комментарию:</span>
+                    <p class="updates-event__post-text">
+                      «Лечила я как-то пациентку по л/н по поводу о.цистита, соответственно, одна из рекомендаций -
+                      половой покой. В контрольном»
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <div class="date-post updates-event__date updates-event__date_new-event">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">9 сентября в 13:11</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tab-content__item" data-item="comments">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <picture><source srcset="images/users/09.webp" type="image/webp"><img src="images/users/09.png" alt="Avatar"></picture>
+                      </div>
+                    </div>
+                    <div class="updates-event__name">Игнатенко Мария</div>
+                    <div class="updates-event__vocation">Невролог</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Добавила комментарий:</span>
+                    <p class="updates-event__post-text">
+                      «Ольга Римовна, спасибо за публикацию. Часто сталкиваюсь с гиперурекемией с нарушенной функции
+                      почек без явного подагрического артрита в анамнезе. Особенно сложно с пациентами с ХСН, петлевые
+                      диуретики увеличивають МК, в том числе креатинина крови. Приходится сперва назначать малые дозу
+                      аденурика, затем...»
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <button class="updates-event__button-read-more" type="button">Читать</button>
+                    <div class="date-post updates-event__date">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">2 сентября в 09:11</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tab-content__item" data-item="publishings">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <picture><source srcset="images/users/10.webp" type="image/webp"><img src="images/users/10.png" alt="Avatar"></picture>
+                      </div>
+                    </div>
+                    <div class="updates-event__name">Кузова Екатерина</div>
+                    <div class="updates-event__vocation">Окулист</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Создала публикацию:</span>
+                    <h4 class="updates-event__post-title">
+                      Какой чудесный день
+                    </h4>
+                    <p class="updates-event__post-text">
+                      17 октября в России отмечают день участкового терапевта. К кому в первую очередь обращаются при первичных признаках " поломки" в организме ? Правильно , К участковому терапевту! Именно терапевт является основным звеном в огромном медицинском мире. Ведь он , без преувеличения , специалист широкого профиля. Он знает все о человеческом организме.
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <button class="updates-event__button-read-more" type="button">Читать</button>
+                    <div class="date-post updates-event__date">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">30 августа в 23:12</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+  <div class="footer__container">
+    <div class="info">
+      <a href="#" class="info__link">
+        <span class="info__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 5C10.5523 5 11 5.44772 11 6V11C11 11.5523 10.5523 12 10 12C9.44771 12 9 11.5523 9 11V6C9 5.44772 9.44771 5 10 5Z" fill="#A0A7B5"/>
+            <path d="M10 15C10.5523 15 11 14.5523 11 14C11 13.4477 10.5523 13 10 13C9.44771 13 9 13.4477 9 14C9 14.5523 9.44771 15 10 15Z" fill="#A0A7B5"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="#A0A7B5"/>
+          </svg>
+        </span>
+        <span class="info__text">Правила</span>
+      </a>
+      <a href="#" class="info__link">
+        <span class="info__icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 5C10.5523 5 11 5.44772 11 6V11C11 11.5523 10.5523 12 10 12C9.44771 12 9 11.5523 9 11V6C9 5.44772 9.44771 5 10 5Z" fill="#A0A7B5"/>
+            <path d="M11 14C11 14.5523 10.5523 15 10 15C9.44771 15 9 14.5523 9 14C9 13.4477 9.44771 13 10 13C10.5523 13 11 13.4477 11 14Z" fill="#A0A7B5"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5 0C2.23858 0 0 2.23858 0 5V15C0 17.7614 2.23858 20 5 20H15C17.7614 20 20 17.7614 20 15V5C20 2.23858 17.7614 0 15 0H5ZM2 5C2 3.34315 3.34315 2 5 2H15C16.6569 2 18 3.34315 18 5V15C18 16.6569 16.6569 18 15 18H5C3.34315 18 2 16.6569 2 15V5Z" fill="#A0A7B5"/>
+          </svg>
+        </span>
+        <span class="info__text">Политика конфиденциальности</span>
+      </a>
+    </div>
+  </div>
+</footer>
+    <div class="_overlay create-popup modal">
+  <div class="create-popup__body modal__body">
+    <button class="modal__button-close" type="button">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.40994 6.99994L12.7099 2.70994C12.8982 2.52164 13.004 2.26624 13.004 1.99994C13.004 1.73364 12.8982 1.47825 12.7099 1.28994C12.5216 1.10164 12.2662 0.99585 11.9999 0.99585C11.7336 0.99585 11.4782 1.10164 11.2899 1.28994L6.99994 5.58994L2.70994 1.28994C2.52164 1.10164 2.26624 0.99585 1.99994 0.99585C1.73364 0.99585 1.47824 1.10164 1.28994 1.28994C1.10164 1.47825 0.995847 1.73364 0.995847 1.99994C0.995847 2.26624 1.10164 2.52164 1.28994 2.70994L5.58994 6.99994L1.28994 11.2899C1.19621 11.3829 1.12182 11.4935 1.07105 11.6154C1.02028 11.7372 0.994141 11.8679 0.994141 11.9999C0.994141 12.132 1.02028 12.2627 1.07105 12.3845C1.12182 12.5064 1.19621 12.617 1.28994 12.7099C1.3829 12.8037 1.4935 12.8781 1.61536 12.9288C1.73722 12.9796 1.86793 13.0057 1.99994 13.0057C2.13195 13.0057 2.26266 12.9796 2.38452 12.9288C2.50638 12.8781 2.61698 12.8037 2.70994 12.7099L6.99994 8.40994L11.2899 12.7099C11.3829 12.8037 11.4935 12.8781 11.6154 12.9288C11.7372 12.9796 11.8679 13.0057 11.9999 13.0057C12.132 13.0057 12.2627 12.9796 12.3845 12.9288C12.5064 12.8781 12.617 12.8037 12.7099 12.7099C12.8037 12.617 12.8781 12.5064 12.9288 12.3845C12.9796 12.2627 13.0057 12.132 13.0057 11.9999C13.0057 11.8679 12.9796 11.7372 12.9288 11.6154C12.8781 11.4935 12.8037 11.3829 12.7099 11.2899L8.40994 6.99994Z" fill="#4E5E78"/>
+      </svg>
+    </button>
+    <h3 class="create-popup__title">Создание публикации</h3>
+    <form class="create-popup__form-action" id="createPostForm">
+      <div class="create-popup__field">
+        <label class="create-popup__label" for="postTheme">Выбрать тему</label>
+        <div class="create-popup__dropdown custom-dropdown" id="postTheme">
+          <button class="custom-dropdown__btn" type="button" id="button-dropdown">
+            <span class="custom-dropdown__label">Выберите группу</span>
+            <span class="custom-dropdown__icon">
+              <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8849 0.294983L6.29492 4.87498L1.70492 0.294983L0.294922 1.70498L6.29492 7.70498L12.2949 1.70498L10.8849 0.294983Z" fill="black"/>
+              </svg>
+            </span>
+          </button>
+          <ul class="custom-dropdown__list select-list" id="dropdown-list">
+            <li data-value="Клинический случай" class="select-list__item">Клинический случай</li>
+            <li data-value="Коллеги, помогите" class="select-list__item">Коллеги, помогите</li>
+            <li data-value="Статья" class="select-list__item">Статья</li>
+            <li data-value="Разомнем мозги" class="select-list__item">Разомнем мозги</li>
+            <li data-value="Врач без халата" class="select-list__item">Врач без халата</li>
+            <li data-value="Анонс" class="select-list__item">Анонс</li>
+            <li data-value="Для начинающих" class="select-list__item">Для начинающих</li>
+            <li data-value="Пишем заключение" class="select-list__item">Пишем заключение</li>
+            <li data-value="Новости медицины" class="select-list__item">Новости медицины</li>
+            <li data-value="Обзор литературы" class="select-list__item">Обзор литературы</li>
+            <li data-value="Мини лекция" class="select-list__item">Мини леkция</li>
+            <li data-value="Обучающий материал" class="select-list__item">Обучающий материал</li>
+            <li data-value="История медицины" class="select-list__item">История медицины</li>
+            <li data-value="Юмор" class="select-list__item">Юмор</li>
+            <li data-value="ЗОЖ всем гож" class="select-list__item">ЗОЖ всем гож</li>
+            <li data-value="На правах рекламы" class="select-list__item">На правах рекламы</li>
+          </ul>
+          <input type="hidden" value="" id="dropdown-input" name="postTheme">
+        </div>
+      </div>
+      <div class="create-popup__field">
+        <label class="create-popup__label" for="postTitle">Название публикации</label>
+        <input class="create-popup__input" type="text" id="postTitle" name="postTitle">
+      </div>
+      <div class="create-popup__field create-popup__field_grid">
+        <label class="new-post__add-file-field new-post__add-file-field_video">
+          <input type="file" name="postVideo">
+          <span class="new-post__label-icon">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4C0 1.79086 1.79086 0 4 0H11C13.2091 0 15 1.79086 15 4V4.07171L18.202 2.23108C19.0019 1.77121 20 2.34868 20 3.27144V10.7488C20 11.6203 19.1003 12.2012 18.306 11.8424L14.9855 10.3425C14.8118 12.3913 13.0938 14 11 14H4C1.79086 14 0 12.2091 0 10V4ZM15 8.15443L18 9.50958V4.65407L15 6.37861V8.15443ZM13 4C13 2.89543 12.1046 2 11 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H11C12.1046 12 13 11.1046 13 10V4Z" fill="#387DFF"/>
+            </svg>
+          </span>
+          <span class="new-post__label-text">Видео</span>
+        </label>
+        <label class="new-post__add-file-field new-post__add-file-field_image">
+          <input type="file" name="postImage">
+          <span class="new-post__label-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0H16C19.3137 0 22 2.68629 22 6V16C22 19.3137 19.3137 22 16 22H6C2.68629 22 0 19.3137 0 16V6C0 2.68629 2.68629 0 6 0ZM6 2C3.79086 2 2 3.79086 2 6V16C2 18.2091 3.79086 20 6 20H16C18.2091 20 20 18.2091 20 16V6C20 3.79086 18.2091 2 16 2H6Z" fill="#39CB8A"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79289 19.6949C2.40237 19.3044 2.40237 18.6712 2.79289 18.2807L7.7835 13.2901L7.79753 13.2771C8.2212 12.8846 8.87622 12.8866 9.29748 13.2817L9.29923 13.2833L10.3259 14.2507L13.6277 10.4274C14.0442 9.94522 14.7819 9.91658 15.2345 10.3651L15.2492 10.3796L21.2326 16.8193C21.6085 17.2239 21.5853 17.8567 21.1807 18.2326C20.7761 18.6085 20.1434 18.5853 19.7674 18.1807L14.4847 12.4951L11.7828 15.6235L16.1858 19.7722C16.5877 20.1509 16.6066 20.7838 16.2278 21.1858C15.8491 21.5877 15.2162 21.6066 14.8142 21.2278L8.56374 15.3383L4.20711 19.6949C3.81658 20.0854 3.18342 20.0854 2.79289 19.6949ZM8.00001 7C7.44772 7 7.00001 7.44772 7.00001 8C7.00001 8.55228 7.44772 9 8.00001 9C8.55229 9 9.00001 8.55228 9.00001 8C9.00001 7.44772 8.55229 7 8.00001 7ZM11 8C11 9.65685 9.65686 11 8.00001 11C6.34315 11 5.00001 9.65685 5.00001 8C5.00001 6.34315 6.34315 5 8.00001 5C9.65686 5 11 6.34315 11 8Z" fill="#39CB8A"/>
+            </svg>
+          </span>
+          <span class="new-post__label-text">Фото</span>
+        </label>
+        <label class="new-post__add-file-field new-post__add-file-field_doc">
+          <input type="file" name="postDoc">
+          <span class="new-post__label-icon">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 4C4.44772 4 4 4.44772 4 5C4 5.55228 4.44772 6 5 6H11C11.5523 6 12 5.55228 12 5C12 4.44772 11.5523 4 11 4H5Z" fill="#FF5531"/>
+              <path d="M4 9C4 8.44771 4.44772 8 5 8H11C11.5523 8 12 8.44771 12 9C12 9.55229 11.5523 10 11 10H5C4.44772 10 4 9.55229 4 9Z" fill="#FF5531"/>
+              <path d="M5 12C4.44772 12 4 12.4477 4 13C4 13.5523 4.44772 14 5 14H11C11.5523 14 12 13.5523 12 13C12 12.4477 11.5523 12 11 12H5Z" fill="#FF5531"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.625 18H16.375C18.3918 18 20 16.3435 20 14.3333V3.66667C20 1.65653 18.3918 0 16.375 0H3.625C1.60818 0 0 1.65653 0 3.66667V14.3333C0 16.3435 1.60818 18 3.625 18ZM3.625 2C2.74233 2 2 2.73129 2 3.66667V14.3333C2 15.2687 2.74233 16 3.625 16H12.375C13.2577 16 14 15.2687 14 14.3333V3.66667C14 2.73129 13.2577 2 12.375 2H3.625ZM16.375 16H15.6042C15.8575 15.4987 16 14.9317 16 14.3333V3.66667C16 3.06833 15.8575 2.50132 15.6042 2H16.375C17.2577 2 18 2.73129 18 3.66667V14.3333C18 15.2687 17.2577 16 16.375 16Z" fill="#FF5531"/>
+            </svg>
+          </span>
+          <span class="new-post__label-text">Документ</span>
+        </label>
+      </div>
+      <div class="create-popup__field">
+        <textarea class="create-popup__textarea" name="postBody" id="postBody" cols="30" rows="10" placeholder="Без вступлений и приветствий изложите суть своей публикации. Проверьте орфографию."></textarea>
+      </div>
+      <div class="create-popup__field">
+        <p class="create-popup__text-description">
+          Опубликовать мнение о современных методах лечения, положениях в здравоохранении, поделиться полезными
+          материалами.
+        </p>
+      </div>
+      <div class="create-popup__field">
+        <button class="create-popup__button-submit" type="submit">Опубликовать</button>
+      </div>
+    </form>
+  </div>
+</div>
+  </div>
+  <script src="js/app.min.js?_v=20221119191700"></script>
+</body>
+
+</html>
