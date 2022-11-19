@@ -3101,9 +3101,10 @@ body._lock {
 .updates-event__header {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 3rem 1fr;
+  grid-template-columns: 3rem 1fr;
   -ms-grid-rows: auto auto;
-  -ms-grid-columns: 3rem 0.75rem 1fr;
-      grid-template: auto auto/3rem 1fr;
+  grid-template-rows: auto auto;
   -webkit-column-gap: 0.75rem;
      -moz-column-gap: 0.75rem;
           column-gap: 0.75rem;
@@ -3114,11 +3115,13 @@ body._lock {
 
 .updates-event__ava-wrapper {
   -ms-grid-row: 1;
+      grid-row-start: 1;
   -ms-grid-row-span: 2;
-  grid-row: 1/3;
+  grid-row-end: 3;
   -ms-grid-column: 1;
+      grid-column-start: 1;
   -ms-grid-column-span: 1;
-  grid-column: 1/2;
+  grid-column-end: 2;
   position: relative;
   width: 100%;
   height: 100%;
@@ -3150,12 +3153,14 @@ body._lock {
 }
 
 .updates-event__name {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
   -ms-grid-row: 1;
+      grid-row-start: 1;
   -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-row-end: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
   font-weight: 700;
   font-size: 1rem;
   line-height: 75%;
@@ -3164,11 +3169,13 @@ body._lock {
 
 .updates-event__vocation {
   -ms-grid-column: 2;
+      grid-column-start: 2;
   -ms-grid-column-span: 1;
-  grid-column: 2/3;
+  grid-column-end: 3;
   -ms-grid-row: 2;
+      grid-row-start: 2;
   -ms-grid-row-span: 1;
-  grid-row: 2/3;
+  grid-row-end: 3;
   font-size: 0.875rem;
   line-height: 85.7142857143%;
   color: #a0a7b5;
@@ -4254,9 +4261,8 @@ body._lock {
   }
 
   .updates-event__header {
-    -ms-grid-rows: auto 0.25rem auto;
-    -ms-grid-columns: 2.25rem 0.25rem 1fr;
-        grid-template: auto auto/2.25rem 1fr;
+    -ms-grid-columns: 2.25rem 1fr;
+    grid-template-columns: 2.25rem 1fr;
     gap: 0.25rem;
   }
 
