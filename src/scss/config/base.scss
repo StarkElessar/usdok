@@ -110,6 +110,10 @@ body {
         gap: rem(8);
       }
     }
+    // .page__container_settings
+    &_settings {
+      height: 100%;
+    }
   }
   // .page__content
   &__content {
