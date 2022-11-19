@@ -1,0 +1,31 @@
+.settings-menu-pc {
+  padding-top: rem(20);
+  @include media(768) {
+    display: none;
+  }
+  // .settings-menu-pc__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  // .settings-menu-pc__item
+  &__item {
+    padding: rem(16) rem(30);
+    border-bottom: rem(2) solid #f6f7f9;
+  }
+  // .settings-menu-pc__button
+  &__button {
+    background-color: transparent;
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: prc(19, 16);
+    color: #4e5e78;
+    transition: $standartTrans;
+    &:hover {
+      color: $blueColor;
+    }
+    &._active {
+      color: $blueColor;
+    }
+  }
+}

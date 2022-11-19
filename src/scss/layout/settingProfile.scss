@@ -1,0 +1,242 @@
+.setting-profile {
+  // .setting-profile__ava-wrapper
+  &__ava-wrapper {
+    width: rem(150);
+    height: rem(150);
+    position: relative;
+    margin-bottom: rem(30);
+    @include media(768) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: rem(36);
+    }
+  }
+  // .setting-profile__ava-image
+  &__ava-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: rem(5) solid #f6f7f9;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // .setting-profile__button-edit-ava
+  &__button-edit-ava {
+    position: absolute;
+    bottom: rem(10);
+    right: rem(10);
+
+    border-radius: 50%;
+    display: flex;
+    width: rem(32);
+    height: rem(32);
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    transition: $standartTrans;
+    box-shadow: 0px 28px 11px rgba(43, 52, 80, 0.01), 0px 16px 10px rgba(43, 52, 80, 0.05),
+      0px 7px 7px rgba(43, 52, 80, 0.09), 0px 2px 4px rgba(43, 52, 80, 0.1), 0px 0px 0px rgba(43, 52, 80, 0.1);
+    &:hover {
+      background-color: darken(#387dff, 5%);
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    &:active {
+      background-color: darken(#387dff, 15%);
+    }
+    svg {
+      path {
+        transition: $standartTrans;
+      }
+    }
+  }
+  // .setting-profile__form-control
+  &__form-control {
+  }
+  // .setting-profile__field-controls
+  &__field-controls {
+    width: 100%;
+    max-width: rem(760);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(220), 1fr));
+    gap: rem(20);
+    @include media(1500) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(1300) {
+      grid-template-columns: 1fr;
+    }
+    @include media(768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(16);
+    }
+  }
+  // .setting-profile__field
+  &__field {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    @include media(768) {
+      row-gap: rem(8);
+    }
+    // .setting-profile__field_row
+    &_row {
+      // grid-column: 3 / 4;
+      
+      flex-direction: row;
+      align-items: center;
+      gap: rem(10);
+      cursor: pointer;
+      @include media(1500) {
+        // grid-column: 2 / 3;
+      }
+      &:hover {
+        .setting-profile__field-box {
+          border-color: $blueColor;
+        }
+        .setting-profile__field-text {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  // .setting-profile__field-name
+  &__field-name {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: prc(17, 14);
+    color: #2b3450;
+  }
+  // .setting-profile__input
+  &__input {
+    border: rem(1) solid #a0a7b5;
+    border-radius: rem(10);
+    padding: rem(16) rem(10);
+    font-weight: 500;
+    font-size: rem(14);
+    color: #4e5e78;
+    transition: $standartTrans;
+    @include hidePlaceholder();
+    @include styledPlaceholder(#4e5e78);
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 rem(2) rgba($blueColor, 40%);
+      color: darken(#4e5e78, 40%);
+    }
+  }
+  // .setting-profile__checkbox
+  &__checkbox {
+    display: none;
+    &:checked + .setting-profile__field-box {
+      border-color: $blueColor;
+      &::after {
+        opacity: 1;
+      }
+    } 
+    &:checked + .setting-profile__field-box + .setting-profile__field-text {
+      opacity: 1;
+    }
+  }
+  // .setting-profile__field-box
+  &__field-box {
+    flex: 0 0 rem(16);
+    height: rem(16);
+    border: rem(1) solid rgba($blueColor, 50%);
+    border-radius: rem(4);
+    position: relative;
+    transition: $standartTrans;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(8);
+      height: rem(8);
+      border-radius: rem(2);
+      background-color: $blueColor;
+      transition: $standartTrans;
+      opacity: 0;
+    }
+  }
+  // .setting-profile__field-text
+  &__field-text {
+    font-weight: 600;
+    font-size: rem(12);
+    padding-top: rem(1.5);
+    color: #4e5e78;
+    transition: $standartTrans;
+    opacity: 0.6;
+  }
+  // .setting-profile__about-me
+  &__about-me {
+    margin-top: rem(50);
+    padding-top: rem(30);
+    border-top: rem(2) solid #f6f7f9;
+  }
+  // .setting-profile__text-label
+  &__text-label {
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: prc(24, 20);
+    color: #2b3450;
+  }
+  // .setting-profile__textarea-feild
+  &__textarea-feild {
+    margin-top: rem(20);
+    width: 100%;
+    max-width: rem(760);
+    height: rem(125);
+    border: rem(1) solid #a0a7b5;
+    border-radius: rem(10);
+    transition: $standartTrans;
+    resize: none;
+    padding: rem(10);
+
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: prc(21, 14);
+    color: #4e5e78;
+    @include styledPlaceholderTextarea(#4e5e78);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 rem(2) rgba($blueColor, 40%);
+      color: darken(#4e5e78, 40%);
+    }
+  }
+  // .setting-profile__button-submit
+  &__button-submit {
+    margin-top: rem(20);
+  }
+}
+.button-submit {
+  padding: rem(16) rem(24);
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: 17px;
+  color: #fff;
+  background-color: #387dff;
+  border-radius: rem(10);
+  transition: $standartTrans;
+  &:hover {
+    background-color: darken(#387dff, 5%);
+  }
+  &:active {
+    background-color: darken(#387dff, 15%);
+  }
+}

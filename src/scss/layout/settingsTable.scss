@@ -1,0 +1,16 @@
+.settings-table {
+  background-color: #fff;
+  display: grid;
+  grid-template: 1fr / rem(300) 1fr;
+  border-radius: rem(20);
+  @include media(768) {
+    grid-template: 1fr / 1fr;
+  }
+  // .settings-table__menu-pc
+  &__menu-pc {
+    border-right: rem(2) solid #f6f7f9;
+  }
+  // .settings-table__body-container
+  &__body-container {
+  }
+}
