@@ -32,4 +32,4 @@ toggleCreatePostPopup()
 toggleArticlePostMenu()
 tabUpdates()
 
-console.log('Я работаю, я JS я подключился!');
+console.log('Я работаю, я JS я подключился!')
