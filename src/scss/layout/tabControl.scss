@@ -1,0 +1,66 @@
+.tab-control {
+  background-color: #fff;
+  border-radius: rem(20);
+  padding: rem(24) rem(30);
+  @include media(768) {
+    padding: 0;
+    background-color: transparent;
+    overflow-x: scroll;
+    border-radius: 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  @include media(425) {
+    padding-left: rem(16);
+  }
+  // .tab-control__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    @include media(768) {
+      flex-direction: row;
+    }
+  }
+  // .tab-control__item
+  &__item {
+    @include media(768) {
+      &:last-child {
+        padding-right: rem(16);
+      }
+    }
+  }
+  // .tab-control__button
+  &__button {
+    width: 100%;
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: prc(19, 16);
+    background-color: transparent;
+    color: #2b3450;
+    padding: rem(20);
+    text-align: left;
+    transition: $standartTrans;
+    border-radius: rem(10);
+    @include media(768) {
+      background-color: #fff;
+      padding: rem(12) rem(18);
+      font-size: rem(12);
+      line-height: prc(13, 12);
+    }
+    &._active {
+      background: #f6f7f9;
+      color: $blueColor;
+      @include media(768) {
+        background-color: #fff;
+      }
+    }
+    &:hover {
+      background-color: rgba(#000, 1%);
+    }
+    &:active {
+      background-color: rgba(#000, 6%);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.tab-content {
+  background-color: #fff;
+  border-radius: rem(20);
+  overflow: hidden;
+  @include media(768) {
+    border-radius: rem(10);
+  }
+  // .tab-content__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  // .tab-content__item
+  &__item {
+    display: none;
+    &._show {
+      display: block;
+    }
+  }
+}

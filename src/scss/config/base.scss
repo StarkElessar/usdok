@@ -93,6 +93,23 @@ body {
         border-radius: 0;
       }
     }
+    // .page__container_updates
+    &_updates {
+      display: grid;
+      grid-template: 1fr / rem(380) 1fr;
+      gap: rem(20);
+      height: 100%;
+      @include media(1440) {
+        grid-template: 1fr / rem(260) 1fr;
+      }
+      @include media(768) {
+        grid-template: auto 1fr / 1fr;
+        gap: rem(16);
+      }
+      @include media(425) {
+        gap: rem(8);
+      }
+    }
   }
   // .page__content
   &__content {
@@ -171,6 +188,10 @@ body {
     @include media(1024) {
       grid-column: 1 / 4;
     }
+  }
+  // .page__updates-control
+  &__updates-control {
+
   }
 
   [data-observ] {
