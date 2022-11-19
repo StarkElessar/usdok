@@ -28,12 +28,6 @@ const tabUpdates = () => {
             item.classList.add('_show')
           })
         }
-
-        const visibleItems = Array.from(tabsContainer.querySelectorAll('._show'))
-        const lastVisibleItem = visibleItems[visibleItems.length - 1]
-        const updatesEventBlockElement = lastVisibleItem.querySelector('.updates-event')
-
-        updatesEventBlockElement.style.borderBottom = '0'
       })
     })
 
