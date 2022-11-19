@@ -4,26 +4,32 @@
   gap: rem(20);
 
   padding: rem(24) rem(32);
+  padding: 0 rem(32);
   background-color: #fff;
-  border-bottom: rem(2) solid #f6f7f9;
   @include media(425) {
     padding: rem(12) rem(16);
+    padding: 0 rem(16);
   }
   // .updates-event__header
   &__header {
     display: grid;
-    grid-template: auto auto / rem(48) 1fr;
+    grid-template-columns: rem(48) 1fr;
+    grid-template-rows: rem(22) rem(22);
     column-gap: rem(12);
+    row-gap: rem(4);
     align-items: center;
     @include media(425) {
-      grid-template: auto auto / rem(36) 1fr;
+      grid-template-columns: rem(40) 1fr;
+      grid-template-rows: rem(18) rem(18);
       gap: rem(4);
     }
   }
   // .updates-event__ava-wrapper
   &__ava-wrapper {
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
 
     position: relative;
     width: 100%;
@@ -35,11 +41,15 @@
     overflow: hidden;
     height: rem(48);
     width: rem(48);
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     border: rem(2) solid #f9fafc;
     @include media(425) {
       width: rem(30);
       height: rem(30);
+      width: 100%;
+    height: 100%;
     }
     img {
       position: absolute;
@@ -62,22 +72,26 @@
   }
   // .updates-event__name
   &__name {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
 
     font-weight: 700;
     font-size: rem(16);
     line-height: prc(12, 16);
     color: #2b3450;
+    margin-top: auto;
     @include media(425) {
       font-size: rem(13);
-      line-height: prc(12, 13);
     }
   }
   // .updates-event__vocation
   &__vocation {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
 
     font-size: rem(14);
     line-height: prc(12, 14);
@@ -85,8 +99,6 @@
     margin-bottom: auto;
     @include media(425) {
       font-size: rem(12);
-      line-height: prc(13, 12);
-      
     }
   }
   // .updates-event__date
@@ -140,7 +152,6 @@
     color: #4e5e78;
     @include media(425) {
       font-size: rem(12);
-      text-align: justify;
     }
   }
   // .updates-event__footer
