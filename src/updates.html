@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Обновления'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <div class="wrapper__content">
+      @@include('html/sideBar.html', {})
+      <main class="page">
+        <div class="page__container page__container_updates" id="tabUpdates">
+          <div class="page__updates-control tab-control">
+            <ul class="tab-control__list">
+              <li class="tab-control__item">
+                <button class="tab-control__button _active" type="button" data-id="all">
+                  Все
+                </button>
+              </li>
+              <li class="tab-control__item">
+                <button class="tab-control__button" type="button" data-id="reactions">
+                  Реакции
+                </button>
+              </li>
+              <li class="tab-control__item">
+                <button class="tab-control__button" type="button" data-id="comments">
+                  Коментарии
+                </button>
+              </li>
+              <li class="tab-control__item">
+                <button class="tab-control__button" type="button" data-id="publishings">
+                  Публикации
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="page__tab-content tab-content">
+            <ul class="tab-content__list">
+              <li class="tab-content__item" data-item="publishings">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <img src="@img/users/08.png" alt="Avatar">
+                      </div>
+                    </div>
+                    <div class="updates-event__name">Аминов Сергей</div>
+                    <div class="updates-event__vocation">Врач общей практики</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Создал публикацию:</span>
+                    <h4 class="updates-event__post-title">
+                      Экстубация в нейрореанимации
+                    </h4>
+                    <p class="updates-event__post-text">
+                      17 октября 2022 г. в журнале Intensive Care Medicine опубликована статья “Экстубация у пациентов в
+                      нейрореанимации: урок выучен. На основании международного исследования, в которое вошли 1500
+                      пациентов из нейрореанимации, был сделан вывод, что основой в успехе экстубации является
+                      комбинация уровня пробуждения (level of arousal), функциональность верхних дыхательных путей и
+                      общие...
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <button class="updates-event__button-read-more" type="button">Читать</button>
+                    <div class="date-post updates-event__date updates-event__date_new-event">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">9 сентября в 12:29</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tab-content__item" data-item="reactions">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <img src="@img/users/07.png" alt="Avatar">
+                      </div>
+                      <img class="updates-event__icon" src="@img/icons/smile.svg" alt="Smile">
+                    </div>
+                    <div class="updates-event__name">Скляренко Наталья</div>
+                    <div class="updates-event__vocation">Хирург</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Добавила реакцию к комментарию:</span>
+                    <p class="updates-event__post-text">
+                      «Лечила я как-то пациентку по л/н по поводу о.цистита, соответственно, одна из рекомендаций -
+                      половой покой. В контрольном»
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <div class="date-post updates-event__date updates-event__date_new-event">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">9 сентября в 13:11</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tab-content__item" data-item="comments">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <img src="@img/users/09.png" alt="Avatar">
+                      </div>
+                    </div>
+                    <div class="updates-event__name">Игнатенко Мария</div>
+                    <div class="updates-event__vocation">Невролог</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Добавила комментарий:</span>
+                    <p class="updates-event__post-text">
+                      «Ольга Римовна, спасибо за публикацию. Часто сталкиваюсь с гиперурекемией с нарушенной функции
+                      почек без явного подагрического артрита в анамнезе. Особенно сложно с пациентами с ХСН, петлевые
+                      диуретики увеличивають МК, в том числе креатинина крови. Приходится сперва назначать малые дозу
+                      аденурика, затем...»
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <button class="updates-event__button-read-more" type="button">Читать</button>
+                    <div class="date-post updates-event__date">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">2 сентября в 09:11</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tab-content__item" data-item="publishings">
+                <div class="updates-event">
+                  <div class="updates-event__header">
+                    <div class="updates-event__ava-wrapper">
+                      <div class="updates-event__ava-image">
+                        <img src="@img/users/10.png" alt="Avatar">
+                      </div>
+                    </div>
+                    <div class="updates-event__name">Кузова Екатерина</div>
+                    <div class="updates-event__vocation">Окулист</div>
+                  </div>
+                  <div class="updates-event__body">
+                    <span class="updates-event__type">Создала публикацию:</span>
+                    <h4 class="updates-event__post-title">
+                      Какой чудесный день
+                    </h4>
+                    <p class="updates-event__post-text">
+                      17 октября в России отмечают день участкового терапевта. К кому в первую очередь обращаются при первичных признаках " поломки" в организме ? Правильно , К участковому терапевту! Именно терапевт является основным звеном в огромном медицинском мире. Ведь он , без преувеличения , специалист широкого профиля. Он знает все о человеческом организме.
+                    </p>
+                  </div>
+                  <div class="updates-event__footer">
+                    <button class="updates-event__button-read-more" type="button">Читать</button>
+                    <div class="date-post updates-event__date">
+                      <span class="date-post__icon">
+                        <img class="date-post__icon" src="images/icons/clock.svg" alt="Clock Icon">
+                      </span>
+                      <span class="date-post__text">30 августа в 23:12</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    @@include('html/footer.html', {})
+    @@include('html/modals/createPostPopup.html', {})
+  </div>
+  @@include('html/script.html', {})
+</body>
+
+</html>
