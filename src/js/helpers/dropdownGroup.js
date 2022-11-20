@@ -1,39 +1,35 @@
 export const dropdownGroup = () => {
-  const dropdownWrapper = document.querySelector('.custom-dropdown')
+  document.addEventListener('click', ({ target }) => {
+    const dropdown = target.closest('.custom-dropdown')
 
-  if (dropdownWrapper) {
-    const dropdownButtonSelect = document.getElementById('button-dropdown')
-    const dropdownButtonLabel = dropdownButtonSelect.querySelector(
-      '.custom-dropdown__label'
-    )
-    const dropdownList = document.getElementById('dropdown-list')
-    const dropdownInput = document.getElementById('dropdown-input')
+    if (dropdown) {
+      const dropdownSelectButton = dropdown.querySelector('[data-dropdown-button]')
+      const dropdownLabelButton = dropdown.querySelector('.custom-dropdown__label')
+      const dropdownList = dropdown.querySelector('[data-dropdown-list]')
+      const dropdownInput = dropdown.querySelector('input')
 
-    if (dropdownWrapper) {
-      document.addEventListener('click', (event) => {
-        const target = event.target
+      console.log(target === dropdownSelectButton);
 
-        if (target !== dropdownButtonSelect) {
-          dropdownButtonSelect.classList.remove('_active')
-          dropdownList.classList.remove('_show')
-        }
-        if (target && target.closest('.custom-dropdown__btn')) {
-          dropdownButtonSelect.classList.toggle('_active')
-          dropdownList.classList.toggle('_show')
-        }
-        if (target.hasAttribute('data-value')) {
-          dropdownButtonLabel.innerText = target.innerText
-          dropdownInput.value = target.dataset.value
-          dropdownButtonSelect.focus()
-        }
-      })
+      if (!target.closest('[data-dropdown-button]')) {
+        dropdownSelectButton.classList.remove('_active')
+        dropdownList.classList.remove('_show')
+      }
+      if (target.closest('[data-dropdown-button]')) {
+        dropdownSelectButton.classList.toggle('_active')
+        dropdownList.classList.toggle('_show')
+      }
+      if (target.closest('[data-value]')) {
+        dropdownLabelButton.innerText = target.dataset.value
+        dropdownInput.value = target.dataset.value
+        dropdownSelectButton.focus()
+      }
 
-      dropdownWrapper.addEventListener('keydown', (event) => {
-        if (event.key === 'Tab' || event.key === 'Escape') {
-          dropdownButtonSelect.classList.remove('_active')
+      dropdown.addEventListener('keydown', ({ key }) => {
+        if (key === 'Tab' || key === 'Escape') {
+          dropdownSelectButton.classList.remove('_active')
           dropdownList.classList.remove('_show')
         }
       })
     }
-  }
+  })
 }
