@@ -64,10 +64,40 @@
                             <span class="setting-profile__field-name">Фамилия</span>
                             <input class="setting-profile__input" type="text" placeholder="Ваша фамилия" value="Сазанчук">
                           </label>
-                          <label class="setting-profile__field">
-                            <span class="setting-profile__field-name">Cпециальность</span>
-                            <input class="setting-profile__input" type="text" placeholder="Ваша специальность" value="Врач общей практики">
-                          </label>
+                          <div class="setting-profile__field">
+                            <label class="setting-profile__field-name" for="specialitySetting">Специальность</label>
+                            <div class="setting-profile__dropdown custom-dropdown" id="specialitySetting">
+                              <button class="custom-dropdown__btn" type="button" data-dropdown-button>
+                                <span class="custom-dropdown__label">Выберите специальность</span>
+                                <span class="custom-dropdown__icon">
+                                  <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M10.8849 0.294983L6.29492 4.87498L1.70492 0.294983L0.294922 1.70498L6.29492 7.70498L12.2949 1.70498L10.8849 0.294983Z"
+                                      fill="black" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <ul class="custom-dropdown__list  select-list" data-dropdown-list>
+                                <li data-value="Клинический случай" class="select-list__item">Клинический случай</li>
+                                <li data-value="Коллеги, помогите" class="select-list__item">Коллеги, помогите</li>
+                                <li data-value="Статья" class="select-list__item">Статья</li>
+                                <li data-value="Разомнем мозги" class="select-list__item">Разомнем мозги</li>
+                                <li data-value="Врач без халата" class="select-list__item">Врач без халата</li>
+                                <li data-value="Анонс" class="select-list__item">Анонс</li>
+                                <li data-value="Для начинающих" class="select-list__item">Для начинающих</li>
+                                <li data-value="Пишем заключение" class="select-list__item">Пишем заключение</li>
+                                <li data-value="Новости медицины" class="select-list__item">Новости медицины</li>
+                                <li data-value="Обзор литературы" class="select-list__item">Обзор литературы</li>
+                                <li data-value="Мини лекция" class="select-list__item">Мини лекция</li>
+                                <li data-value="Обучающий материал" class="select-list__item">Обучающий материал</li>
+                                <li data-value="История медицины" class="select-list__item">История медицины</li>
+                                <li data-value="Юмор" class="select-list__item">Юмор</li>
+                                <li data-value="ЗОЖ всем гож" class="select-list__item">ЗОЖ всем гож</li>
+                                <li data-value="На правах рекламы" class="select-list__item">На правах рекламы</li>
+                              </ul>
+                              <input type="hidden" value="" name="specialitySetting">
+                            </div>
+                          </div>
                           <label class="setting-profile__field">
                             <span class="setting-profile__field-name">Адрес</span>
                             <input class="setting-profile__input" type="text" placeholder="Ваш адрес" value="Россия, Калининград">
@@ -109,7 +139,6 @@
       </main>
     </div>
     @@include('html/footer.html', {})
-    @@include('html/modals/createPostPopup.html', {})
   </div>
   @@include('html/script.html', {})
 </body>
