@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
   <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221120001241">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221120223641">
   <title>Главная</title>
 </head>
 
@@ -731,15 +731,15 @@
       <div class="create-popup__field">
         <label class="create-popup__label" for="postTheme">Выбрать тему</label>
         <div class="create-popup__dropdown custom-dropdown" id="postTheme">
-          <button class="custom-dropdown__btn" type="button" id="button-dropdown">
-            <span class="custom-dropdown__label">Выберите группу</span>
+          <button class="custom-dropdown__btn" type="button" data-dropdown-button>
+            <span class="custom-dropdown__label">Выберите тему</span>
             <span class="custom-dropdown__icon">
               <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.8849 0.294983L6.29492 4.87498L1.70492 0.294983L0.294922 1.70498L6.29492 7.70498L12.2949 1.70498L10.8849 0.294983Z" fill="black"/>
               </svg>
             </span>
           </button>
-          <ul class="custom-dropdown__list select-list" id="dropdown-list">
+          <ul class="custom-dropdown__list select-list" data-dropdown-list>
             <li data-value="Клинический случай" class="select-list__item">Клинический случай</li>
             <li data-value="Коллеги, помогите" class="select-list__item">Коллеги, помогите</li>
             <li data-value="Статья" class="select-list__item">Статья</li>
@@ -757,7 +757,7 @@
             <li data-value="ЗОЖ всем гож" class="select-list__item">ЗОЖ всем гож</li>
             <li data-value="На правах рекламы" class="select-list__item">На правах рекламы</li>
           </ul>
-          <input type="hidden" value="" id="dropdown-input" name="postTheme">
+          <input type="hidden" value="" name="postTheme">
         </div>
       </div>
       <div class="create-popup__field">
@@ -813,7 +813,7 @@
   </div>
 </div>
   </div>
-  <script src="js/app.min.js?_v=20221120001241"></script>
+  <script src="js/app.min.js?_v=20221120223641"></script>
 </body>
 
 </html>
