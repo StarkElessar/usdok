@@ -4498,6 +4498,14 @@ body._lock {
     border-radius: 0.5rem;
   }
 
+  .setting-profile__dropdown .custom-dropdown__btn {
+    border-radius: 0.5rem;
+  }
+
+  .setting-profile__dropdown .custom-dropdown__label {
+    font-size: 0.6875rem;
+  }
+
   .setting-profile__about-me {
     padding-top: 1.5rem;
     margin-top: 1.5rem;
