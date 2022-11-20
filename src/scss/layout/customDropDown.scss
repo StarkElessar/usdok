@@ -26,11 +26,13 @@
     margin-right: auto;
     color: rgba(#000, 50%);
     font-size: rem(14);
+    pointer-events: none;
   }
   // .custom-dropdown__icon
   &__icon {
     opacity: 50%;
     transition: $standartTrans;
+    pointer-events: none;
   }
   // .custom-dropdown__list
   &__list {
@@ -38,6 +40,7 @@
     top: 100%;
     left: 0;
     margin-top: rem(8);
+    z-index: 10;
   }
 }
 .select-list {
