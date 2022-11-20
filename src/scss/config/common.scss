@@ -586,3 +586,23 @@
     transition: $standartTrans;
   }
 }
+// ===========================================================================
+.button-submit {
+  padding: rem(16) rem(24);
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: 17px;
+  color: #fff;
+  background-color: #387dff;
+  border-radius: rem(10);
+  transition: $standartTrans;
+  @include media(768) {
+    width: 100%;
+  }
+  &:hover {
+    background-color: darken(#387dff, 5%);
+  }
+  &:active {
+    background-color: darken(#387dff, 15%);
+  }
+}
