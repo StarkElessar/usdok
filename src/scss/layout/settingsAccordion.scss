@@ -68,6 +68,7 @@
     margin-top: rem(30);
     @include media(768) {
       margin-top: rem(16);
+      margin-bottom: rem(16);
     }
   }
 }
