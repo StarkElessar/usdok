@@ -5,6 +5,7 @@
   border-radius: rem(20);
   @include media(768) {
     grid-template: 1fr / 1fr;
+    background-color: transparent;
   }
   // .settings-table__menu-pc
   &__menu-pc {
