@@ -2151,6 +2151,25 @@ body._lock {
   position: relative;
 }
 
+.custom-dropdown._is-open .custom-dropdown__btn {
+  -webkit-box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.6);
+          box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.6);
+}
+
+.custom-dropdown._is-open .custom-dropdown__btn .custom-dropdown__icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.custom-dropdown._is-open .select-list {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .custom-dropdown__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2171,17 +2190,6 @@ body._lock {
 .custom-dropdown__btn:hover {
   -webkit-box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.6);
           box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.6);
-}
-
-.custom-dropdown__btn._active {
-  -webkit-box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.6);
-          box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.6);
-}
-
-.custom-dropdown__btn._active .custom-dropdown__icon {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 .custom-dropdown__label {
@@ -2234,14 +2242,6 @@ body._lock {
   overflow-y: auto;
 }
 
-.select-list._show {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .select-list__item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 2.375rem;
@@ -2257,6 +2257,11 @@ body._lock {
 
 .select-list__item:not(:last-child) {
   border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.05);
+}
+
+.select-list__item._active {
+  color: #fff;
+  background-color: rgba(56, 125, 255, 0.3);
 }
 
 .select-list__item:hover {
@@ -3732,6 +3737,210 @@ body._lock {
   margin-top: 1.25rem;
 }
 
+.setting-black-list__group-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.setting-black-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.625rem;
+     -moz-column-gap: 0.625rem;
+          column-gap: 0.625rem;
+  padding: 1.125rem 0;
+}
+
+.setting-black-list__item:not(:last-child) {
+  border-bottom: 0.125rem solid #f6f7f9;
+}
+
+.setting-black-list__ava-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3rem;
+          flex: 0 0 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 0.125rem solid #f9fafc;
+}
+
+.setting-black-list__ava-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.setting-black-list__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.setting-black-list__user-name {
+  font-weight: 700;
+  line-height: 75%;
+}
+
+.setting-black-list__user-vocation {
+  font-size: 0.875rem;
+  line-height: 85.7142857143%;
+  color: #a0a7b5;
+}
+
+.setting-black-list__button-delete {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2rem;
+          flex: 0 0 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+  border-radius: 0.375rem;
+  background-color: transparent;
+}
+
+.setting-black-list__button-delete:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.setting-black-list__button-delete:hover svg path {
+  fill: #ff5531;
+}
+
+.setting-black-list__button-delete:active {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.setting-black-list__button-delete svg path {
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+}
+
+.setting-updates__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.setting-updates__item {
+  padding: 1.5rem 0;
+}
+
+.setting-updates__item:not(:last-child) {
+  border-bottom: 0.125rem solid #f6f7f9;
+}
+
+.setting-updates__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  cursor: pointer;
+}
+
+.setting-updates__label input {
+  display: none;
+}
+
+.setting-updates__label input:checked + .setting-updates__custom-box {
+  background-color: #387dff;
+}
+
+.setting-updates__label input:checked + .setting-updates__custom-box::after {
+  background-color: #fff;
+  -webkit-box-shadow: -0.125rem 0 0.4375rem rgba(18, 72, 48, 0.32);
+          box-shadow: -0.125rem 0 0.4375rem rgba(18, 72, 48, 0.32);
+  left: calc(1.6875rem);
+}
+
+.setting-updates__text-label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-weight: 600;
+  line-height: 118.75%;
+  color: #4e5e78;
+}
+
+.setting-updates__custom-box {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 3.375rem;
+          flex: 0 0 3.375rem;
+  height: 1.875rem;
+  background-color: #f6f7f9;
+  -webkit-box-shadow: inset 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.25);
+  border-radius: 6.25rem;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+}
+
+.setting-updates__custom-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.1875rem;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #a0a7b5;
+  -webkit-box-shadow: 0.125rem 0 0.4375rem rgba(18, 72, 48, 0.3);
+          box-shadow: 0.125rem 0 0.4375rem rgba(18, 72, 48, 0.3);
+  border-radius: 50%;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+}
+
 .footer {
   padding: 1.25rem 0;
   background-color: #fff;
@@ -4920,6 +5129,68 @@ body._lock {
 
   .updates-event__button-read-more {
     font-size: 0.75rem;
+  }
+
+  .setting-black-list__item {
+    -webkit-column-gap: 0.375rem;
+       -moz-column-gap: 0.375rem;
+            column-gap: 0.375rem;
+    padding: 0.5rem 0;
+  }
+
+  .setting-black-list__ava-image {
+    -ms-flex-preferred-size: 2.5rem;
+        flex-basis: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .setting-black-list__column {
+    row-gap: 0.25rem;
+  }
+
+  .setting-black-list__user-name {
+    font-size: 0.8125rem;
+  }
+
+  .setting-black-list__user-vocation {
+    font-size: 0.6875rem;
+  }
+
+  .setting-black-list__button-delete {
+    border-radius: 0.1875rem;
+    -ms-flex-preferred-size: 1.5rem;
+        flex-basis: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .setting-black-list__button-delete svg {
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+
+  .setting-updates__item {
+    padding: 0.75rem 0;
+  }
+
+  .setting-updates__label input:checked + .setting-updates__custom-box::after {
+    left: calc(1.3125rem);
+  }
+
+  .setting-updates__text-label {
+    font-size: 0.8125rem;
+    line-height: 123.0769230769%;
+  }
+
+  .setting-updates__custom-box {
+    -ms-flex-preferred-size: 2.75rem;
+        flex-basis: 2.75rem;
+    height: 1.5rem;
+  }
+
+  .setting-updates__custom-box::after {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   .footer {
