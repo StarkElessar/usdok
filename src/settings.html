@@ -11,26 +11,42 @@
       @@include('html/sideBar.html', {})
       <main class="page">
         <div class="page__container page__container_settings">
-          <div class="settings-table">
+          <div class="settings-table" id="settingsTable">
             <div class="settings-table__menu-pc settings-menu-pc">
               <ul class="settings-menu-pc__list">
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button _active" type="button">Редактировать профиль</button>
+                  <button 
+                      class="settings-menu-pc__button _active" 
+                      type="button"
+                      data-menu-settings="profile"
+                  >Редактировать профиль</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Черный список</button>
+                  <button
+                      class="settings-menu-pc__button" 
+                      type="button"
+                      data-menu-settings="blacklist"
+                  >Черный список</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Обновления</button>
+                  <button 
+                      class="settings-menu-pc__button" 
+                      type="button"
+                      data-menu-settings="updates"
+                  >Обновления</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Смена пароля</button>
+                  <button 
+                      class="settings-menu-pc__button" 
+                      type="button"
+                      data-menu-settings="password"
+                  >Смена пароля</button>
                 </li>
               </ul>
             </div>
-            <div class="settings-table__body-container settings-accordion">
+            <div class="settings-table__body-container settings-accordion" data-auto-closing="true">
               <ul class="settings-accordion__list">
-                <li class="settings-accordion__item">
+                <li class="settings-accordion__item _active" data-open data-type-settings="profile">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Редактировать профиль</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -129,7 +145,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="settings-accordion__item">
+                <li class="settings-accordion__item" data-type-settings="blacklist">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Черный список</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -204,7 +220,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="settings-accordion__item">
+                <li class="settings-accordion__item" data-type-settings="updates">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Обновления</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -247,7 +263,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="settings-accordion__item _active">
+                <li class="settings-accordion__item" data-type-settings="password">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Смена пароля</span>
                     <span class="settings-accordion__menu-mobile-icon">
