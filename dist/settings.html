@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
   <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221120223641">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221122004946">
   <title>Обновления</title>
 </head>
 
@@ -136,29 +136,26 @@
 </aside>
       <main class="page">
         <div class="page__container page__container_settings">
-          <div class="settings-table">
+          <div class="settings-table" id="settingsTable">
             <div class="settings-menu-pc settings-table__menu-pc">
               <ul class="settings-menu-pc__list">
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button _active" type="button">Редактировать профиль</button>
+                  <button class="settings-menu-pc__button _active" type="button" data-menu-settings="profile">Редактировать профиль</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Язык</button>
+                  <button class="settings-menu-pc__button" type="button" data-menu-settings="blacklist">Черный список</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Черный список</button>
+                  <button class="settings-menu-pc__button" type="button" data-menu-settings="updates">Обновления</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Обновления</button>
-                </li>
-                <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Смена пароля</button>
+                  <button class="settings-menu-pc__button" type="button" data-menu-settings="password">Смена пароля</button>
                 </li>
               </ul>
             </div>
-            <div class="settings-accordion settings-table__body-container">
+            <div class="settings-accordion settings-table__body-container" data-auto-closing="true">
               <ul class="settings-accordion__list">
-                <li class="_active settings-accordion__item">
+                <li class="settings-accordion__item _active" data-open data-type-settings="profile">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Редактировать профиль</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -167,7 +164,7 @@
                   </div>
                   <div class="settings-accordion__body">
                     <h4 class="settings-accordion__body-title">Редактировать профиль</h4>
-                    <div class="setting-profile settings-accordion__content">
+                    <div class="settings-accordion__content setting-profile">
                       <div class="setting-profile__ava-wrapper">
                         <div class="setting-profile__ava-image">
                           <picture><source srcset="images/profile/full-avatar.webp" type="image/webp"><img src="images/profile/full-avatar.png" alt="Avatar"></picture>
@@ -249,6 +246,150 @@
                     </div>
                   </div>
                 </li>
+                <li class="settings-accordion__item" data-type-settings="blacklist">
+                  <div class="settings-accordion__menu-mobile">
+                    <span class="settings-accordion__menu-mobile-text">Черный список</span>
+                    <span class="settings-accordion__menu-mobile-icon">
+                      <img src="images/icons/arrow-down.svg" alt="Arrow">
+                    </span>
+                  </div>
+                  <div class="settings-accordion__body">
+                    <h4 class="settings-accordion__body-title">Черный список</h4>
+                    <div class="settings-accordion__content setting-black-list">
+                      <ul class="setting-black-list__group-list">
+                        <li class="setting-black-list__item">
+                          <div class="setting-black-list__ava-image">
+                            <picture><source srcset="images/users/02.webp" type="image/webp"><img src="images/users/02.png" alt=""></picture>
+                          </div>
+                          <div class="setting-black-list__column">
+                            <span class="setting-black-list__user-name">Аминов Сергей</span>
+                            <span class="setting-black-list__user-vocation">Врач общей практики</span>
+                          </div>
+                          <button class="setting-black-list__button-delete" type="button">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6C13.5523 6 14 6.44772 14 7V17C14 18.6569 12.6569 20 11 20H5C3.34315 20 2 18.6569 2 17V7C2 6.44772 2.44772 6 3 6H13ZM12 8H4V17C4 17.5523 4.44772 18 5 18H11C11.5523 18 12 17.5523 12 17V8ZM5 1C5 0.447715 5.44772 0 6 0H10C10.5523 0 11 0.447715 11 1V2H15C15.5523 2 16 2.44772 16 3C16 3.55228 15.5523 4 15 4H1C0.447715 4 0 3.55228 0 3C0 2.44772 0.447715 2 1 2H5V1Z" fill="#A0A7B5"/>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="setting-black-list__item">
+                          <div class="setting-black-list__ava-image">
+                            <picture><source srcset="images/users/07.webp" type="image/webp"><img src="images/users/07.png" alt=""></picture>
+                          </div>
+                          <div class="setting-black-list__column">
+                            <span class="setting-black-list__user-name">Скляренко Наталья</span>
+                            <span class="setting-black-list__user-vocation">Хирург</span>
+                          </div>
+                          <button class="setting-black-list__button-delete" type="button">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6C13.5523 6 14 6.44772 14 7V17C14 18.6569 12.6569 20 11 20H5C3.34315 20 2 18.6569 2 17V7C2 6.44772 2.44772 6 3 6H13ZM12 8H4V17C4 17.5523 4.44772 18 5 18H11C11.5523 18 12 17.5523 12 17V8ZM5 1C5 0.447715 5.44772 0 6 0H10C10.5523 0 11 0.447715 11 1V2H15C15.5523 2 16 2.44772 16 3C16 3.55228 15.5523 4 15 4H1C0.447715 4 0 3.55228 0 3C0 2.44772 0.447715 2 1 2H5V1Z" fill="#A0A7B5"/>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="setting-black-list__item">
+                          <div class="setting-black-list__ava-image">
+                            <picture><source srcset="images/users/10.webp" type="image/webp"><img src="images/users/10.png" alt=""></picture>
+                          </div>
+                          <div class="setting-black-list__column">
+                            <span class="setting-black-list__user-name">Кузова Екатерина</span>
+                            <span class="setting-black-list__user-vocation">Окулист</span>
+                          </div>
+                          <button class="setting-black-list__button-delete" type="button">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6C13.5523 6 14 6.44772 14 7V17C14 18.6569 12.6569 20 11 20H5C3.34315 20 2 18.6569 2 17V7C2 6.44772 2.44772 6 3 6H13ZM12 8H4V17C4 17.5523 4.44772 18 5 18H11C11.5523 18 12 17.5523 12 17V8ZM5 1C5 0.447715 5.44772 0 6 0H10C10.5523 0 11 0.447715 11 1V2H15C15.5523 2 16 2.44772 16 3C16 3.55228 15.5523 4 15 4H1C0.447715 4 0 3.55228 0 3C0 2.44772 0.447715 2 1 2H5V1Z" fill="#A0A7B5"/>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="setting-black-list__item">
+                          <div class="setting-black-list__ava-image">
+                            <picture><source srcset="images/users/03.webp" type="image/webp"><img src="images/users/03.png" alt=""></picture>
+                          </div>
+                          <div class="setting-black-list__column">
+                            <span class="setting-black-list__user-name">Игнатенко Мария</span>
+                            <span class="setting-black-list__user-vocation">Невролог</span>
+                          </div>
+                          <button class="setting-black-list__button-delete" type="button">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6C13.5523 6 14 6.44772 14 7V17C14 18.6569 12.6569 20 11 20H5C3.34315 20 2 18.6569 2 17V7C2 6.44772 2.44772 6 3 6H13ZM12 8H4V17C4 17.5523 4.44772 18 5 18H11C11.5523 18 12 17.5523 12 17V8ZM5 1C5 0.447715 5.44772 0 6 0H10C10.5523 0 11 0.447715 11 1V2H15C15.5523 2 16 2.44772 16 3C16 3.55228 15.5523 4 15 4H1C0.447715 4 0 3.55228 0 3C0 2.44772 0.447715 2 1 2H5V1Z" fill="#A0A7B5"/>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="settings-accordion__item" data-type-settings="updates">
+                  <div class="settings-accordion__menu-mobile">
+                    <span class="settings-accordion__menu-mobile-text">Обновления</span>
+                    <span class="settings-accordion__menu-mobile-icon">
+                      <img src="images/icons/arrow-down.svg" alt="Arrow">
+                    </span>
+                  </div>
+                  <div class="settings-accordion__body">
+                    <h4 class="settings-accordion__body-title">Обновления</h4>
+                    <div class="settings-accordion__content setting-updates">
+                      <ul class="setting-updates__list">
+                        <li class="setting-updates__item">
+                          <label class="setting-updates__label">
+                            <span class="setting-updates__text-label">Уведомлять о новых сообщениях</span>
+                            <input type="checkbox" name="updatesNewMessages">
+                            <span class="setting-updates__custom-box"></span>
+                          </label>
+                        </li>
+                        <li class="setting-updates__item">
+                          <label class="setting-updates__label">
+                            <span class="setting-updates__text-label">Уведомлять о новых публикациях</span>
+                            <input type="checkbox" name="updatesNewMessages" checked="checked">
+                            <span class="setting-updates__custom-box"></span>
+                          </label>
+                        </li>
+                        <li class="setting-updates__item">
+                          <label class="setting-updates__label">
+                            <span class="setting-updates__text-label">Уведомлять о новых комментариях</span>
+                            <input type="checkbox" name="updatesNewMessages">
+                            <span class="setting-updates__custom-box"></span>
+                          </label>
+                        </li>
+                        <li class="setting-updates__item">
+                          <label class="setting-updates__label">
+                            <span class="setting-updates__text-label">Уведомлять о новых реакциях</span>
+                            <input type="checkbox" name="updatesNewMessages" checked="checked">
+                            <span class="setting-updates__custom-box"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="settings-accordion__item" data-type-settings="password">
+                  <div class="settings-accordion__menu-mobile">
+                    <span class="settings-accordion__menu-mobile-text">Смена пароля</span>
+                    <span class="settings-accordion__menu-mobile-icon">
+                      <img src="images/icons/arrow-down.svg" alt="Arrow">
+                    </span>
+                  </div>
+                  <div class="settings-accordion__body">
+                    <h4 class="settings-accordion__body-title">Смена пароля</h4>
+                    <div class="settings-accordion__content setting-password">
+                      <form class="setting-password__form-control">
+                        <label class="setting-password__field">
+                          <span class="setting-password__field-name">Введите старый пароль</span>
+                          <input class="setting-password__input" type="password" name="oldPassword">
+                        </label>
+                        <label class="setting-password__field">
+                          <span class="setting-password__field-name">Введите новый пароль</span>
+                          <input class="setting-password__input" type="password" name="newPassword">
+                        </label>
+                        <label class="setting-password__field">
+                          <span class="setting-password__field-name">Повторите новый пароль</span>
+                          <input class="setting-password__input" type="password" name="confirmNewPassword">
+                        </label>
+                        <button class="button-submit setting-password__button" type="submit">
+                          Сохранить изменения
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -282,7 +423,7 @@
   </div>
 </footer>
   </div>
-  <script src="js/app.min.js?_v=20221120223641"></script>
+  <script src="js/app.min.js?_v=20221122004946"></script>
 </body>
 
 </html>
