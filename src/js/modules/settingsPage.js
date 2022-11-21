@@ -8,7 +8,7 @@ const settingsPage = () => {
     const settingsContentItems = Array.from(settingsContainer.querySelectorAll('.settings-accordion__body'))
     const settingsList = Array.from(settingsContainer.querySelectorAll('[data-type-settings]'))
 
-    settingsAccordion()
+    window.innerWidth < 768 && settingsAccordion()
 
     window.addEventListener('resize', () => {
       settingsContentItems.forEach((item) => item.style.height = null)
