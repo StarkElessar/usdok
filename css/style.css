@@ -3364,6 +3364,16 @@ body._lock {
           transform: rotate(180deg);
 }
 
+.settings-accordion__item._is-open .settings-accordion__menu-mobile-text {
+  color: #387dff;
+}
+
+.settings-accordion__item._is-open .settings-accordion__menu-mobile-icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .settings-accordion__menu-mobile {
   display: none;
 }
@@ -3389,6 +3399,12 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+}
+
+.settings-accordion__body {
   -webkit-transition: all 280ms ease-in-out 0ms;
   -o-transition: all 280ms ease-in-out 0ms;
   transition: all 280ms ease-in-out 0ms;
@@ -3939,6 +3955,51 @@ body._lock {
   -webkit-transition: all 280ms ease-in-out 0ms;
   -o-transition: all 280ms ease-in-out 0ms;
   transition: all 280ms ease-in-out 0ms;
+}
+
+.setting-password__form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.25rem;
+  max-width: 15.625rem;
+}
+
+.setting-password__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.625rem;
+}
+
+.setting-password__field-name {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 121.4285714286%;
+}
+
+.setting-password__input {
+  padding: 1rem 0.625rem;
+  border: 0.0625rem solid #a0a7b5;
+  border-radius: 0.625rem;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+}
+
+.setting-password__input:focus {
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.4);
+          box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.4);
+  color: black;
 }
 
 .footer {
@@ -4644,6 +4705,7 @@ body._lock {
     -ms-grid-rows: 1fr;
     -ms-grid-columns: 1fr;
         grid-template: 1fr/1fr;
+    background-color: transparent;
   }
 
   .settings-menu-pc {
@@ -4652,6 +4714,25 @@ body._lock {
 
   .settings-accordion {
     padding: 0;
+    background-color: transparent;
+  }
+
+  .settings-accordion__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 0.3125rem;
+    background-color: transparent;
+  }
+
+  .settings-accordion__item {
+    display: block;
+    background-color: #fff;
+    border-radius: 0.5rem;
   }
 
   .settings-accordion__menu-mobile {
@@ -4670,7 +4751,9 @@ body._lock {
   }
 
   .settings-accordion__body {
+    overflow: hidden;
     padding: 0 1rem;
+    height: 0;
   }
 
   .settings-accordion__body-title {
@@ -4727,6 +4810,10 @@ body._lock {
 
   .setting-profile__button-submit {
     margin-top: 1rem;
+  }
+
+  .setting-password__form-control {
+    max-width: 100%;
   }
 }
 
@@ -5192,6 +5279,19 @@ body._lock {
     left: 0.125rem;
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  .setting-password__form-control {
+    row-gap: 1rem;
+  }
+
+  .setting-password__field {
+    row-gap: 0.5rem;
+  }
+
+  .setting-password__field-name {
+    font-size: 0.6875rem;
+    line-height: 118.1818181818%;
   }
 
   .footer {

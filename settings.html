@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
   <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221121220235">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221121234327">
   <title>Обновления</title>
 </head>
 
@@ -136,26 +136,26 @@
 </aside>
       <main class="page">
         <div class="page__container page__container_settings">
-          <div class="settings-table">
+          <div class="settings-table" id="settingsTable">
             <div class="settings-menu-pc settings-table__menu-pc">
               <ul class="settings-menu-pc__list">
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button _active" type="button">Редактировать профиль</button>
+                  <button class="settings-menu-pc__button _active" type="button" data-menu-settings="profile">Редактировать профиль</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Черный список</button>
+                  <button class="settings-menu-pc__button" type="button" data-menu-settings="blacklist">Черный список</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Обновления</button>
+                  <button class="settings-menu-pc__button" type="button" data-menu-settings="updates">Обновления</button>
                 </li>
                 <li class="settings-menu-pc__item">
-                  <button class="settings-menu-pc__button" type="button">Смена пароля</button>
+                  <button class="settings-menu-pc__button" type="button" data-menu-settings="password">Смена пароля</button>
                 </li>
               </ul>
             </div>
-            <div class="settings-accordion settings-table__body-container">
+            <div class="settings-accordion settings-table__body-container" data-auto-closing="true">
               <ul class="settings-accordion__list">
-                <li class="settings-accordion__item">
+                <li class="settings-accordion__item _active" data-open data-type-settings="profile">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Редактировать профиль</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -246,7 +246,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="settings-accordion__item">
+                <li class="settings-accordion__item" data-type-settings="blacklist">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Черный список</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -317,7 +317,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="settings-accordion__item _active">
+                <li class="settings-accordion__item" data-type-settings="updates">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Обновления</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -360,7 +360,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="settings-accordion__item">
+                <li class="settings-accordion__item" data-type-settings="password">
                   <div class="settings-accordion__menu-mobile">
                     <span class="settings-accordion__menu-mobile-text">Смена пароля</span>
                     <span class="settings-accordion__menu-mobile-icon">
@@ -370,6 +370,23 @@
                   <div class="settings-accordion__body">
                     <h4 class="settings-accordion__body-title">Смена пароля</h4>
                     <div class="settings-accordion__content setting-password">
+                      <form class="setting-password__form-control">
+                        <label class="setting-password__field">
+                          <span class="setting-password__field-name">Введите старый пароль</span>
+                          <input class="setting-password__input" type="password" name="oldPassword">
+                        </label>
+                        <label class="setting-password__field">
+                          <span class="setting-password__field-name">Введите новый пароль</span>
+                          <input class="setting-password__input" type="password" name="newPassword">
+                        </label>
+                        <label class="setting-password__field">
+                          <span class="setting-password__field-name">Повторите новый пароль</span>
+                          <input class="setting-password__input" type="password" name="confirmNewPassword">
+                        </label>
+                        <button class="button-submit setting-password__button" type="submit">
+                          Сохранить изменения
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </li>
@@ -406,7 +423,7 @@
   </div>
 </footer>
   </div>
-  <script src="js/app.min.js?_v=20221121220235"></script>
+  <script src="js/app.min.js?_v=20221121234327"></script>
 </body>
 
 </html>
