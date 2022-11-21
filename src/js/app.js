@@ -6,6 +6,7 @@ import { toggleBurgerMenu } from './modules/toggleBurgerMenu'
 import { toggleCreatePostPopup } from './modules/toggleCreatePostPopup'
 import { toggleArticlePostMenu } from './modules/toggleArticlePostMenu'
 import { tabUpdates } from './modules/tabUpdates'
+import { settingsPage } from './modules/settingsPage'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -31,5 +32,8 @@ dropdownGroup()
 toggleCreatePostPopup()
 toggleArticlePostMenu()
 tabUpdates()
+
+settingsPage()
+window.onresize = () => settingsPage
 
 console.log('Я работаю, я JS я подключился!')
