@@ -137,6 +137,16 @@
       line-height: prc(13, 11);
     }
   }
+  // .chat-block__message-info
+  &__message-info {
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+    @include media(768) {
+      top: rem(8);
+      right: rem(10);
+    }
+  }
   // .chat-block__footer
   &__footer {
     padding: rem(30);
