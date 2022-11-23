@@ -23,20 +23,28 @@
 
 // Подключение стилей отдельных блоков и секций =======================================================================================================================
 @import 'layout/header';
+
 @import 'layout/sideBar';
+
 @import 'layout/articlePost';
+
 @import 'layout/modalAuth';
 @import 'layout/createPostPopup';
 @import 'layout/customDropDown';
+
 @import 'layout/newPostField';
+
 @import 'layout/fullPost';
 @import 'layout/sidebarPost';
 @import 'layout/commentsBlock';
+
 @import 'layout/profileHead';
 @import 'layout/profileUserInfo';
+
 @import 'layout/tabContent';
 @import 'layout/tabControl';
 @import 'layout/updatesEvent';
+
 @import 'layout/settingsTable';
 @import 'layout/settingsMenuPc';
 @import 'layout/settingsAccordion';
@@ -44,4 +52,10 @@
 @import 'layout/settingBlackList';
 @import 'layout/settingUpdates';
 @import 'layout/settingPassword';
+
+@import 'layout/dialogs';
+@import 'layout/chatBlock';
+@import 'layout/leftMessage';
+@import 'layout/rightMessage';
+
 @import 'layout/footer';
