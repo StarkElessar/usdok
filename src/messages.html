@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Сообщения'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {})
+    <div class="wrapper__content">
+      @@include('html/sideBar.html', {})
+      <main class="page">
+        <div class="page__container page__container_messages">
+          <div class="dialogs">
+            <ul class="dialogs__list">
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/11.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Терёхин Константин</span>
+                <span class="dialogs__last-message">Привет! Как твои дела? Что ты делаешь?</span>
+                <span class="dialogs__last-message-time">12:29</span>
+                <span class="dialogs__icon-status">
+                  <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.8585 0.247437C13.2741 0.611119 13.3163 1.24288 12.9526 1.65852L10.1526 4.85852C9.7889 5.27416 9.15713 5.31627 8.7415 4.95259C8.32586 4.58891 8.28374 3.95715 8.64742 3.54151L11.4474 0.341509C11.8111 -0.0741276 12.4429 -0.116245 12.8585 0.247437ZM17.6585 0.247437C18.0741 0.611119 18.1163 1.24288 17.7526 1.65852L10.7526 9.65852C10.5731 9.86362 10.3177 9.98659 10.0455 9.99898C9.77321 10.0114 9.5077 9.91211 9.31035 9.72415L7.44751 7.95002L5.95258 9.65852C5.77311 9.86362 5.51771 9.98659 5.24546 9.99898C4.97321 10.0114 4.7077 9.91211 4.51035 9.72415L0.310347 5.72415C-0.0895837 5.34327 -0.105022 4.71029 0.275864 4.31036C0.65675 3.91043 1.28973 3.89499 1.68966 4.27588L5.13431 7.5565L5.99795 6.56948L5.11035 5.72415C4.71042 5.34327 4.69498 4.71029 5.07586 4.31036C5.45675 3.91043 6.08973 3.89499 6.48966 4.27588L9.93431 7.5565L16.2474 0.341509C16.6111 -0.0741276 17.2429 -0.116245 17.6585 0.247437Z"
+                      fill="#A0A7B5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="dialogs__item _active">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/02.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Пахалуев Алексей</span>
+                <span class="dialogs__last-message">Повседневная практика показывает</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status">
+                  <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.8585 0.247437C13.2741 0.611119 13.3163 1.24288 12.9526 1.65852L10.1526 4.85852C9.7889 5.27416 9.15713 5.31627 8.7415 4.95259C8.32586 4.58891 8.28374 3.95715 8.64742 3.54151L11.4474 0.341509C11.8111 -0.0741276 12.4429 -0.116245 12.8585 0.247437ZM17.6585 0.247437C18.0741 0.611119 18.1163 1.24288 17.7526 1.65852L10.7526 9.65852C10.5731 9.86362 10.3177 9.98659 10.0455 9.99898C9.77321 10.0114 9.5077 9.91211 9.31035 9.72415L7.44751 7.95002L5.95258 9.65852C5.77311 9.86362 5.51771 9.98659 5.24546 9.99898C4.97321 10.0114 4.7077 9.91211 4.51035 9.72415L0.310347 5.72415C-0.0895837 5.34327 -0.105022 4.71029 0.275864 4.31036C0.65675 3.91043 1.28973 3.89499 1.68966 4.27588L5.13431 7.5565L5.99795 6.56948L5.11035 5.72415C4.71042 5.34327 4.69498 4.71029 5.07586 4.31036C5.45675 3.91043 6.08973 3.89499 6.48966 4.27588L9.93431 7.5565L16.2474 0.341509C16.6111 -0.0741276 17.2429 -0.116245 17.6585 0.247437Z"
+                      fill="#A0A7B5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/03.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Фёдорова Ольга</span>
+                <span class="dialogs__last-message">Таким образом новая модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _is-read">
+                  <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.8585 0.247437C13.2741 0.611119 13.3163 1.24288 12.9526 1.65852L10.1526 4.85852C9.7889 5.27416 9.15713 5.31627 8.7415 4.95259C8.32586 4.58891 8.28374 3.95715 8.64742 3.54151L11.4474 0.341509C11.8111 -0.0741276 12.4429 -0.116245 12.8585 0.247437ZM17.6585 0.247437C18.0741 0.611119 18.1163 1.24288 17.7526 1.65852L10.7526 9.65852C10.5731 9.86362 10.3177 9.98659 10.0455 9.99898C9.77321 10.0114 9.5077 9.91211 9.31035 9.72415L7.44751 7.95002L5.95258 9.65852C5.77311 9.86362 5.51771 9.98659 5.24546 9.99898C4.97321 10.0114 4.7077 9.91211 4.51035 9.72415L0.310347 5.72415C-0.0895837 5.34327 -0.105022 4.71029 0.275864 4.31036C0.65675 3.91043 1.28973 3.89499 1.68966 4.27588L5.13431 7.5565L5.99795 6.56948L5.11035 5.72415C4.71042 5.34327 4.69498 4.71029 5.07586 4.31036C5.45675 3.91043 6.08973 3.89499 6.48966 4.27588L9.93431 7.5565L16.2474 0.341509C16.6111 -0.0741276 17.2429 -0.116245 17.6585 0.247437Z"
+                      fill="#A0A7B5" />
+                  </svg>
+                </span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/07.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Говорова Светлана</span>
+                <span class="dialogs__last-message">Задача организации, в особеннос модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _no-read">1</span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/07.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Говорова Светлана</span>
+                <span class="dialogs__last-message">Задача организации, в особеннос модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _no-read">1</span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/07.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Говорова Светлана</span>
+                <span class="dialogs__last-message">Задача организации, в особеннос модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _no-read">1</span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/07.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Говорова Светлана</span>
+                <span class="dialogs__last-message">Задача организации, в особеннос модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _no-read">1</span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/07.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Говорова Светлана</span>
+                <span class="dialogs__last-message">Задача организации, в особеннос модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _no-read">1</span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/07.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Говорова Светлана</span>
+                <span class="dialogs__last-message">Задача организации, в особеннос модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _no-read">1</span>
+              </li>
+              <li class="dialogs__item">
+                <div class="dialogs__ava-image">
+                  <img src="@img/users/07.png" alt="">
+                </div>
+                <span class="dialogs__user-name">Говорова Светлана</span>
+                <span class="dialogs__last-message">Задача организации, в особеннос модель не может быть!</span>
+                <span class="dialogs__last-message-time">11:11</span>
+                <span class="dialogs__icon-status _no-read">1</span>
+              </li>
+            </ul>
+          </div>
+          <div class="chat-block">
+            <div class="chat-block__head">
+              <button class="chat-block__button-close-chat" type="button" data-close-chat>
+                <img src="@img/icons/arrow-back.svg" alt="Arrow Back">
+              </button>
+              <div class="chat-block__head-ava">
+                <img src="@img/users/11.png" alt="">
+              </div>
+              <div class="chat-block__head-info">
+                <span class="chat-block__head-user-name">Терёхин Константин</span>
+                <span class="chat-block__head-status _online">
+                  В сети
+                </span>
+              </div>
+            </div>
+            <div class="chat-block__body">
+              <p class="chat-block__date-group">19 октября 2022</p>
+              <div class="left-message">
+                <div class="left-message__ava-wrapper">
+                  <div class="left-message__ava-image">
+                    <img src="@img/users/06.png" alt="">
+                  </div>
+                  <span class="left-message__status left-message__status_online"></span>
+                </div>
+                <div class="left-message__body">
+                  <p class="left-message__text-body">
+                    Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности
+                    обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. С другой
+                    стороны сложившаяся структура организации позволяет оценить значение модели развития. Не следует,
+                    однако забывать, что сложившаяся структура организации требуют определения и уточнения
+                    соответствующий условий активизации.
+                  </p>
+                  <button class="left-message__button-msg-setting" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+                <span class="left-message__time-message">1 час назад</span>
+              </div>
+              <div class="right-message">
+                <div class="right-message__ava-wrapper">
+                  <div class="right-message__ava-image">
+                    <img src="@img/users/11.png" alt="">
+                  </div>
+                </div>
+                <div class="right-message__body">
+                  <p class="right-message__text-body">
+                    Значимость этих проблем настолько очевидна, что сложившаяся структура организации требуют
+                    определения и уточнения дальнейших направлений развития.
+                  </p>
+                  <button class="right-message__button-msg-setting" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+                <span class="right-message__time-message">1 час назад</span>
+              </div>
+              <div class="left-message">
+                <div class="left-message__ava-wrapper">
+                  <div class="left-message__ava-image">
+                    <img src="@img/users/06.png" alt="">
+                  </div>
+                  <span class="left-message__status left-message__status_online"></span>
+                </div>
+                <div class="left-message__body">
+                  <p class="left-message__text-body">
+                    Равным образом постоянный количественный рост и сфера нашей активности влечет за собой процесс
+                    внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                  </p>
+                  <button class="left-message__button-msg-setting" type="button">
+                    <svg width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
+                        fill="#A0A7B5" />
+                    </svg>
+                  </button>
+                </div>
+                <span class="left-message__time-message">50 минут назад</span>
+              </div>
+            </div>
+            <div class="chat-block__footer">
+              <form class="chat-block__form-control">
+                <div class="chat-block__field-control">
+                  <textarea class="chat-block__textarea" name="messageText" id="sendMessage"
+                    placeholder="Написать сообщение.."></textarea>
+                  <label title="Прикрепить файл" class="chat-block__send-file">
+                    <input type="file" name="sendFileMessage">
+                    <span class="chat-block__send-file-icon">
+                      <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="20" height="8" fill="#1E1E1E" />
+                        <rect width="3468" height="1918" transform="translate(-1287 -895)" fill="white" />
+                        <path
+                          d="M8.42105 1C8.42105 0.447715 7.97334 0 7.42105 0H4.21053C1.88512 0 0 1.79086 0 4C0 6.20914 1.88512 8 4.21053 8H7.42105C7.97334 8 8.42105 7.55228 8.42105 7V7C8.42105 6.44772 7.97334 6 7.42105 6H4.21053C3.04782 6 2.10526 5.10457 2.10526 4C2.10526 2.89543 3.04782 2 4.21053 2H7.42105C7.97334 2 8.42105 1.55228 8.42105 1V1Z"
+                          fill="#4E5E78" />
+                        <path
+                          d="M11.5789 7C11.5789 6.44772 12.0267 6 12.5789 6H15.7895C16.9522 6 17.8947 5.10457 17.8947 4C17.8947 2.89543 16.9522 2 15.7895 2H12.5789C12.0267 2 11.5789 1.55228 11.5789 1V1C11.5789 0.447715 12.0267 0 12.5789 0H15.7895C18.1149 0 20 1.79086 20 4C20 6.20914 18.1149 8 15.7895 8H12.5789C12.0267 8 11.5789 7.55228 11.5789 7V7Z"
+                          fill="#4E5E78" />
+                        <path d="M13 4L7 4" stroke="#4E5E78" stroke-width="2" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+                <button class="chat-block__button-send" type="submit">
+                  <img src="@img/icons/send.svg" alt="">
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    @@include('html/footer.html', {})
+  </div>
+  @@include('html/script.html', {})
+</body>
+
+</html>
