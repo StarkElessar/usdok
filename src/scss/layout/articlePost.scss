@@ -20,7 +20,8 @@
     position: absolute;
   }
   // .article-post__swiper-slide
-  &__swiper-slide {}
+  &__swiper-slide {
+  }
   // .article-post__swiper-pagination
   &__swiper-pagination {
     position: absolute;
@@ -41,11 +42,19 @@
       opacity: 0.6;
       box-shadow: rem(1) rem(1) rem(4) rgba(#000, 40%);
       cursor: pointer;
+      @include media(768) {
+        width: rem(8);
+        height: rem(8);
+      }
       &.swiper-pagination-bullet-active {
         background-color: $blueColor;
         width: rem(30);
         opacity: 1;
         border-radius: rem(6);
+        @include media(768) {
+          width: rem(20);
+          border-radius: rem(4);
+        }
       }
     }
   }
@@ -135,7 +144,8 @@
   &__user-info {
   }
   // .article-post__button-like
-  &__button-like { }
+  &__button-like {
+  }
   // .article-post__more-info
   &__more-info {
     position: relative;
