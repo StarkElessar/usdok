@@ -1,0 +1,49 @@
+.message-info {
+  overflow: hidden;
+  border-radius: rem(12);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: rem(8) rem(36) rem(8) rem(8);
+  row-gap: rem(10);
+  visibility: hidden;
+  opacity: 0;
+  transition: $standartTrans;
+  box-shadow: 0px 104px 42px rgba(43, 52, 80, 0.01), 
+  0px 59px 35px rgba(43, 52, 80, 0.05),
+  0px 26px 26px rgba(43, 52, 80, 0.09), 
+  0px 7px 14px rgba(43, 52, 80, 0.1), 
+  0px 0px 0px rgba(43, 52, 80, 0.1);
+  @include media(768) {
+    border-radius: rem(8);
+  }
+  &._show {
+    opacity: 1;
+    visibility: visible;
+  }
+  // .message-info__action-button
+  &__action-button {
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: prc(21, 12);
+    background-color: transparent;
+    padding: rem(4) rem(8);
+    transition: $standartTrans;
+    border-radius: rem(6);
+    &:hover {
+      background-color: rgba(#000, 1%);
+    }
+    &:active {
+      background-color: rgba(#000, 3%);
+    }
+    // .message-info__action-button_complain
+    &_complain {
+      color: #ff5531;
+    }
+    // .message-info__action-button_edit
+    &_edit {
+      color: $blueColor;
+    }
+  }
+}
