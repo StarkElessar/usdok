@@ -9,6 +9,8 @@ import { tabUpdates } from './modules/tabUpdates'
 import { settingsPage } from './modules/settingsPage'
 import { openChatWindow } from './modules/openChatWindow'
 import { openMessageInfo } from './modules/openMessageInfo'
+import { sliderPostDetail } from './modules/sliderPostDetail'
+import { sliderPagePosts } from './modules/sliderPagePosts'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -33,6 +35,8 @@ toggleBurgerMenu()
 dropdownGroup()
 toggleCreatePostPopup()
 toggleArticlePostMenu()
+sliderPagePosts()
+sliderPostDetail()
 tabUpdates()
 openMessageInfo()
 openChatWindow()
