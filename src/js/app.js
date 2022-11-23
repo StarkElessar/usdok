@@ -8,6 +8,7 @@ import { toggleArticlePostMenu } from './modules/toggleArticlePostMenu'
 import { tabUpdates } from './modules/tabUpdates'
 import { settingsPage } from './modules/settingsPage'
 import { openChatWindow } from './modules/openChatWindow'
+import { openMessageInfo } from './modules/openMessageInfo'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -33,6 +34,7 @@ dropdownGroup()
 toggleCreatePostPopup()
 toggleArticlePostMenu()
 tabUpdates()
+openMessageInfo()
 openChatWindow()
 
 settingsPage()
