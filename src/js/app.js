@@ -7,6 +7,7 @@ import { toggleCreatePostPopup } from './modules/toggleCreatePostPopup'
 import { toggleArticlePostMenu } from './modules/toggleArticlePostMenu'
 import { tabUpdates } from './modules/tabUpdates'
 import { settingsPage } from './modules/settingsPage'
+import { openChatWindow } from './modules/openChatWindow'
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -26,14 +27,16 @@ isWebp()
 // ====================================================================================================================================================
 
 toggleWindowAuth()
-textareaHeightAuto('#new-post', 44)
+textareaHeightAuto('#sendMessage', 55)
 toggleBurgerMenu()
 dropdownGroup()
 toggleCreatePostPopup()
 toggleArticlePostMenu()
 tabUpdates()
+openChatWindow()
 
 settingsPage()
 window.onresize = () => settingsPage
+
 
 console.log('Я работаю, я JS я подключился!')
