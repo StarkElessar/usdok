@@ -110,6 +110,18 @@ body {
         gap: rem(8);
       }
     }
+    // .page__container_messages
+    &_messages {
+      grid-template: 1fr / rem(420) 1fr;
+      column-gap: rem(20);
+      @include media(1400) {
+        grid-template-columns: rem(300) 1fr;
+      }
+      @include media(768) {
+        position: relative;
+        grid-template-columns: 1fr;
+      }
+    }
     // .page__container_settings
     &_settings {
       height: 100%;
