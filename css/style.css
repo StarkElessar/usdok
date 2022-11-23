@@ -3084,6 +3084,17 @@ body._lock {
 }
 
 .comments-block__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+.comments-block__comment-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2.5rem auto auto 1fr 6.25rem auto;
@@ -3176,6 +3187,140 @@ body._lock {
       grid-column-start: 5;
   -ms-grid-column-span: 1;
   grid-column-end: 6;
+}
+
+.comments-block__sublist {
+  padding-left: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+.comments-block__form-add-comment {
+  padding-left: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.625rem;
+}
+
+.comments-block__form-add-comment textarea {
+  background: #f9fafc;
+  border: 0.0625rem solid #cbccd1;
+  border-radius: 0.625rem;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+  color: #a0a7b5;
+  height: 7.5rem;
+  resize: none;
+  font-size: 0.875rem;
+  line-height: 150%;
+  padding: 0.625rem;
+}
+
+.comments-block__form-add-comment textarea::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea:-moz-placeholder {
+  opacity: 1;
+  -moz-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea:-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.comments-block__form-add-comment textarea:-moz-placeholder {
+  color: #a0a7b5;
+  font-size: 0.875rem;
+  line-height: normal;
+}
+
+.comments-block__form-add-comment textarea::-webkit-input-placeholder {
+  color: #a0a7b5;
+  font-size: 0.875rem;
+  line-height: normal;
+}
+
+.comments-block__form-add-comment textarea:focus {
+  color: #2b3450;
+  -webkit-box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.4);
+          box-shadow: 0 0 0 0.125rem rgba(56, 125, 255, 0.4);
+  border-color: transparent;
+}
+
+.comments-block__form-add-comment textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.comments-block__add-comment {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0.875rem 1.875rem;
+}
+
+.comments-block__show-more-comments {
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 125%;
+  color: #a0a7b5;
+  -webkit-transition: all 280ms ease-in-out 0ms;
+  -o-transition: all 280ms ease-in-out 0ms;
+  transition: all 280ms ease-in-out 0ms;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 3.125rem;
+}
+
+.comments-block__show-more-comments:hover {
+  color: #697386;
 }
 
 .profile-head {
@@ -6304,7 +6449,7 @@ body._lock {
     font-size: 0.75rem;
   }
 
-  .comments-block__item {
+  .comments-block__comment-wrapper {
     -ms-grid-columns: 2.5rem 3.75rem auto 2rem;
     grid-template-columns: 2.5rem 3.75rem auto 2rem;
     -ms-grid-rows: auto auto auto auto;

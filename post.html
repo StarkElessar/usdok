@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="files/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="files/favicon128.png" sizes="128x128" type="image/png">
   <link rel="apple-touch-icon" href="files/favicon64.png" sizes="64x64" type="image/png">
-  <link rel="stylesheet" href="css/style.min.css?_v=20221123151010">
+  <link rel="stylesheet" href="css/style.min.css?_v=20221123200743">
   <title>Публикация</title>
 </head>
 
@@ -294,70 +294,151 @@
                 </form>
                 <ul class="comments-block__list">
                   <li class="comments-block__item">
-                    <div class="comments-block__user-image">
-                      <picture><source srcset="images/users/03.webp" type="image/webp"><img src="images/users/03.png" alt=""></picture>
+                    <div class="comments-block__comment-wrapper">
+                      <div class="comments-block__user-image">
+                        <picture><source srcset="images/users/03.webp" type="image/webp"><img src="images/users/03.png" alt=""></picture>
+                      </div>
+                      <div class="comments-block__user-name">Говорова Светлана</div>
+                      <div class="comments-block__date">19 ноября 2022</div>
+                      <div class="comments-block__comment-text">
+                        Значимость этих проблем настолько очевидна, что сложившаяся структура организации требуют определения и уточнения дальнейших направлений развития.
+                      </div>
+                      <button class="comments-block__button comments-block__button_add-comment" type="button">
+                        Ответить
+                      </button>
+                      <button class="button-like comments-block__button-like" type="button">
+                        <span class="button-like__icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
+                            <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
+                            <path d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                            <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                          </svg>
+                        </span>
+                        <span class="button-like__text">
+                          <span data-like="124">124</span>
+                        </span>
+                      </button>
+                      <button class="comments-block__button comments-block__button_complain" type="button">
+                        Пожаловаться
+                      </button>
                     </div>
-                    <div class="comments-block__user-name">Говорова Светлана</div>
-                    <div class="comments-block__date">19 ноября 2022</div>
-                    <div class="comments-block__comment-text">
-                      Значимость этих проблем настолько очевидна, что сложившаяся структура организации требуют определения и уточнения дальнейших направлений развития.
-                    </div>
-                    <button class="comments-block__button comments-block__button_add-comment" type="button">
-                      Ответить
-                    </button>
-                    <button class="button-like comments-block__button-like" type="button">
-                      <span class="button-like__icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
-                          <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
-                          <path d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450"/>
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
-                        </svg>
-                      </span>
-                      <span class="button-like__text">
-                        <span data-like="124">124</span>
-                      </span>
-                    </button>
-                    <button class="comments-block__button comments-block__button_complain" type="button">
-                      Пожаловаться
-                    </button>
+                    <form class="comments-block__form-add-comment">
+                      <textarea name="addNewComment" placeholder="Текс вашего комментария"></textarea>
+                      <button class="button-submit comments-block__add-comment" type="submit">Ответить</button>
+                    </form>
                   </li>
                   <li class="comments-block__item">
-                    <div class="comments-block__user-image">
-                      <picture><source srcset="images/users/02.webp" type="image/webp"><img src="images/users/02.png" alt=""></picture>
+                    <div class="comments-block__comment-wrapper">
+                      <div class="comments-block__user-image">
+                        <picture><source srcset="images/users/02.webp" type="image/webp"><img src="images/users/02.png" alt=""></picture>
+                      </div>
+                      <div class="comments-block__user-name">Барсуков Андрей</div>
+                      <div class="comments-block__date">5 августа 2022</div>
+                      <div class="comments-block__comment-text">
+                        Равным образом постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                      </div>
+                      <button class="comments-block__button comments-block__button_add-comment" type="button">
+                        Ответить
+                      </button>
+                      <button class="button-like comments-block__button-like" type="button">
+                        <span class="button-like__icon">
+                          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
+                            <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
+                            <path d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                            <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                          </svg>
+                        </span>
+                        <span class="button-like__text">
+                          <span data-like="12">12</span>
+                        </span>
+                      </button>
+                      <button class="comments-block__button comments-block__button_complain" type="button">
+                        Пожаловаться
+                      </button>
                     </div>
-                    <div class="comments-block__user-name">Барсуков Андрей</div>
-                    <div class="comments-block__date">5 августа 2022</div>
-                    <div class="comments-block__comment-text">
-                      Равным образом постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-                    </div>
-                    <button class="comments-block__button comments-block__button_add-comment" type="button">
-                      Ответить
-                    </button>
-                    <button class="button-like comments-block__button-like" type="button">
-                      <span class="button-like__icon">
-                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
-                          <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
-                          <path d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
-                          <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450"/>
-                          <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
-                        </svg>
-                      </span>
-                      <span class="button-like__text">
-                        <span data-like="12">12</span>
-                      </span>
-                    </button>
-                    <button class="comments-block__button comments-block__button_complain" type="button">
-                      Пожаловаться
-                    </button>
+                    <ul class="comments-block__sublist">
+                      <li class="comments-block__item">
+                        <div class="comments-block__comment-wrapper">
+                          <div class="comments-block__user-image">
+                            <picture><source srcset="images/users/02.webp" type="image/webp"><img src="images/users/02.png" alt=""></picture>
+                          </div>
+                          <div class="comments-block__user-name">Барсуков Андрей</div>
+                          <div class="comments-block__date">5 августа 2022</div>
+                          <div class="comments-block__comment-text">
+                            Равным образом постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                          </div>
+                          <button class="comments-block__button comments-block__button_add-comment" type="button">
+                            Ответить
+                          </button>
+                          <button class="button-like comments-block__button-like" type="button">
+                            <span class="button-like__icon">
+                              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
+                                <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
+                                <path d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                                <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                              </svg>
+                            </span>
+                            <span class="button-like__text">
+                              <span data-like="12">12</span>
+                            </span>
+                          </button>
+                          <button class="comments-block__button comments-block__button_complain" type="button">
+                            Пожаловаться
+                          </button>
+                        </div>
+                      </li>
+                      <li class="comments-block__item">
+                        <div class="comments-block__comment-wrapper">
+                          <div class="comments-block__user-image">
+                            <picture><source srcset="images/users/02.webp" type="image/webp"><img src="images/users/02.png" alt=""></picture>
+                          </div>
+                          <div class="comments-block__user-name">Барсуков Андрей</div>
+                          <div class="comments-block__date">5 августа 2022</div>
+                          <div class="comments-block__comment-text">
+                            Равным образом постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                          </div>
+                          <button class="comments-block__button comments-block__button_add-comment" type="button">
+                            Ответить
+                          </button>
+                          <button class="button-like comments-block__button-like" type="button">
+                            <span class="button-like__icon">
+                              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.5" cy="9.5" r="8.5" fill="#FFD54F"/>
+                                <path d="M3.33837 9.5C3.33837 18 10 18 10 18C5.02944 18 1 14.1944 1 9.5C1 4.80558 5.02944 1 10 1C10 1 3.33837 1 3.33837 9.5Z" fill="#E6C047"/>
+                                <path d="M4.47524 2.6435C5.88276 1.61027 7.62011 1 9.5 1C14.1944 1 18 4.80558 18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 7.70687 1.55524 6.04342 2.50317 4.67221" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M6 12C6 12 7.30165 13 9.5 13C11.6983 13 13 12 13 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5.99972 11C5.99972 11 6.02012 11.3673 5.71408 11.6735C5.40805 11.9796 5 12 5 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M13.0003 11C13.0003 11 12.9799 11.3673 13.2859 11.6735C13.592 11.9796 14 12 14 12" stroke="#2B3450" stroke-width="1.5" stroke-linecap="round"/>
+                                <circle cx="6.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                                <circle cx="12.5" cy="7.5" r="1.5" fill="#2B3450"/>
+                              </svg>
+                            </span>
+                            <span class="button-like__text">
+                              <span data-like="12">12</span>
+                            </span>
+                          </button>
+                          <button class="comments-block__button comments-block__button_complain" type="button">
+                            Пожаловаться
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                    <button class="comments-block__show-more-comments" type="button">Показать еще 3 комментария</button>
                   </li>
                 </ul>
               </div>
@@ -393,7 +474,7 @@
   </div>
 </footer>
   </div>
-  <script src="js/app.min.js?_v=20221123151010"></script>
+  <script src="js/app.min.js?_v=20221123200743"></script>
 </body>
 
 </html>
