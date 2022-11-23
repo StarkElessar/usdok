@@ -77,6 +77,12 @@
   }
   // .comments-block__item
   &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+  }
+  // .comments-block__comment-wrapper
+  &__comment-wrapper {
     display: grid;
     grid-template-columns: rem(40) auto auto 1fr rem(100) auto;
     grid-template-rows: auto auto auto;
@@ -111,7 +117,7 @@
   &__user-name {
     grid-column-start: 2;
     grid-column-end: 4;
-    
+
     font-weight: 700;
     font-size: rem(16);
     line-height: prc(12, 16);
@@ -152,7 +158,7 @@
     grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 3;
-    
+
     font-size: rem(14);
     line-height: prc(21, 14);
     color: #4e5e78;
@@ -203,6 +209,62 @@
       .button-like__text {
         display: none;
       }
+    }
+  }
+  // .comments-block__sublist
+  &__sublist {
+    padding-left: rem(50);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+  }
+  // .comments-block__form-add-comment
+  &__form-add-comment {
+    padding-left: rem(50);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+
+    textarea {
+      background: #f9fafc;
+      border: rem(1) solid #cbccd1;
+      border-radius: rem(10);
+      transition: $standartTrans;
+      color: #a0a7b5;
+      height: rem(120);
+      resize: none;
+      font-size: rem(14);
+      line-height: prc(21, 14);
+      padding: rem(10);
+      @include hidePlaceholder();
+      @include styledPlaceholderTextarea(#a0a7b5, rem(14));
+      &:focus {
+        color: $darkBlueColor;
+        box-shadow: 0 0 0 rem(2) rgba($blueColor, 40%);
+        border-color: transparent;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  // .comments-block__add-comment
+  &__add-comment {
+    align-self: flex-start;
+    padding: rem(14) rem(30);
+  }
+  // .comments-block__show-more-comments
+  &__show-more-comments {
+    background-color: transparent;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: prc(15, 12);
+    color: #a0a7b5;
+    transition: $standartTrans;
+    align-self: flex-start;
+    padding-left: rem(50);
+    &:hover {
+      color: darken(#a0a7b5, 20%);
     }
   }
 }
