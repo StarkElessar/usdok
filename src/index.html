@@ -85,9 +85,26 @@
             <div class="page__posts-wrapper">
               <article class="page__post article-post">
                 <div class="article-post__top">
-                  <a href="#" class="article-post__image">
-                    <img src="@img/posts/01.jpg" alt="Post Image">
-                  </a>
+                  <div class="article-post__swiper swiper">
+                    <div class="article-post__swiper-wrapper swiper-wrapper">
+                      <div class="article-post__swiper-slide swiper-slide">
+                        <div class="article-post__image">
+                          <img src="@img/posts/01.jpg" alt="Post Image">
+                        </div>
+                      </div>
+                      <div class="article-post__swiper-slide swiper-slide">
+                        <div class="article-post__image">
+                          <img src="@img/posts/02.jpg" alt="Post Image">
+                        </div>
+                      </div>
+                      <div class="article-post__swiper-slide swiper-slide">
+                        <div class="article-post__image">
+                          <img src="@img/posts/03.jpg" alt="Post Image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="article-post__swiper-pagination swiper-pagination"></div>
+                  </div>
                 </div>
                 <div class="article-post__body">
                   <div class="article-post__row">
@@ -97,8 +114,7 @@
                       </span>
                       <span class="date-post__text">10 мин. назад</span>
                     </div>
-                    <button class="article-post__button-tag" 
-                            type="button">
+                    <button class="article-post__button-tag" type="button">
                       Коллеги, помогите
                     </button>
                   </div>
@@ -148,7 +164,8 @@
                     </span>
                   </button>
                   <button class="article-post__more-info button-more-info" type="button">
-                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
                         fill="#A0A7B5" />
@@ -170,8 +187,7 @@
                       </span>
                       <span class="date-post__text">10 мин. назад</span>
                     </div>
-                    <button class="article-post__button-tag" 
-                            type="button">
+                    <button class="article-post__button-tag" type="button">
                       Частный случай
                     </button>
                   </div>
@@ -221,7 +237,8 @@
                     </span>
                   </button>
                   <button class="article-post__more-info button-more-info" type="button">
-                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
                         fill="#A0A7B5" />
@@ -243,8 +260,7 @@
                       </span>
                       <span class="date-post__text">10 мин. назад</span>
                     </div>
-                    <button class="article-post__button-tag" 
-                            type="button">
+                    <button class="article-post__button-tag" type="button">
                       Частный случай
                     </button>
                   </div>
@@ -296,7 +312,8 @@
                     </span>
                   </button>
                   <button class="article-post__more-info button-more-info" type="button">
-                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
                         fill="#A0A7B5" />
@@ -318,8 +335,7 @@
                       </span>
                       <span class="date-post__text">10 мин. назад</span>
                     </div>
-                    <button class="article-post__button-tag" 
-                            type="button">
+                    <button class="article-post__button-tag" type="button">
                       Случай в больнице
                     </button>
                   </div>
@@ -369,7 +385,8 @@
                     </span>
                   </button>
                   <button class="article-post__more-info button-more-info" type="button">
-                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
                         fill="#A0A7B5" />
@@ -391,8 +408,7 @@
                       </span>
                       <span class="date-post__text">10 мин. назад</span>
                     </div>
-                    <button class="article-post__button-tag" 
-                            type="button">
+                    <button class="article-post__button-tag" type="button">
                       Коллеги, помогите
                     </button>
                   </div>
@@ -442,7 +458,8 @@
                     </span>
                   </button>
                   <button class="article-post__more-info button-more-info" type="button">
-                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
                         fill="#A0A7B5" />
@@ -464,8 +481,7 @@
                       </span>
                       <span class="date-post__text">10 мин. назад</span>
                     </div>
-                    <button class="article-post__button-tag" 
-                            type="button">
+                    <button class="article-post__button-tag" type="button">
                       Коллеги, помогите
                     </button>
                   </div>
@@ -515,7 +531,8 @@
                     </span>
                   </button>
                   <button class="article-post__more-info button-more-info" type="button">
-                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="button-more-info__icon" width="6" height="20" viewBox="0 0 6 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M5.5 3C5.5 4.38071 4.38071 5.5 3 5.5C1.61929 5.5 0.5 4.38071 0.5 3C0.5 1.61929 1.61929 0.5 3 0.5C4.38071 0.5 5.5 1.61929 5.5 3ZM3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4ZM5.5 10C5.5 11.3807 4.38071 12.5 3 12.5C1.61929 12.5 0.5 11.3807 0.5 10C0.5 8.61929 1.61929 7.5 3 7.5C4.38071 7.5 5.5 8.61929 5.5 10ZM3 11C3.55228 11 4 10.5523 4 10C4 9.44771 3.55228 9 3 9C2.44772 9 2 9.44771 2 10C2 10.5523 2.44772 11 3 11ZM3 19.5C4.38071 19.5 5.5 18.3807 5.5 17C5.5 15.6193 4.38071 14.5 3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5ZM4 17C4 17.5523 3.55228 18 3 18C2.44772 18 2 17.5523 2 17C2 16.4477 2.44772 16 3 16C3.55228 16 4 16.4477 4 17Z"
                         fill="#A0A7B5" />
@@ -577,7 +594,8 @@
                       </div>
                       <div class="block-event__body">
                         <p>
-                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
+                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой
+                          сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
                         </p>
                       </div>
                     </div>
@@ -597,7 +615,8 @@
                       </div>
                       <div class="block-event__body">
                         <p>
-                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
+                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой
+                          сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
                         </p>
                       </div>
                     </div>
@@ -617,7 +636,8 @@
                       </div>
                       <div class="block-event__body">
                         <p>
-                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
+                          Уже завтра - поэтому срочно в номер - стартует продолжение серии вебинаров об ультразвуковой
+                          сосудистой визуализации с прекрасной Людмилой Эдуардовной Шульгиной.
                         </p>
                       </div>
                     </div>
