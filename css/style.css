@@ -5843,6 +5843,16 @@ body._lock {
     font-weight: 700;
   }
 
+  .article-post__swiper-pagination .swiper-pagination-bullet {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .article-post__swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 1.25rem;
+    border-radius: 0.25rem;
+  }
+
   .modal__body {
     max-width: 100%;
   }
