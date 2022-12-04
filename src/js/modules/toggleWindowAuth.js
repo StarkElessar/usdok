@@ -3,7 +3,7 @@ import { toggleElementsWindowsAuth } from '../helpers/toggleElementsWindowsAuth'
 
 export const toggleWindowAuth = () => {
   const openWindowAuthButton = document.querySelector('.button_auth')
-  const windowAuth = document.querySelector('[modal-open]')
+  const windowAuth = document.querySelector('[data-modal-open]')
 
   let isLogin = true
 
